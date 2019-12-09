@@ -18,7 +18,16 @@
     var app = new Vue({
       el: '#app',
       data: {
+        tasks: require('./aguiaReal.json'),
         message: 'Hello Vue!'
+      },
+      methods: {
+        listTasks: function () {
+          console.log(this.tasks);
+        }
+      },
+      mounted() {
+       this.listTasks();
       }
     })
   </script>
