@@ -5,30 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <title>My tasks</title>
+  <script src="./js/main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Rods dev</title>
 </head>
 
 <body>
-  <div id="app">
-    {{ message }}
-  </div>
-
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        tasks: require('./aguiaReal.json'),
-        message: 'Hello Vue!'
-      },
-      methods: {
-        listTasks: function () {
-          console.log(this.tasks);
-        }
-      },
-      mounted() {
-       this.listTasks();
-      }
-    })
-  </script>
+  <section>
+    <div id="profile">
+      <img src="./imgs/profile.jpeg" alt="profile" >
+      <h1>Rods $dev</h1>
+      <div id="langs">
+        <p>
+          <span class="langs">backend</span>
+          <span>PHP</span>
+        </p>
+        <p>
+          <span class="langs">frontend</span>
+          <span>Javascript</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div id="links">
+      <ul>
+        <li><a href="./bis2crum/page.html"> Bi2Crum </a></li>
+      </ul>
+    </div>
+  </section>
 </body>
