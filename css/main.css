@@ -46,15 +46,17 @@ a{
     flex-direction: column ;
     align-items: center;
 }
-
-#strategy, #con-scrum{
+#page{
+    width: 50%;
+}
+.fullw{
+    width: 100%;
+}
+#strategy, #con-scrum, #pos-scrum{
     width: 50%;
     display: flex;
     flex-direction: column ;
     align-items: center;
-}
-#page{
-    width: 50%;
 }
 #strategy ul, #con-scrum ul, #pos-scrum ul{
     list-style: square;
