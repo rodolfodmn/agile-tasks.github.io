@@ -2,38 +2,60 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="../js/main.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css">
-  <title>Rods dev</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Rods dev</title>
 </head>
 
 <body>
-  <section>
-    <div id="page">
-      <h1>Bis2Crum</h1>
-      <div id="desc">
-        <p>
-            Método Scrum adaptado para Bis2bis.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div id="strategy">
-      <ul>
-        <li>passo um
-            <div>
-                <ul>
-                    <li>sub passo um</li>
-                </ul>
+    <section>
+        <div id="page">
+            <div id="desc">
+                <h1>Bis2Crum</h1>
+                <p>
+                    Método Scrum adaptado para Bis2bis.
+                </p>
             </div>
-        </li>
-        <li>passo dois</li>
-      </ul>
-    </div>
-  </section>
+            <div id="resume">
+                <h4>Resumo</h4>
+                <p>
+                    Um time composto por devs e um ou mais testers coringas ou não, entregam as features disponibilizadas pelo Gerente de Projeto, onde o time gerencia como as features vão ser desenvolvidas, dividindo as features em tasks, e podendo dividir as features em mais features caso necessário, sendo que uma feature, deve ser um entregavel para o cliente. Cada feature possui as tasks obrigatórias: testes, correções, deploy e ajustes, sendo que os testes são realizados pelos testers e as correções e deploy pelos devs. Os testers devem saber se a feature está entregável ou não, sendo entregavel ela é deployda e disponibiliza para o Gerente de Projeto. Toda semana o time se reúne e valida as features que vão ser desenvolvidas durante a semana, sendo que se hover alguma task da semana passada que não foi entregue ela simplesmente é reanalisada. Caso haja algum bloqueio para algum dev, esse bloqueio é passado para o time, e caso o time não conseguir resolver, é passado para o Gerente de Projeto, sendo função dele resolver o bloqueio. 
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="strategy">
+            <ul>
+                <li>O Gerente de projeto cria o projeto na ferramenta de gerência, e alimenta o projeto com as features referenciadas com o documento de requisitos</li>
+                <li>Reunião de apresentação do projeto, onde o Gerente de projeto da uma visão geral do projeto para o time</li>
+                <li>Reunião do time para analise do entregavel da semana, com a pontuação normal do scrum</li>
+                <li>
+                    Desenvolvimento da feature
+                    <div>
+                        <ul>
+                            <li>o dev seleciona uma feature para inicar o desenvolvimento</li>
+                            <li>o dev seleciona quebra a feature em tasks</li>
+                            <li>com todas as taks desenvolvidas, inicia o teste</li>
+                            <div>
+                                <ul>
+                                    <li>o tester testa e insere os erros encontrados na task correções</li>
+                                    <li>o dev analisa e aplica as correções necessárias</li>
+                                    <li>o tester idientificando que a feature está sem erros e funcionando como esperado tesmina a task</li>
+                                </ul>
+                            </div>
+                            <li>o dev da feature deploya a feature e passa para o Gerente</li>
+                            <li>Caso exista alguma falta na feature o Gerente pode informar as mesmas na task faltas</li>
+                            <li>o dev analisa e reinicia o dev da feature até o Gerente aprovar</li>
+                            <li>Com a aprovação do Gerente, a taks ajustes é concludia, concluindo o dev da feature</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 </body>
