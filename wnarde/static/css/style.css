@@ -1,0 +1,93 @@
+body{
+	background: linear-gradient(180deg, #FBFFF1 0%, #E0E4E6 36.46%, #7C7BBA 100%);
+}
+main{
+	background-image: url('../../assets/bghome.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 20px;
+}
+footer{
+	border: 1px solid #1D262D;
+	box-sizing: border-box;
+	border-radius: 2px;
+	margin: 20px;
+	padding: 15px;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+
+	color: #1D262D;
+}
+.links-count{
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: right;
+	text-transform: uppercase;
+
+	color: #939393;
+}
+.icon{
+	font-size: 35px;
+}
+.pointer{
+	cursor: pointer;
+}
+.back-nav{
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+	/*background-color: #31393f;*/
+	background-color: rgba(49, 57, 63, 0.85);
+	color: #fff;
+	opacity: 0;
+	display:none;
+}
+.back-nav ul{
+	margin: 20px;
+}
+#logo{
+	z-index: 1;
+	height: 50px;
+	width: 187px;
+	border-radius: 2px;
+	background: #1D262D;
+	border-radius: 2px;
+	text-align: center;
+}
+#logo h1{
+	font-family: Kadwa;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 21px;
+	color: #F6FBED;
+	line-height: 50px;
+	text-transform: capitalize;
+}
+.home-text{
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #EE7B52;
+}
+.home-text span {
+	font-family: Charter;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #FFC1AB;
+}
