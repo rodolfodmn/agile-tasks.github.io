@@ -1,18 +1,21 @@
 body{
 	background: linear-gradient(180deg, #FBFFF1 0%, #E0E4E6 36.46%, #7C7BBA 100%);
+	position: fixed; 
+	overflow-y: scroll;
+	width: 100%;
+}
+header{
+	z-index: 8;
 }
 main{
-	background-image: url('../../assets/bghome.png');
-	background-repeat: no-repeat;
-	background-position: center;
 	margin: 20px;
 }
 footer{
+	z-index: 9;
 	border: 1px solid #1D262D;
 	box-sizing: border-box;
 	border-radius: 2px;
 	margin: 20px;
-	padding: 15px;
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
@@ -23,6 +26,7 @@ footer{
 	color: #1D262D;
 }
 .links-count{
+	margin-left: auto;
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
@@ -40,6 +44,7 @@ footer{
 	cursor: pointer;
 }
 .back-nav{
+	z-index: 5;
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
@@ -47,13 +52,24 @@ footer{
 	line-height: 20px;
 	text-transform: uppercase;
 	/*background-color: #31393f;*/
-	background-color: rgba(49, 57, 63, 0.85);
+	background: rgba(49, 57, 63, 0);
 	color: #fff;
-	opacity: 0;
 	display:none;
+	border: 2px solid #1D262D;
 }
 .back-nav ul{
 	margin: 20px;
+}
+.back-nav h3{
+	margin-left: 12%;
+}
+.back-nav a{
+	color: #fff;
+	margin-left: 12%;
+}
+.icon-fix{
+	color: transparent;
+	font-size: 35px;
 }
 #logo{
 	z-index: 1;
@@ -73,21 +89,23 @@ footer{
 	line-height: 50px;
 	text-transform: capitalize;
 }
-.home-text{
-	font-family: Charter;
+.footer-end a{
+	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 88px;
-	line-height: 107px;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: right;
+	text-transform: uppercase;
 
-	color: #EE7B52;
+	color: #1D262D;
+	padding: 0 8px;
 }
-.home-text span {
-	font-family: Charter;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 88px;
-	line-height: 107px;
-
-	color: #FFC1AB;
+.footer-middle{
+	padding:8px 15px;
+}
+.footer-time{
+	width: 25%;
+	padding:8px 15px;
+	border-right:0.5px dashed #1D262D;
 }

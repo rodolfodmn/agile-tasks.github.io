@@ -1,3 +1,18 @@
+.back-nav-links{
+	display: flex;
+}
+.back-nav-links div{
+	display: flex;
+	justify-content: flex-start;
+	margin-right: 100px;
+}
+.back-nav-links h3{
+	text-align: center;
+	margin-bottom: 44px;
+}
+.expance{
+	flex:1;
+}
 .row{
 	display: flex;
 }
@@ -6,7 +21,13 @@
 }
 .footer-row {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
+}
+.footer-end{
+	flex: 1;
+	padding:8px 15px;
+	align-items: center;
+	justify-content: flex-end;
 }
 .nav-row {
 	display: flex;
@@ -23,6 +44,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.final-link{
+	align-items: stretch;
 }
 .back-nav{
 	position: absolute;

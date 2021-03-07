@@ -1,0 +1,47 @@
+.banner-content{
+	position: fixed;
+	width: 700%;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+.tleft{
+	z-index: 9;
+	background-image: url("../../assets/tl.png");
+	width: 12px;
+	height: 19px;
+	position: fixed;
+	right: 90%;
+	top: 50%;
+}
+.tright{
+	z-index: 9;
+	width: 12px;
+	height: 19px;
+	background-image: url("../../assets/tr.png");
+	position: fixed;
+	left: 90%;
+	top: 50%;
+}
+.home-text{
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 107px;
+	color: #EE7B52;
+	justify-content:space-between;
+}
+.home-text img{
+	height:610px;
+	margin: auto;
+}
+.home-text span {
+	font-family: Charter;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #FFC1AB;
+}
