@@ -3,11 +3,19 @@
 <head>
   <title>Wgner Narde</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="static/css/main.css">
-  <link rel="stylesheet" href="static/css/flex.css">
-  <link rel="stylesheet" href="static/css/style.css">
-  <link rel="stylesheet" href="static/css/banner.css">
+  <link rel="stylesheet" media="(min-width: 769px)" href="static/css/main.css">
+  <link rel="stylesheet" media="(min-width: 769px)" href="static/css/flex.css">
+  <link rel="stylesheet" media="(min-width: 769px)" media="(min-width: 769px)" href="static/css/style.css">
+  <link rel="stylesheet" media="(min-width: 769px)" href="static/css/banner.css">
+  <link rel="stylesheet" media="(min-width: 769px)" href="static/css/content.css">
   <link rel="stylesheet" href="un4icons-v1.0/style.css">
+
+  <link rel="stylesheet" media="(max-width: 768px)" href="static/css/mobile/main.css">
+  <link rel="stylesheet" media="(max-width: 768px)" href="static/css/mobile/flex.css">
+  <link rel="stylesheet" media="(max-width: 768px)" href="static/css/mobile/style.css">
+  <link rel="stylesheet" media="(max-width: 768px)" href="static/css/mobile/banner.css">
+  <link rel="stylesheet" media="(max-width: 768px)" href="static/css/mobile/content.css">
+
   <script type="module" src="static/js/content.js"></script>
   <script type="module" src="static/js/banner-config.js"></script>
   <script type="module" src="static/js/banners.js"></script>
@@ -15,7 +23,7 @@
   <script type="module" src="static/js/main.js"></script>
 </head>
 
-<body>
+<body class="bg1">
   <header>
     <section>
       <nav>
@@ -168,12 +176,12 @@
       </div>
     </div>
     <section class="post-content">
-      <div include-html="content/home.html">
+      <div class="post-body" include-html="content/home.html">
       </div>
     </section>
   </main>
   <footer>
-    <section>
+    <section class="dk">
       <div class="footer-row">
         <div class="footer-time center space-around row">
           <span class="icon icon-media_articles"></span>
@@ -192,6 +200,26 @@
             <li><a href="#">tutorial</a></li>
           </ul>
           <span class="icon icon-tag"></span>
+        </div>
+      </div>
+    </section>
+    <section class="mb">
+      <div class="footer-row">
+        <div class="footer-time center space-around row">
+          <span class="icon icon-media_articles"></span>
+          <p>JULHO de 2019</p>
+          <p>5:00 </p>
+          <span class="icon icon-recent_w"></span>
+        </div>
+        <div class="footer-end center row">
+          <div class="footer-middle center row ">
+            <span class="icon icon-cat_software"></span>
+            <p>Arquitetura de software</p>
+          </div>
+          <div class="row center">
+            <p>3</p>
+            <span class="icon icon-tag"></span>
+          </div>
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+img{
+}
 .title-home{
 	font-family: Charter;
 	font-style: normal;
@@ -17,7 +19,7 @@
 	color: #DC3900;
 }
 .post-body{
-	width: 700px;
+	width: 100%;
 	margin: auto;
 }
 .post-content h3{
@@ -92,7 +94,11 @@
 .post-img{
 	display: flex;
 	justify-content: center;
-	margin: 44px;
+	margin: 44px 0;
+}
+.post-img img{
+	width: 100%;
+	height: auto;
 }
 .img-note > p{
 	display: flex;
@@ -179,12 +185,13 @@
 	font-weight: normal;
 	font-size: 21px;
 	line-height: 32px;
+	margin-left: 19px;
 
 	color: #292929;
 }
 .post-ul li{
-	list-style-image: url('../../assets/list.png');
-	padding-left: 24px;
+	list-style-image: url('../../../assets/list.png');
+	padding-left: 14px;
 	margin:30px 0;
 }
 

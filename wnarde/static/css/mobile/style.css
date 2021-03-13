@@ -121,11 +121,11 @@ h5{
 	padding:8px 15px;
 }
 .footer-time{
-	width: 25%;
 	padding:8px 15px;
-	border-right:0.5px dashed #1D262D;
+	border-bottom:0.5px dashed #1D262D;
 }
-/*hidden mobile*/
-.mb{
+
+/*hidden desktop*/
+.dk{
 	display:none;
 }

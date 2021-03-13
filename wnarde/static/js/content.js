@@ -32,6 +32,7 @@ var content = {
 	showContent: function () {
 		const self = this
 		var banner = document.querySelector('.banner-content').style
+		document.querySelector('footer').style.display = 'none'
 		var transiotion = setInterval(function () {
 			if (banner.opacity === '') {
 				banner.opacity = 1
@@ -65,6 +66,7 @@ var content = {
 				return
 			}
 			clearInterval(transiotion)
+			document.querySelector('footer').style.display = 'block'
 			document.querySelector('.banner-content').style.display = 'flex'
 			document.querySelector('.banner-content').style.opacity = 1
 			document.querySelector('.post-content').style.display = 'none'

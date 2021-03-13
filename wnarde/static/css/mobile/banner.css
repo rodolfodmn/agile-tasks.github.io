@@ -14,8 +14,8 @@
 	height: 19px;
 	position: fixed;
 	right: 90%;
-	top: 15%;
-	padding: 250px 33px;
+	top: 9%;
+	padding: 25% 33px;
 }
 .tright{
 	z-index: 9;
@@ -26,8 +26,8 @@
 	height: 19px;
 	position: fixed;
 	left: 90%;
-	top: 15%;
-	padding: 250px 33px;
+	top: 9%;
+	padding: 25% 33px;
 }
 .home-text{
 	font-family: Charter;
@@ -38,10 +38,6 @@
 	color: #EE7B52;
 	justify-content:space-between;
 }
-.home-text img{
-	height:610px;
-	margin: auto;
-}
 .home-text span {
 	font-family: Charter;
 	font-style: normal;
@@ -50,4 +46,7 @@
 	line-height: 107px;
 
 	color: #FFC1AB;
+}
+.banner-img{
+	width:-webkit-fill-available;
 }

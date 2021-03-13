@@ -21,13 +21,14 @@
 }
 .footer-row {
 	display: flex;
+	flex-direction:column;
 	justify-content: flex-start;
 }
 .footer-end{
 	flex: 1;
 	padding:8px 15px;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
 }
 .nav-row {
 	display: flex;
