@@ -4,11 +4,10 @@
 .back-nav-links div{
 	display: flex;
 	justify-content: flex-start;
-	margin-right: 100px;
 }
 .back-nav-links h3{
 	text-align: center;
-	margin-bottom: 44px;
+	margin-bottom: 24px;
 }
 .expance{
 	flex:1;

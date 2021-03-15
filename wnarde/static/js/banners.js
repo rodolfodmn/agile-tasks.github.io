@@ -20,6 +20,8 @@ const banners = {
 		document.querySelector(".tright").addEventListener("click", function () {
 			if (self.curentBanner > 0) {
 				self.nextBanner = self.curentBanner - 1
+				self.changeBgBody(self.nextBanner)
+
 				var move = setInterval(function () {
 					var cbEle = document.querySelector(`#banner${self.curentBanner - 1} `)
 					self.widthIncrise += 1
@@ -39,6 +41,7 @@ const banners = {
 			if (self.curentBanner < imgs.length - 1) {
 				self.nextBanner = self.curentBanner + 1
 				self.curentBannerW = 0
+				self.changeBgBody(self.nextBanner)
 
 				var move = setInterval(function () {
 					var cbEle = document.querySelector(`#banner${self.curentBanner} `)
@@ -54,6 +57,10 @@ const banners = {
 				}, 30)
 			}
 		})
+	},
+
+	changeBgBody: function (banner) {
+		document.body.className = imgs[banner].bgClass
 	},
 
 	craeteBanners: function () {

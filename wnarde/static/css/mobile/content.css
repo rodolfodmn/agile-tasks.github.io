@@ -1,78 +1,12 @@
-img{
+.go-back-mb{
+	transform: rotate(90deg);
 }
-.title-home{
-	font-family: Charter;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 27px;
-	line-height: 150.6%;
-	color: #DC3900;
+.setas-mobile{
+	display: flex;
+	justify-content: space-around;
 }
-.post-title{
-	font-family: Charter;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 27px;
-	line-height: 41px;
-	margin-bottom: 33px;
-
-	color: #DC3900;
-}
-.post-body{
-	width: 100%;
-	margin: auto;
-}
-.post-content h3{
-	margin-top:30px;
-	font-family: Charter;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 27px;
-	line-height: 150.6%;
-	color: #DC3900; 
-}
-.post-content article > p{
-	font-family: Georgia;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 21px;
-	line-height: 150.6%;
-	/* or 32px */
-	margin-top:16px;
-
-	color: #292929;
-}
-.post-content h4{
-	margin-top:30px;
-	font-family: Charter;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 27px;
-	line-height: 150.6%;
-	/* identical to box height, or 41px */
-
-
-	color: #DC3900;
-}
-.post-notes h5{
-	margin-bottom: 14px;
-}
-.post-notes p{
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 16px;
-	margin-bottom: 20px;
-}
-.post-notes span{
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 16px;
-
-	color: #DC3900;
+.setas-mobile > div:nth-child(2){
+	transform: rotate(180deg);
 }
 .post-date{
 	display: flex;
@@ -153,7 +87,7 @@ img{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 20px;
 	text-transform: uppercase;
 
@@ -205,11 +139,11 @@ img{
 	border-bottom: 0.5px dashed #1D262D;
 	box-sizing: border-box;
 }
-.footer-post-middle, .footer-post-end{
+.footer-post-end{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 20px;
 	text-transform: uppercase;
 
@@ -218,14 +152,19 @@ img{
 	flex: 1;
 }
 .footer-post-end{
-	justify-content: flex-end;
+	justify-content: space-between;
+}
+.footer-post-type{
+	font-family: Open Sans;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 .footer-post-links a{
 	margin: 0 0 0 12px;
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 20px;
 	text-align: right;
 	text-transform: uppercase;
@@ -244,4 +183,108 @@ img{
 }
 .footer-post span{
 	margin: 0 10px 0 10px;
+}
+.job-title{
+	padding: 7px 16px;
+}
+/*titles*/
+.title{
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 27px;
+	line-height: 41px;
+}
+.orange-title{
+	margin-top:30px;
+	color: #DC3900; 
+}
+.orange-sub-title{
+	margin-top:30px;
+	font-weight: bold;
+	color: #DC3900;
+}
+.post-notes h5{
+	margin-bottom: 14px;
+}
+.pink-title{
+	font-size: 25px;
+	line-height: 34px;
+	margin-bottom: 14px;
+	color: #B2384A;
+}
+.pink-sub-title{
+	font-weight: bold;
+	font-size: 27px;
+	line-height: 33px;
+	margin-top: 44px;
+	margin-bottom: 28px;
+	color: #B2384A;
+}
+.gold-title{
+	font-size: 25px;
+	line-height: 34px;
+	margin-bottom: 14px;
+	color: #FFF3B6; 
+}
+.gold-sub-title{
+	font-size: 25px;
+	color: #FFF3B6;
+}
+.title-bio-pink{
+	line-height: 54px;
+	font-weight: bold;
+	font-size: 44px;
+	color: #C60053;
+}
+.title-bio-blue{
+	line-height: 54px;
+	font-weight: bold;
+	font-size: 44px;
+	color: #00ACCD;
+}
+/*estrutura*/
+.post-body{
+	width: 700px;
+	margin: auto;
+}
+ 
+/*paragrafos*/
+.home-post p{
+	font-family: Georgia;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+	line-height: 32px;
+
+	margin: 20px 0;
+	color: #292929;
+}
+.post-notes p{
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	margin-bottom: 20px;
+}
+.post-notes span{
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+
+	color: #DC3900;
+}
+.img-note > p{
+	display: flex;
+	justify-content: center;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #1D262D;
 }

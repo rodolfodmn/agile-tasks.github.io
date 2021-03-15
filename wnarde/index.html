@@ -3,14 +3,13 @@
 <head>
   <title>Wgner Narde</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" media="(min-width: 769px)" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/main.css">
   <link rel="stylesheet" media="(min-width: 769px)" href="static/css/flex.css">
   <link rel="stylesheet" media="(min-width: 769px)" media="(min-width: 769px)" href="static/css/style.css">
   <link rel="stylesheet" media="(min-width: 769px)" href="static/css/banner.css">
   <link rel="stylesheet" media="(min-width: 769px)" href="static/css/content.css">
   <link rel="stylesheet" href="un4icons-v1.0/style.css">
 
-  <link rel="stylesheet" media="(max-width: 768px)" href="static/css/mobile/main.css">
   <link rel="stylesheet" media="(max-width: 768px)" href="static/css/mobile/flex.css">
   <link rel="stylesheet" media="(max-width: 768px)" href="static/css/mobile/style.css">
   <link rel="stylesheet" media="(max-width: 768px)" href="static/css/mobile/banner.css">
@@ -19,11 +18,13 @@
   <script type="module" src="static/js/content.js"></script>
   <script type="module" src="static/js/banner-config.js"></script>
   <script type="module" src="static/js/banners.js"></script>
-  <script src="static/js/nav.js"></script>
   <script type="module" src="static/js/main.js"></script>
+  <script type="module" src="static/js/night.js"></script>
+  <script type="module" src="static/js/nav.js"></script>
+  <script type="module" src="static/js/fakeAjax.js"></script>
 </head>
 
-<body class="bg1">
+<body class="bg2">
   <header>
     <section>
       <nav>
@@ -33,11 +34,19 @@
               <span class="pointer icon icon-close"></span>
             </li>
           </ul>
+          <div class="mb nav-search">
+            <form action="#" method="post">
+              <div class="nav-search-form expance">
+                <input class="expance" type="text" value="" name="search" id="" />
+                <button type="button"></button>
+              </div>
+            </form>
+          </div>
           <div class="p20 row center">
             <span class="icon pointer icon-recent_w"></span>
             <p>Mais recentes</p>
           </div>
-          <ul class="back-nav-links">
+          <ul class="dk back-nav-links">
             <li class="expance">
               <div>
                 <span class="icon-fix icon-media_articles"></span>
@@ -147,15 +156,66 @@
               </div>
             </li>
           </ul>
+          <ul class="mb back-nav-links nav-mb">
+            <li class="expance">
+              <div>
+                <span class="icon-fix icon-media_articles"></span>
+                <h3>Mídia</h3>
+              </div>
+              <div>
+                <span class="icon pointer icon-media_articles"></span>
+                <a href="">Artigos</a>
+                <span class="links-count">1</span>
+              </div>
+              <div>
+                <span class="icon pointer icon-media_videos"></span>
+                <a href="">Vídeios</a>
+                <span class="links-count">1</span>
+              </div>
+              <div>
+                <span class="icon pointer icon-podcast_itunes"></span>
+                <a href="">Podcasts</a>
+                <span class="links-count">1</span>
+              </div>
+            </li>
+            <li class="expance">
+              <div>
+                <span class="icon-fix icon-media_articles"></span>
+                <h3>categoria</h3>
+              </div>
+              <div>
+                <span class="icon pointer icon-cat_infra"></span>
+                <a href="">Infraestrutura & Operações</a>
+                <span class="links-count">1</span>
+              </div>
+              <div>
+                <span class="icon pointer icon-cat_software"></span>
+                <a href="">Arquitetura de software</a>
+                <span class="links-count">1</span>
+              </div>
+              <div>
+                <span class="icon pointer icon-cat_mgmt"></span>
+                <a href="">Gestão & Liderança</a>
+                <span class="links-count">1</span>
+              </div>
+              <div>
+                <span class="icon pointer icon-cat_security"></span>
+                <a href="">Segurança da Informação</a>
+                <span class="links-count">1</span>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="row space-between p20">
           <ul class="row space-between">
             <li>
               <span class="show-back icon pointer icon-recent_b"></span>
-              <span hidden class="go-back icon pointer icon-prev"></span>
+              <span hidden class="go-back dk icon pointer icon-prev"></span>
+              <span hidden class="go-back-mb mb icon pointer icon-prev"></span>
             </li>
             <li>
-              <span class="icon icon-day"></span>
+              <span class="icon pointer icon-day"></span>
+              <span hidden class="icon pointer icon-night"></span>
             </li>
           </ul>
           <div id="logo">
@@ -176,7 +236,7 @@
       </div>
     </div>
     <section class="post-content">
-      <div class="post-body" include-html="content/home.html">
+      <div id="post" class="post-body" include-html="content/rosca.html">
       </div>
     </section>
   </main>
@@ -205,14 +265,19 @@
     </section>
     <section class="mb">
       <div class="footer-row">
-        <div class="footer-time center space-around row">
-          <span class="icon icon-media_articles"></span>
-          <p>JULHO de 2019</p>
-          <p>5:00 </p>
-          <span class="icon icon-recent_w"></span>
+        <div class="row footer-start">
+          <div class="center row">
+            <span class="icon icon-media_articles"></span>
+            <p>artigo</p>
+          </div>
+          <div class="footer-time center row">
+            <p class="auto">JULHO de 2019</p>
+            <p>5:00 </p>
+            <span class="icon icon-recent_w"></span>
+          </div>
         </div>
         <div class="footer-end center row">
-          <div class="footer-middle center row ">
+          <div class="center row ">
             <span class="icon icon-cat_software"></span>
             <p>Arquitetura de software</p>
           </div>

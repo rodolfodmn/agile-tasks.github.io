@@ -6,6 +6,18 @@
 	margin: 0;
 	padding: 0;
 }
+.slin{
+	font-weight: 400;
+}
+.auto{
+	margin: auto;
+}
+.up{
+	text-transform: uppercase;
+}
+.icon{
+	font-size: 35px;
+}
 .p20{
 	padding: 20px;
 }
@@ -14,4 +26,10 @@
 }
 .bg2{
 	background: linear-gradient(180deg, #FBFFF1 0%, #E0E4E6 10.46%, #7c7bbab0 43%, #fbfff100 100%);
+}
+.bg3{
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.51%, #c5a59a 100%), linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 89.31%);
+}
+.bg4{
+	background: #fbfff100;
 }

@@ -1,26 +1,38 @@
-function initNav() {
-	var show;
-	var alpha = 0
-	var backNav = document.querySelector(".back-nav")
-	document.querySelector('.icon-close').
-		addEventListener('click', function (event) {
-			alpha = 0
-			document.querySelector(".back-nav").style.display = "none"
-		})
+var navBar = {
 
-	document.querySelector('.icon-recent_b').
-		addEventListener('click', function (event) {
-			document.querySelector(".back-nav").style.display = "flex"
-			show = setInterval(opacityUp, 25)
-		})
+	show: '',
+	alpha: 0,
+	backNav: document.querySelector(".back-nav"),
 
-	function opacityUp() {
-		alpha += 0.05
-		backNav.style.background = `rgba(49, 57, 63, ${alpha})`
-		if (alpha > 0.9) {
-			backNav.style.background = `rgba(49, 57, 63, 0.85)`
-			clearInterval(show)
+	init: function () {
+		document.querySelector('.icon-close').
+			addEventListener('click', function (event) {
+				navBar.alpha = 0
+				document.querySelector(".back-nav").style.display = "none"
+			})
+
+		document.querySelector('.icon-recent_b').
+			addEventListener('click', function (event) {
+				document.querySelector(".back-nav").style.display = "flex"
+				navBar.show = setInterval(navBar.opacityUp, 25)
+			})
+
+	},
+
+	opacityUp: function () {
+		navBar.alpha += 0.05
+		var bgColor = `rgba(49, 57, 63, ${navBar.alpha})`
+		if (document.querySelector(".icon-day").hidden) {
+			bgColor = `rgba(255, 255, 255, ${navBar.alpha})`
+		}
+		navBar.backNav.style.background = bgColor
+		if (navBar.alpha > 0.9) {
+			if (document.querySelector(".icon-day").hidden) {
+				bgColor = `rgba(255, 255, 255, 1)`
+			}
+			navBar.backNav.style.background = bgColor
+			clearInterval(navBar.show)
 		}
 	}
-
 }
+export default navBar

@@ -42,13 +42,21 @@ var content = {
 				return
 			}
 			clearInterval(transiotion)
+			console.log(window.screen)
 			document.querySelector('.banner-content').style.display = 'none'
 			document.querySelector('.post-content').style.display = 'flex'
 			document.querySelector('.show-back').style.display = 'none'
-			document.querySelector('.go-back').style.display = 'block'
-			document.querySelector('.go-back').addEventListener('click', function () {
-				self.showBanners()
-			})
+			if (window.screen.availWidth > 768) {
+				document.querySelector('.go-back').style.display = 'block'
+				document.querySelector('.go-back').addEventListener('click', function () {
+					self.showBanners()
+				})
+			} else {
+				document.querySelector('.go-back-mb').style.display = 'block'
+				document.querySelector('.go-back-mb').addEventListener('click', function () {
+					self.showBanners()
+				})
+			}
 		}, 30)
 
 		this.includeHTML()
@@ -72,7 +80,11 @@ var content = {
 			document.querySelector('.post-content').style.display = 'none'
 			document.querySelector('.post-content').style.opacity = 1
 			document.querySelector('.show-back').style.display = 'block'
-			document.querySelector('.go-back').style.display = 'none'
+			if (window.screen.availWidth > 768) {
+				document.querySelector('.go-back').style.display = 'none'
+			} else {
+				document.querySelector('.go-back-mb').style.display = 'none'
+			}
 		}, 30)
 	}
 }

@@ -3,17 +3,17 @@ body{
 	background-repeat: no-repeat;
 }
 header{
-	z-index: 8;
+	z-index: 9;
 }
 main{
 	margin: 20px;
 }
 footer{
-	z-index: 9;
+	z-index: 8;
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 20px;
 	text-transform: uppercase;
 	margin: auto;
@@ -30,24 +30,6 @@ footer section, .footer-post{
 	margin: 20px;
 
 }
-.links-count{
-	margin-left: auto;
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 15px;
-	line-height: 20px;
-	text-align: right;
-	text-transform: uppercase;
-
-	color: #939393;
-}
-.icon{
-	font-size: 35px;
-}
-.pointer{
-	cursor: pointer;
-}
 h5{
 	margin-top:30px;
 	font-family: Georgia;
@@ -57,6 +39,72 @@ h5{
 	line-height: 150.6%;
 	/* identical to box height, or 41px */
 	color: #DC3900; 
+}
+/*nav*/
+.nav-search form{
+	margin: 0 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.nav-search input{
+	background: #1d262d;
+	height: 50px;
+	border: none;
+	border-radius: 2px;
+	padding-left: 15px;
+	text-indent: 40px;
+	color: #fff;
+	background-image: url('../../../assets/search.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	background-origin:content-box;
+}
+.nav-search input:focus{
+	outline: none;
+	background-color: #fff;
+	background-image: url('../../../assets/searchB.png');
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 20px;
+
+	color: #1D262D;
+}
+.nav-search button{
+	margin-left: 2px;
+	padding: 25px 25px;
+	background: #1d262d;
+	background-image: url('../../../assets/filter.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+	border-radius: 2px;
+}
+.nav-search input:focus + button{
+	background: #fff;
+	background-image: url('../../../assets/filterB.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.nav-search-form{
+	display: flex; 
+	justify-content: space-between;
+}
+.links-count{
+	margin-left: auto;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: right;
+	text-transform: uppercase;
+
+	color: #939393;
+}
+.nav-mb{
+	flex-direction: column;
 }
 .back-nav{
 	position: fixed;
@@ -76,6 +124,12 @@ h5{
 .back-nav ul{
 	margin: 20px;
 }
+.back-nav li{
+	margin-bottom: 30px;
+}
+.back-nav li div{
+	margin-bottom: 20px;
+}
 .back-nav h3{
 	margin-left: 12%;
 }
@@ -88,7 +142,7 @@ h5{
 	font-size: 35px;
 }
 #logo{
-	z-index: 1;
+	z-index: 5;
 	height: 50px;
 	width: 187px;
 	border-radius: 2px;
@@ -109,7 +163,7 @@ h5{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 20px;
 	text-align: right;
 	text-transform: uppercase;
@@ -117,12 +171,15 @@ h5{
 	color: #1D262D;
 	padding: 0 8px;
 }
-.footer-middle{
-	padding:8px 15px;
-}
 .footer-time{
+	font-weight: 400;
+	flex: 1;
+	justify-content: flex-end;
+}
+.footer-start{
 	padding:8px 15px;
 	border-bottom:0.5px dashed #1D262D;
+	justify-content: space-between;
 }
 
 /*hidden desktop*/
