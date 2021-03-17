@@ -72,3 +72,11 @@
 #banner6{
 	background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #C9FF56 0%, #937DB0 100%);
 }
+.text-b0 img{
+	height: auto;
+	position: absolute;
+	opacity: 0;
+}
+#banner0 .img-text{
+	opacity: 1;
+}
