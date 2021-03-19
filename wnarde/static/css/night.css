@@ -7,11 +7,16 @@ p, li, a, i, span{
 #logo h1{
 	color: #1D262D !important;
 }
-footer section, .footer-post {
+footer section {
 	border: 1px solid #fff;
 	box-sizing: border-box;
 	border-radius: 2px;
 	margin: 20px;
+}
+.footer-post{
+	border: 1px solid #fff;
+	box-sizing: border-box;
+	border-radius: 2px;
 }
 .bg2{
 	background-color: #1b2933;
