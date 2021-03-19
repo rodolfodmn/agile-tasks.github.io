@@ -80,3 +80,13 @@
 #banner0 .img-text{
 	opacity: 1;
 }
+.text-ba{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+.text-ba img{
+	position:absolute;
+	opacity:0;
+}
