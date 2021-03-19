@@ -1,6 +1,6 @@
 /*titles*/
 .title{
-	font-family: Charter;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 27px;
@@ -62,7 +62,7 @@
  
 /*paragrafos*/
 .home-post p{
-	font-family: Georgia;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 21px;
@@ -102,18 +102,18 @@
 /*post date*/
 .post-date{
 	display: flex;
+	margin-top: 20px;
 }
 .post-date div{
 	margin-right: 30px;
 }
 .post-date p, .post-date span{
 	margin-left: 5px;
-	font-family: Georgia, "Open Sans";
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 21px;
 	line-height: 41px;
-	margin-bottom: 32px;
 
 	color: #5C5C5C; 
 }
@@ -187,7 +187,7 @@
 }
 /*titles brain*/
 .post-ul{
-	font-family: Georgia;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 21px;

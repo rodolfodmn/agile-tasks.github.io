@@ -14,7 +14,10 @@ footer section, .footer-post {
 	margin: 20px;
 }
 .bg2{
-	background: linear-gradient(180deg, rgba(58,47,58,1) 2%, rgba(72,74,106,1) 15%, rgba(27,41,51,1) 50%);
+	background-color: #1b2933;
+	background-image: url("../../assets/bgTimezoneN.png");
+	background-position: top;
+	background-repeat: repeat-x;
 }
 .bg3{
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.51%, rgba(27, 41, 51, 1) 100%), linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 89.31%);
@@ -135,4 +138,20 @@ footer section, .footer-post {
 }
 .footer-start, .footer-time{
 	border-color: #fff;
+}
+.post-type{
+	color: #fff;
+}
+.icon-fix{
+	color: transparent !important;
+}
+.tleft{
+	background-image: url("../../assets/tlN.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.tright{
+	background-image: url("../../assets/trN.png");
+	background-repeat: no-repeat;
+	background-position: center;
 }

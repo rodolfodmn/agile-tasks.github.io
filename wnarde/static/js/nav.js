@@ -21,7 +21,7 @@ var navBar = {
 
 	opacityUp: function () {
 		navBar.alpha += 0.05
-		var bgColor = `rgba(49, 57, 63, ${navBar.alpha})`
+		var bgColor = `rgba(29, 38, 45, ${navBar.alpha})`
 		if (document.querySelector(".icon-day").hidden) {
 			bgColor = `rgba(255, 255, 255, ${navBar.alpha})`
 		}

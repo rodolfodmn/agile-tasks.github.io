@@ -1,5 +1,5 @@
 body{
-	background: linear-gradient(180deg, #FBFFF1 0%, #E0E4E6 10.46%, #7c7bbab0 43%, #fbfff100 100%);
+	background: linear-gradient(180deg, #FBFFF1 0%, #E0E4E6 10.46%, #7c7bbab0 43%, #fbfff100 100%)N;
 	background-repeat: no-repeat;
 }
 header{
@@ -23,15 +23,21 @@ footer{
 
 	color: #1D262D;
 }
-footer section, .footer-post{
+footer section {
 	border: 1px solid #1D262D;
 	box-sizing: border-box;
 	border-radius: 2px;
 	margin: 20px;
 
 }
+.footer-post{
+	border: 1px solid #1D262D;
+	box-sizing: border-box;
+	border-radius: 2px;
+}
 .links-count{
 	margin-left: auto;
+	margin-right: 95px;
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
@@ -58,6 +64,14 @@ h5{
 	/* identical to box height, or 41px */
 	color: #DC3900; 
 }
+.recent-nav{
+	margin-right: 24px;
+}
+
+.back-nav-links li div{
+	margin: 26px 0;
+	align-items: center;
+}
 .back-nav{
 	position: fixed;
 	z-index: 5;
@@ -68,7 +82,7 @@ h5{
 	line-height: 20px;
 	text-transform: uppercase;
 	/*background-color: #31393f;*/
-	background: rgba(49, 57, 63, 0);
+	background: rgba(29, 38, 45, 0);
 	color: #fff;
 	display:none;
 	border: 2px solid #1D262D;
@@ -77,11 +91,11 @@ h5{
 	margin: 20px;
 }
 .back-nav h3{
-	margin-left: 12%;
+	margin-left: 24px;
 }
 .back-nav a{
 	color: #fff;
-	margin-left: 12%;
+	margin-left: 24px;
 }
 .icon-fix{
 	color: transparent;
@@ -122,9 +136,33 @@ h5{
 }
 .footer-time{
 	width: 25%;
-	padding:8px 15px;
 	border-right:0.5px dashed #1D262D;
 	font-weight: 400;
+}
+.footer-hour p{
+	margin-right: 15px;
+}
+.footer-hour span{
+	font-weight: normal;
+	font-size: 26px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+.icon-day{
+	margin-left: 55px;
+}
+.icon-night{
+	margin-left: 55px;
+}
+.post-type{
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #1D262D;
+}
+.post-resume{
+	margin-left: 12px;
 }
 /*hidden mobile*/
 .mb{

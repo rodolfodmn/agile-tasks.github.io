@@ -23,7 +23,7 @@ const banners = {
 
 	setEvents: function () {
 		const self = this
-		document.querySelector(".tright").addEventListener("click", function () {
+		document.querySelector(".tleft").addEventListener("click", function () {
 			if (self.curentBanner > 0) {
 				if (banners.canChange) {
 					banners.canChange = false
@@ -44,7 +44,7 @@ const banners = {
 			}
 		})
 
-		document.querySelector(".tleft").addEventListener("click", function () {
+		document.querySelector(".tright").addEventListener("click", function () {
 			if (self.curentBanner < imgs.length - 1) {
 				if (banners.canChange) {
 					banners.canChange = false
