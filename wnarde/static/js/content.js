@@ -1,32 +1,36 @@
 var content = {
+	done: false,
+
 	includeHTML: function () {
-		const self = this
-		var z, i, elmnt, file, xhttp;
-		/* Loop through a collection of all HTML elements: */
-		z = document.getElementsByTagName("*");
-		for (i = 0; i < z.length; i++) {
-			elmnt = z[i];
-			/*search for elements with a certain atrribute:*/
-			file = elmnt.getAttribute("include-html");
-			if (file) {
-				/* Make an HTTP request using the attribute value as the file name: */
-				xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function () {
-					if (this.readyState == 4) {
-						if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-						if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-						/* Remove the attribute, and call this function once more: */
-						elmnt.removeAttribute("include-html");
-						self.includeHTML();
+		if (!this.done) {
+			this.done = true
+			const self = this
+			var z, i, elmnt, file, xhttp;
+			/* Loop through a collection of all HTML elements: */
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+				elmnt = z[i];
+				/*search for elements with a certain atrribute:*/
+				file = elmnt.getAttribute("includeHtml");
+				if (file) {
+					/* Make an HTTP request using the attribute value as the file name: */
+					xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+						if (this.readyState == 4) {
+							if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+							if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+							/* Remove the attribute, and call this function once more: */
+							elmnt.removeAttribute("include-html");
+							self.includeHTML();
+						}
 					}
+					xhttp.open("GET", file, true);
+					xhttp.send();
+					/* Exit the function: */
+					return;
 				}
-				xhttp.open("GET", file, true);
-				xhttp.send();
-				/* Exit the function: */
-				return;
 			}
 		}
-
 	},
 
 	showContent: function () {
@@ -42,7 +46,6 @@ var content = {
 				return
 			}
 			clearInterval(transiotion)
-			console.log(window.screen)
 			document.querySelector('.banner-content').style.display = 'none'
 			document.querySelector('.post-content').style.display = 'flex'
 			document.querySelector('.show-back').style.display = 'none'
@@ -59,11 +62,14 @@ var content = {
 			}
 		}, 30)
 
-		this.includeHTML()
+		setTimeout(function () {
+			content.includeHTML()
+		}, 500)
 	},
 
 	showBanners: function () {
 		const self = this
+		this.done = false
 		var banner = document.querySelector('.post-content').style
 		var transiotion = setInterval(function () {
 			if (banner.opacity === '') {

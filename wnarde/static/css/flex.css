@@ -73,3 +73,9 @@ body{
 	flex-direction: column;
 	justify-content: space-between;
 }
+.f1{
+	flex: 1;
+}
+.f2{
+	flex: 2;
+}

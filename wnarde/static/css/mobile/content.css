@@ -2,6 +2,7 @@
 	transform: rotate(90deg);
 }
 .setas-mobile{
+	margin-top: 30px;
 	display: flex;
 	justify-content: space-around;
 }
@@ -245,7 +246,7 @@
 }
 /*estrutura*/
 .post-body{
-	width: 700px;
+	width: 100%;
 	margin: auto;
 }
  
@@ -287,4 +288,14 @@
 	line-height: 15px;
 	text-transform: uppercase;
 	color: #1D262D;
+}
+.footer-post{
+	border: 1px solid #1D262D;
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+.bg2{
+	background-image: url("../../../assets/bgTimezoneM.png");
+	background-position: top;
+	background-repeat: repeat-x;
 }

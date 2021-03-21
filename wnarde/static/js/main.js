@@ -1,11 +1,11 @@
-import banners from './banners.js'
+import banners from './banner/banners.js'
 import colorScreen from './colorScreen.js'
 import navBar from './nav.js'
-import textBanner from './textBanner.js'
+import fakeJson from './fake-ajax.js'
 
 window.onload = function () {
 	navBar.init()
-	textBanner.init()
 	colorScreen.setup()
-	banners.setupBanners()
+	banners.init()
+	fakeJson.init()
 } 

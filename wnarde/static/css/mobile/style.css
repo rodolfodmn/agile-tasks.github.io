@@ -6,7 +6,7 @@ header{
 	z-index: 9;
 }
 main{
-	margin: 20px;
+	margin: 30px;
 }
 footer{
 	z-index: 8;
@@ -23,7 +23,7 @@ footer{
 
 	color: #1D262D;
 }
-footer section, .footer-post{
+footer section {
 	border: 1px solid #1D262D;
 	box-sizing: border-box;
 	border-radius: 2px;
@@ -180,6 +180,12 @@ h5{
 	padding:8px 15px;
 	border-bottom:0.5px dashed #1D262D;
 	justify-content: space-between;
+}
+.icon-day{
+	margin-left: 55px;
+}
+.icon-night{
+	margin-left: 55px;
 }
 
 /*hidden desktop*/

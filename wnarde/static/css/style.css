@@ -135,18 +135,18 @@ h5{
 	padding:8px 15px;
 }
 .footer-time{
-	width: 25%;
 	border-right:0.5px dashed #1D262D;
 	font-weight: 400;
 }
 .footer-hour p{
-	margin-right: 15px;
+	margin-right: 12px;
 }
 .footer-hour span{
 	font-weight: normal;
 	font-size: 26px;
 	line-height: 20px;
 	text-transform: uppercase;
+
 }
 .icon-day{
 	margin-left: 55px;

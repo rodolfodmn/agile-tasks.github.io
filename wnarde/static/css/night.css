@@ -7,13 +7,13 @@ p, li, a, i, span{
 #logo h1{
 	color: #1D262D !important;
 }
-footer section {
+footer section{
 	border: 1px solid #fff;
 	box-sizing: border-box;
 	border-radius: 2px;
 	margin: 20px;
 }
-.footer-post{
+.footer-post {
 	border: 1px solid #fff;
 	box-sizing: border-box;
 	border-radius: 2px;
@@ -132,7 +132,7 @@ footer section {
 	color:#FCF9F7;
 }
 .post-date p, .post-date span{
-	color: #FCF9F7;
+	color: #939393;
 }
 .footer-post > section > div > div:nth-child(1){
 	border-bottom: 0.5px dashed #fff;
