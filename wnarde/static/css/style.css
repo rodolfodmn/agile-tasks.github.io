@@ -20,15 +20,22 @@ footer{
 	width: 100%;
 	position: absolute;
 	bottom: 0;
-
 	color: #1D262D;
+}
+h5{
+	margin-top:30px;
+	font-family: Georgia;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 27px;
+	line-height: 150.6%;
+	color: #DC3900; 
 }
 footer section {
 	border: 1px solid #1D262D;
 	box-sizing: border-box;
 	border-radius: 2px;
 	margin: 20px;
-
 }
 .footer-post{
 	border: 1px solid #1D262D;
@@ -38,36 +45,15 @@ footer section {
 .links-count{
 	margin-left: auto;
 	margin-right: 95px;
-	font-family: Open Sans;
-	font-style: normal;
 	font-weight: normal;
 	font-size: 15px;
-	line-height: 20px;
 	text-align: right;
 	text-transform: uppercase;
-
 	color: #939393;
-}
-.icon{
-	font-size: 35px;
-}
-.pointer{
-	cursor: pointer;
-}
-h5{
-	margin-top:30px;
-	font-family: Georgia;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 27px;
-	line-height: 150.6%;
-	/* identical to box height, or 41px */
-	color: #DC3900; 
 }
 .recent-nav{
 	margin-right: 24px;
 }
-
 .back-nav-links li div{
 	margin: 26px 0;
 	align-items: center;
@@ -81,7 +67,6 @@ h5{
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
-	/*background-color: #31393f;*/
 	background: rgba(29, 38, 45, 0);
 	color: #fff;
 	display:none;
@@ -127,9 +112,8 @@ h5{
 	line-height: 20px;
 	text-align: right;
 	text-transform: uppercase;
-
-	color: #1D262D;
 	padding: 0 8px;
+	color: #1D262D;
 }
 .footer-middle{
 	padding:8px 15px;
@@ -148,12 +132,6 @@ h5{
 	text-transform: uppercase;
 
 }
-.icon-day{
-	margin-left: 55px;
-}
-.icon-night{
-	margin-left: 55px;
-}
 .post-type{
 	font-weight: bold;
 	font-size: 15px;
@@ -164,6 +142,7 @@ h5{
 .post-resume{
 	margin-left: 12px;
 }
+
 /*hidden mobile*/
 .mb{
 	display:none;

@@ -9,6 +9,9 @@
 .slin{
 	font-weight: 400;
 }
+.bold{
+	font-weight: 700;
+}
 .auto{
 	margin: auto;
 }
@@ -37,4 +40,16 @@
 }
 .text-home{
 	cursor: pointer;
+}
+.pointer{
+	cursor: pointer;
+}
+.icon{
+	font-size: 35px;
+}
+.icon-day{
+	margin-left: 55px;
+}
+.icon-night{
+	margin-left: 55px;
 }

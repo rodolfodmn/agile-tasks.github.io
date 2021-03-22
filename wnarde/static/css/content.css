@@ -131,7 +131,6 @@
 	justify-content: center;
 }
 
-/*brain*/
 /*audio*/
 .audio-div{
 	height: 99px;
@@ -182,17 +181,14 @@
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
-
 	color: #C16071;
 }
-/*titles brain*/
 .post-ul{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 21px;
 	line-height: 32px;
-
 	color: #292929;
 }
 .post-ul li{
@@ -246,14 +242,13 @@
 	box-sizing: border-box;
 }
 .footer-post-middle, .footer-post-end{
+	flex: 1;
+	margin: 0;
 	font-weight: bold;
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
-
-	margin: 0;
 	color: #1D262D;
-	flex: 1;
 }
 .footer-post-end{
 	justify-content: flex-end;
@@ -265,7 +260,6 @@
 	line-height: 20px;
 	text-align: right;
 	text-transform: uppercase;
-
 	color: #1D262D;
 }
 .footer-post-time{
@@ -273,7 +267,6 @@
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
-
 	color: #1D262D; 
 }
 .footer-post span{

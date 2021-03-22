@@ -1,13 +1,13 @@
-export const bannerlayers = [
+export const allLayers = [
 	{
 		central: {
-			src: `A_1`, pos: {top: '325', left: '350'}
+			src: `A_1`, pos: {top: '100', left: '350'}
 		},
 		text: {
-			src: `A_2`, pos: {top: '325', left: '350'}
+			src: `A_2`, pos: {top: '100', left: '350'}
 		},
-		back: {
-			src: `A_3`, pos: {top: '325', left: '350'}
+		secondary: {
+			src: `A_3`, pos: {top: '100', left: '350'}
 		}
 	}
 ]

@@ -1,3 +1,8 @@
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 .back-nav-links{
 	display: flex;
 }
@@ -67,11 +72,6 @@
 }
 .column{
 	flex-direction: column;
-}
-body{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 .f1{
 	flex: 1;

@@ -1,5 +1,5 @@
 import content from '../content.js'
-import {imgs, bannerlayers} from './config.js'
+import {imgs, allLayers} from './config.js'
 import text from './text.js'
 import change from './change.js'
 
@@ -22,7 +22,7 @@ const banners = {
 	},
 
 	initLayers: function () {
-		bannerlayers.forEach(function (banner) {
+		allLayers.forEach(function (banner) {
 			console.log(banner)
 		})
 	},
