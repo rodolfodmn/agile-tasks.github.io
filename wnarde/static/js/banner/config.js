@@ -14,7 +14,7 @@ export const allLayers = [
 export const imgs = [
 	{
 		img: 'bghome',
-		bgClass: 'bg2',
+		bgClass: 'bg-timezone',
 		link: '#',
 		text: {
 			src: `textBanner0`, pos: {top: '325', left: '350'}
@@ -22,7 +22,7 @@ export const imgs = [
 	},
 	{
 		img: '3D',
-		bgClass: 'bg2',
+		bgClass: 'bg-timezone',
 		link: '#',
 		text: {
 			src: `textBanner1`, pos: {top: '180', left: '350'}
@@ -30,7 +30,7 @@ export const imgs = [
 	},
 	{
 		img: '3D77',
-		bgClass: 'bg1',
+		bgClass: 'bg-psico',
 		link: '#',
 		text: {
 			src: `textBanner2`, pos: {top: '162', left: '350'}
@@ -38,7 +38,7 @@ export const imgs = [
 	},
 	{
 		img: '3D83',
-		bgClass: 'bg3',
+		bgClass: 'bg-gatlin',
 		link: '#',
 		text: {
 			src: `textBanner3`, pos: {top: '130', left: '350'}
@@ -46,7 +46,7 @@ export const imgs = [
 	},
 	{
 		img: '3D88',
-		bgClass: 'bg5',
+		bgClass: 'bg-gatlin',
 		link: '#',
 		text: {
 			src: `textBanner4`, pos: {top: '166', left: '350'}

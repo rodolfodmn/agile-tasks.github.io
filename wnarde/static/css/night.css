@@ -18,13 +18,13 @@ footer section{
 	box-sizing: border-box;
 	border-radius: 2px;
 }
-.bg2{
+.bg-timezone{
 	background-color: #1b2933;
 	background-image: url("../../assets/bgTimezoneN.png");
 	background-position: top;
 	background-repeat: repeat-x;
 }
-.bg3{
+.bg-gatlin{
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.51%, rgba(27, 41, 51, 1) 100%), linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 89.31%);
 }
 #banner0{

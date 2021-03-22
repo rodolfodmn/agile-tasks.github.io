@@ -24,18 +24,18 @@
 .p20{
 	padding: 20px;
 }
-.bg1{
+.bg-psico{
 	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 0%, #fbfff100 100%);
 }
-.bg2{
+.bg-timezone{
 	background-image: url("../../assets/bgTimezone.png");
 	background-position: top;
 	background-repeat: repeat-x;
 }
-.bg3{
+.bg-gatlin{
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.51%, #c5a59a 100%), linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 89.31%);
 }
-.bg4{
+.bg-wnarde{
 	background: #fbfff100;
 }
 .text-home{

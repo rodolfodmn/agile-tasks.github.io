@@ -17,6 +17,10 @@
 	top: 15%;
 	padding: 250px 33px;
 }
+.tleft:hover{
+	transform: scale(1.2);
+	transition-duration: 0.5s;
+}
 .tright{
 	z-index: 9;
 	background-image: url("../../assets/tr.png");
@@ -28,6 +32,10 @@
 	left: 90%;
 	top: 15%;
 	padding: 250px 33px;
+}
+.tright:hover{
+	transform: scale(1.2);
+	transition-duration: 0.5s;
 }
 .home-text{
 	font-family: Charter;
