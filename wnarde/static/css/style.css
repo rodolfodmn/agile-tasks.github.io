@@ -88,12 +88,7 @@ footer section {
 }
 #logo{
 	z-index: 5;
-	height: 50px;
-	width: 187px;
 	border-radius: 2px;
-	background: #1D262D;
-	border-radius: 2px;
-	text-align: center;
 }
 #logo h1{
 	font-family: Kadwa;

@@ -25,7 +25,8 @@
 	padding: 20px;
 }
 .bg-psico{
-	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 0%, #fbfff100 100%);
+	background-image: url('../../assets/BG753.png');
+	background-color: #fcf9f7;
 }
 .bg-timezone{
 	background-image: url("../../assets/bgTimezone.png");

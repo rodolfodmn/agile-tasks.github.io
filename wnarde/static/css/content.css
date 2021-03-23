@@ -59,7 +59,7 @@
 	width: 700px;
 	margin: auto;
 }
- 
+
 /*paragrafos*/
 .home-post p{
 	font-family: Georgia, 'Times New Roman', Times, serif;
@@ -225,7 +225,7 @@
 	left: 44px;
 	z-index: -1;
 }
- 
+
 /*footer*/
 .footer-post{
 	font-family: Open Sans;
@@ -271,4 +271,58 @@
 }
 .footer-post span{
 	margin: 0 10px 0 10px;
+}
+.post-top-banner{
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: -1;
+}
+#top-timezone-post .pos1{
+	position: relative;
+	right: 613px;
+	top: 1px;
+}
+#top-timezone-post .pos2{
+	position: relative;
+	right: 1232;
+	top: 8px;
+}
+#top-timezone-post .pos3{
+	position: relative;
+	right: 1860px;
+	top: 28px;
+	width: auto;
+	height: 100%;
+}
+#top-timezone-post .pos4{
+    position: relative;
+    right: 2085px;
+    top: 133px;
+    width: auto;
+    height: 100%;
+}
+#top-gatlin-post .pos1{
+	position: relative;
+	right: 613px;
+	top: 1px;
+}
+#top-gatlin-post .pos2{
+	position: relative;
+	right: 1232;
+	top: 8px;
+}
+#top-gatlin-post .pos3{
+	position: relative;
+	right: 1860px;
+	top: 28px;
+	width: auto;
+	height: 100%;
+}
+#top-gatlin-post .pos4{
+    position: relative;
+    right: 2085px;
+    bottom: 203px;
+    width: auto;
+    height: 100%;
 }
