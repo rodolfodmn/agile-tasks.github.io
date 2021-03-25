@@ -1,5 +1,12 @@
 import {allLayers} from './config.js'
 const bannerLayers = {
+	fps: 30,
+	mY: 0,
+	mX: 0,
+	changScreen: 0,
+	screen: window.screen,
+	middle: window.screen.width / 2,
+	toMove: 100,
 	init: function () {
 		document.querySelector('.banner-content').innerHTML = ''
 		allLayers.forEach(function (layer) {
@@ -9,19 +16,37 @@ const bannerLayers = {
 		})
 	},
 	mouseMove: function (ele) {
-		console.log(ele)
-		const screen = window.screen
-		const middle = screen.width / 2
-		ele.addEventListener('mousemove', function (ev) {
-			var base = ev.target.parentNode.parentNode
+		window.onmousemove = function (e) {
+			bannerLayers.mX = e.clientX
+			bannerLayers.mY = e.clientY
+		}
+		setInterval(function () {
+			var toMove = 0
+			const middle = window.screen.width / 2
+			var base = document.querySelector('#banner-base')
 			for (var i = 0, len = base.children.length; i < len; i++) {
-				if (middle < ev.clientX) {
-					base.children.item(i).style.left = newPos
+				var chil = base.children.item(i)
+				if (middle < bannerLayers.mX) {
+					toMove = bannerLayers.mX - middle
+					console.log(bannerLayers.checkDistance(toMove))
+					toMove = parseInt((chil.style.left).replace('px', '')) + bannerLayers.checkDistance(toMove)
+					console.log(toMove)
+					chil.style.left = toMove + 'px'
 				} else {
-					base.children.item(i).style.left = newPos
+					toMove = (bannerLayers.mX - middle) * -1
+					console.log(bannerLayers.checkDistance(toMove))
+					toMove = parseInt((chil.style.left).replace('px', '')) - bannerLayers.checkDistance(toMove)
+					console.log(toMove)
+					chil.style.left = toMove + 'px'
 				}
 			}
-		})
+		}, 1000)
+	},
+	setPorcent: function () {
+		return this.middle / this.toMove
+	},
+	checkDistance: function (mousePos) {
+		return parseInt(mousePos / this.setPorcent())
 	},
 	crateBanner: function (layer) {
 		var banner = document.createElement('div')

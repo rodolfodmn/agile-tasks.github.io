@@ -1,12 +1,6 @@
 p, li, a, i, span{
 	color: #fff;
 }
-#logo{
-	background-color: #fff;
-}
-#logo h1{
-	color: #1D262D !important;
-}
 footer section{
 	border: 1px solid #fff;
 	box-sizing: border-box;
@@ -103,10 +97,6 @@ footer section{
 }
 #logo{
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11);
-	background: #fff;
-}
-#logo h1{
-	color: #1d262d;
 }
 .footer-end a{
 	color:#fff;

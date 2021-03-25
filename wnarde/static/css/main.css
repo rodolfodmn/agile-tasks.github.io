@@ -26,6 +26,7 @@
 }
 .bg-psico{
 	background-image: url('../../assets/BG753.png');
+	background-repeat: repeat-x;
 	background-color: #fcf9f7;
 }
 .bg-timezone{

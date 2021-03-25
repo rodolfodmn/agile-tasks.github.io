@@ -1,13 +1,13 @@
 export const allLayers = [
 	{
 		central: {
-			src: `A_1`, pos: {top: '100', left: '350'}
+			src: `A_1`, pos: {top: '100', left: '750'}
 		},
 		text: {
-			src: `A_2`, pos: {top: '100', left: '350'}
+			src: `A_2`, pos: {top: '100', left: '750'}
 		},
 		secondary: {
-			src: `A_3`, pos: {top: '100', left: '350'}
+			src: `A_3`, pos: {top: '100', left: '750'}
 		}
 	}
 ]
@@ -40,10 +40,10 @@ export const imgs = [
 		link: '#',
 		text: {
 			src: `textBanner2`, pos: {top: '162', left: '350'}
-		}
+		},
 		adds: {
 			src: `textBanner4`, pos: {top: '166', left: '350'}
-		},
+		}
 	},
 	{
 		img: 'banners/E_2',
@@ -51,10 +51,10 @@ export const imgs = [
 		link: '#',
 		text: {
 			src: `textBanner3`, pos: {top: '130', left: '350'}
-		}
+		},
 		adds: {
 			src: `textBanner4`, pos: {top: '166', left: '350'}
-		},
+		}
 	},
 	{
 		img: 'banners/E_2',

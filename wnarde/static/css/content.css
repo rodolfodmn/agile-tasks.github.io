@@ -277,6 +277,12 @@
 	top:0;
 	left:0;
 	z-index: -1;
+	width: 100%;
+}
+.post-top-banner img{
+	margin: auto;
+	width: 100%;
+	height: auto;
 }
 #top-timezone-post .pos1{
 	position: relative;
@@ -296,11 +302,11 @@
 	height: 100%;
 }
 #top-timezone-post .pos4{
-    position: relative;
-    right: 2085px;
-    top: 133px;
-    width: auto;
-    height: 100%;
+	position: relative;
+	right: 2085px;
+	top: 133px;
+	width: auto;
+	height: 100%;
 }
 #top-gatlin-post .pos1{
 	position: relative;
@@ -320,9 +326,9 @@
 	height: 100%;
 }
 #top-gatlin-post .pos4{
-    position: relative;
-    right: 2085px;
-    bottom: 203px;
-    width: auto;
-    height: 100%;
+	position: relative;
+	right: 2085px;
+	bottom: 203px;
+	width: auto;
+	height: 100%;
 }
