@@ -108,7 +108,7 @@ const bannerLayers = {
 	createLayer: function (layer, id) {
 		const div = document.createElement('div')
 		const img = document.createElement('img')
-		img.src = `../../../assets/banners/${layer.src}.png`
+		img.src = `/wnarde/assets/banners/${layer.src}.png`
 		div.append(img)
 		div.className = id
 		div.style.top = layer.pos.top
