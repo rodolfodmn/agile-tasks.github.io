@@ -1,4 +1,4 @@
-import {imgs} from './config.js'
+import {imgs} from '../banner/config.js'
 import banners from './banners.js'
 const text = {
 	currentImg: 0,

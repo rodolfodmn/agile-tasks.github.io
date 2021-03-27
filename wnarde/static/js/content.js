@@ -62,9 +62,7 @@ var content = {
 			}
 		}, 30)
 
-		setTimeout(function () {
-			content.includeHTML()
-		}, 500)
+		content.includeHTML()
 	},
 
 	showBanners: function () {
