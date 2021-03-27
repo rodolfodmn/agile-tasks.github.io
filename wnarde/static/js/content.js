@@ -47,6 +47,8 @@ var content = {
 			}
 			clearInterval(transiotion)
 			document.querySelector('.banner-content').style.display = 'none'
+			document.querySelector('.tleft').style.display = 'none'
+			document.querySelector('.tright').style.display = 'none'
 			document.querySelector('.post-content').style.display = 'flex'
 			document.querySelector('.show-back').style.display = 'none'
 			if (window.screen.availWidth > 768) {
@@ -66,7 +68,6 @@ var content = {
 	},
 
 	showBanners: function () {
-		const self = this
 		this.done = false
 		var banner = document.querySelector('.post-content').style
 		var transiotion = setInterval(function () {
@@ -78,6 +79,8 @@ var content = {
 				return
 			}
 			clearInterval(transiotion)
+			document.querySelector('.tleft').style.display = 'flex'
+			document.querySelector('.tright').style.display = 'flex'
 			document.querySelector('footer').style.display = 'block'
 			document.querySelector('.banner-content').style.display = 'flex'
 			document.querySelector('.banner-content').style.opacity = 1

@@ -1,4 +1,4 @@
-import {allLayers} from './config.js'
+import utils from '../utils.js'
 const bannerLayers = {
 	fps: 30,
 	mY: 0,
@@ -7,40 +7,78 @@ const bannerLayers = {
 	screen: window.screen,
 	middle: window.screen.width / 2,
 	toMove: 100,
-	init: function () {
-		document.querySelector('.banner-content').innerHTML = ''
-		allLayers.forEach(function (layer) {
-			var base = bannerLayers.crateBanner(layer)
-			document.querySelector('.banner-content').append(base)
-			bannerLayers.mouseMove(document.querySelector('.banner-content'))
-		})
+	init: function (layer) {
+		var base = bannerLayers.createBanner(layer)
+		bannerLayers.mouseMove(document.querySelector('.banner-content'))
+		return base
 	},
-	mouseMove: function (ele) {
+	mouseMove: function () {
 		window.onmousemove = function (e) {
 			bannerLayers.mX = e.clientX
 			bannerLayers.mY = e.clientY
 		}
 		setInterval(function () {
+			if (bannerLayers.mY > window.screen.height / 2) {
+				document.body.style.cursor = 'pointer'
+				return
+			}
+			document.body.style.cursor = 'alias'
 			var toMove = 0
 			const middle = window.screen.width / 2
-			var base = document.querySelector('#banner-base')
+			var base = document.querySelector('.banner-base')
 			for (var i = 0, len = base.children.length; i < len; i++) {
 				var chil = base.children.item(i)
-				if (middle < bannerLayers.mX) {
-					toMove = bannerLayers.mX - middle
-					console.log(bannerLayers.checkDistance(toMove))
-					toMove = parseInt((chil.style.left).replace('px', '')) + bannerLayers.checkDistance(toMove)
-					console.log(toMove)
-					chil.style.left = toMove + 'px'
-				} else {
-					toMove = (bannerLayers.mX - middle) * -1
-					console.log(bannerLayers.checkDistance(toMove))
-					toMove = parseInt((chil.style.left).replace('px', '')) - bannerLayers.checkDistance(toMove)
-					console.log(toMove)
-					chil.style.left = toMove + 'px'
+				var limit = chil.querySelector('img').width
+				if (chil.className != 'banner-text') {
+					if (chil.className === 'banner-central') {
+						bannerLayers.moveCentral(middle, limit)
+					}
+					if (chil.className === 'banner-secondary') {
+						bannerLayers.moveSecundary(middle, limit)
+					}
 				}
 			}
-		}, 1000)
+		}, 80)
+	},
+	moveSecundary: function (middle, limit) {
+		const chil = document.querySelector('.banner-secondary')
+		if (middle > bannerLayers.mX) {
+			var moved = (utils.middle - bannerLayers.mX)
+			var toMove = (moved / 10)
+			toMove = utils.pxToIn(chil.style.left) - toMove
+			if (toMove < utils.middle - (limit / 1.3))
+				return
+
+			chil.style.left = `${toMove}px`
+		} else {
+			var moved = (bannerLayers.mX - utils.middle)
+			var toMove = (moved / 10)
+			toMove = utils.pxToIn(chil.style.left) + toMove
+			if (toMove > utils.middle - (limit / 3))
+				return
+
+			chil.style.left = `${toMove}px`
+		}
+	},
+	moveCentral: function (middle, limit) {
+		const chil = document.querySelector('.banner-central')
+		if (middle > bannerLayers.mX) {
+			var moved = (utils.middle - bannerLayers.mX)
+			var toMove = (moved / 10)
+			toMove = utils.pxToIn(chil.style.left) + toMove
+			if (toMove > utils.middle - (limit / 3))
+				return
+
+			chil.style.left = `${toMove}px`
+		} else {
+			var moved = (bannerLayers.mX - utils.middle)
+			var toMove = (moved / 10)
+			toMove = utils.pxToIn(chil.style.left) - toMove
+			if (toMove < utils.middle - (limit / 1.3))
+				return
+
+			chil.style.left = `${toMove}px`
+		}
 	},
 	setPorcent: function () {
 		return this.middle / this.toMove
@@ -48,31 +86,35 @@ const bannerLayers = {
 	checkDistance: function (mousePos) {
 		return parseInt(mousePos / this.setPorcent())
 	},
-	crateBanner: function (layer) {
+	createBanner: function (layer) {
 		var banner = document.createElement('div')
-		banner.id = 'banner-base'
-		banner.append(this.crateCentral(layer.central))
-		banner.append(this.crateSecondary(layer.secondary))
-		banner.append(this.crateText(layer.text))
+		banner.className = 'banner-base'
+		banner.append(this.createCentral(layer.central))
+		layer.secondary.forEach(function (s) {
+			banner.append(bannerLayers.createSecondary(s))
+		})
+		banner.append(this.createText(layer.text))
 		return banner
 	},
-	crateCentral: function (layer) {
+	createCentral: function (layer) {
 		return this.createLayer(layer, 'banner-central')
 	},
-	crateSecondary: function (layer) {
+	createSecondary: function (layer) {
 		return this.createLayer(layer, 'banner-secondary')
 	},
-	crateText: function (layer) {
+	createText: function (layer) {
 		return this.createLayer(layer, 'banner-text')
 	},
 	createLayer: function (layer, id) {
-		var div = document.createElement('div')
-		var img = document.createElement('img')
+		const div = document.createElement('div')
+		const img = document.createElement('img')
 		img.src = `../../../assets/banners/${layer.src}.png`
 		div.append(img)
-		div.id = id
+		div.className = id
 		div.style.top = layer.pos.top
-		div.style.left = layer.pos.left
+		img.onload = function () {
+			div.style.left = ((window.screen.width - this.width) / 2)
+		}
 		return div
 	}
 }

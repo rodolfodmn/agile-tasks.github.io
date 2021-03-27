@@ -1,5 +1,4 @@
 var navBar = {
-
 	show: '',
 	alpha: 0,
 	backNav: document.querySelector(".back-nav"),

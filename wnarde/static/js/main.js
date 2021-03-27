@@ -1,4 +1,4 @@
-import create from './banner2/create.js'
+import create from './banner/create.js'
 import colorScreen from './colorScreen.js'
 import navBar from './nav.js'
 import fakeJson from './fake-ajax.js'
