@@ -23,7 +23,6 @@ const bannerLayers = {
 				return
 			}
 			document.body.style.cursor = 'alias'
-			var toMove = 0
 			const middle = window.screen.width / 2
 			var base = document.querySelector('.banner-base')
 			for (var i = 0, len = base.children.length; i < len; i++) {
