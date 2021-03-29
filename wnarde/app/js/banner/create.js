@@ -1,15 +1,19 @@
 import bannerLayers from './layers.js'
 import change from './change.js'
-import {allLayers} from './config.js'
+import {allLayers, allLayersMobile} from './config.js'
 const create = {
+	allL: allLayers,
 	init: function () {
+		if (window.screen.width < 800) {
+			create.allL = allLayersMobile
+		}
 		document.querySelector('.tright').addEventListener('click', change.changeBannerArrow)
 		document.querySelector('.tleft').addEventListener('click', change.changeBannerArrow)
 
 		const bannerContent = document.querySelector('.banner-content')
 		bannerContent.innerHTML = ''
 		bannerContent.style.width = '200%'
-		allLayers.slice(0, 1).forEach(function (layer, key) {
+		create.allL.slice(0, 1).forEach(function (layer, key) {
 			var banner = create.one(key, false)
 			bannerContent.append(banner)
 		})
@@ -22,7 +26,7 @@ const create = {
 			pos = 0
 		}
 
-		var banner = bannerLayers.init(allLayers[pos])
+		var banner = bannerLayers.init(create.allL[pos])
 		banner.id = `banner${pos}`
 		banner.style.width = (isPrevius) ? 0 : '50%'
 		banner.style.zIndex = 1

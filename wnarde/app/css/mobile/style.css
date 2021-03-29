@@ -143,21 +143,7 @@ h5{
 }
 #logo{
 	z-index: 5;
-	height: 50px;
-	width: 187px;
 	border-radius: 2px;
-	background: #1D262D;
-	border-radius: 2px;
-	text-align: center;
-}
-#logo h1{
-	font-family: Kadwa;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 21px;
-	color: #F6FBED;
-	line-height: 50px;
-	text-transform: capitalize;
 }
 .footer-end a{
 	font-family: Open Sans;

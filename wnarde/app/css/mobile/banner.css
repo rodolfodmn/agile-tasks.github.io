@@ -7,7 +7,6 @@
 }
 .tleft{
 	z-index: 9;
-	background-image: url("../../../assets/tl.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 12px;
@@ -19,7 +18,6 @@
 }
 .tright{
 	z-index: 9;
-	background-image: url("../../../assets/tr.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 12px;
@@ -50,27 +48,6 @@
 .banner-img{
 	width:-webkit-fill-available;
 }
-#banner0{
-	background: linear-gradient(180deg, #FBFFF1 0%, #E0E4E6 36.46%, #7C7BBA 100%);
-}
-#banner1{
-	background: linear-gradient(180deg, #FFF1FD 0%, #E0E4E6 42.19%, #7C7BBA 100%);
-}
-#banner2{
-	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 50.52%, #D9C5D8 100%);
-}
-#banner3{
-	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);
-}
-#banner4{
-	background: linear-gradient(180deg, #CAD3C2 0%, #0C7CBB 100%);
-}
-#banner5{
-	background: linear-gradient(180deg, #8FC3FF 0%, #974AF8 100%);
-}
-#banner6{
-	background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #C9FF56 0%, #937DB0 100%);
-}
 .text-b0 img{
 	height: auto;
 	position: absolute;
@@ -88,4 +65,38 @@
 .text-ba img{
 	position:absolute;
 	opacity:0;
+}
+#banner2{
+	background: linear-gradient(180deg, #FBFFF1 0%, #E0E4E6 36.46%, #7C7BBA 100%);
+}
+#banner0{
+	background: linear-gradient(180deg, #FFF1FD 0%, #E0E4E6 42.19%, #7C7BBA 100%);
+}
+#banner1{
+	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 50.52%, #D9C5D8 100%);
+}
+#banner5{
+	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);
+}
+#banner6{
+	background: linear-gradient(180deg, #CAD3C2 0%, #0C7CBB 100%);
+}
+#banner4{
+	background: linear-gradient(180deg, #8FC3FF 0%, #974AF8 100%);
+}
+#banner3{
+	background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #C9FF56 0%, #937DB0 100%);
+}
+.banner-base div{
+	position: absolute;
+}
+.banner-central{
+	z-index: 8;
+}
+.banner-text{
+	z-index: 9;
+}
+
+#banner1 .banner-secondary{
+	left:0 !important;
 }

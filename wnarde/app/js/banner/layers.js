@@ -108,6 +108,9 @@ const bannerLayers = {
 		const div = document.createElement('div')
 		const img = document.createElement('img')
 		img.src = `assets/banners/${layer.src}.png`
+		if (window.screen.width < 800)
+			img.src = `assets/bannersMobile/${layer.src}.png`
+
 		div.append(img)
 		div.className = id
 		div.style.top = layer.pos.top
