@@ -16,6 +16,7 @@ const create = {
 		create.allL.slice(0, 1).forEach(function (layer, key) {
 			var banner = create.one(key, false)
 			bannerContent.append(banner)
+			document.body.className = `banner${key}`
 		})
 	},
 	one: function (pos, isPrevius) {
@@ -32,6 +33,10 @@ const create = {
 		banner.style.zIndex = 1
 		banner.style.position = 'relative'
 		banner.dataset.pos = pos
+		banner.style.marginTop = '1px'
+		banner.style.marginRight = '1px'
+		banner.style.marginLeft = '1px'
+		banner.style.marginBottom = '1px'
 		banner.addEventListener('click', change.changeBanner)
 		return banner
 	}

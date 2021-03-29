@@ -15,10 +15,6 @@ const change = {
 		}
 	},
 	changeBanner: function (e) {
-		if (e.clientY > utils.down) {
-			content.showContent()
-			return
-		}
 		if (change.canChange) {
 			change.currentBanner = e.target.dataset.pos
 			if (typeof change.currentBanner === 'undefined') {
@@ -35,7 +31,7 @@ const change = {
 	changeToNext: function () {
 		change.canChange = false
 		const banner = document.querySelector(`#banner${change.currentBanner}`)
-		change.appendNewBanner()
+		const nextBanner = change.appendNewBanner()
 		var hidde = setInterval(function () {
 			if (utils.prToIn(banner.style.width) > 0) {
 				banner.style.width = `${utils.prToIn(banner.style.width) - 1}%`
@@ -45,6 +41,8 @@ const change = {
 			change.destroyBanner()
 			clearInterval(hidde)
 			fakeJson.init()
+			document.body.className = allLayers[nextBanner.dataset.pos].bg
+			document.body.className += ` banner${nextBanner.dataset.pos}`
 			change.canChange = true
 		}, 30)
 	},
@@ -60,6 +58,8 @@ const change = {
 			change.destroyBanner(true)
 			clearInterval(hidde)
 			fakeJson.init()
+			document.body.className = allLayers[banner.dataset.pos].bg
+			document.body.className += ` banner${banner.dataset.pos}`
 			change.canChange = true
 		}, 30)
 	},
@@ -69,14 +69,12 @@ const change = {
 			var banner = document.querySelector(`#banner${change.currentBanner}`)
 			if (nextBanner) {
 				banner.parentNode.insertBefore(nextBanner, banner)
-				document.body.className = allLayers[nextBanner.dataset.pos].bg
 				return nextBanner
 			}
 		}
 		var nextBanner = create.one(change.currentBanner + 1, false, true)
 		var banner = document.querySelector('.banner-content')
 		if (nextBanner) {
-			document.body.className = allLayers[nextBanner.dataset.pos].bg
 			banner.appendChild(nextBanner)
 			return nextBanner
 		}
