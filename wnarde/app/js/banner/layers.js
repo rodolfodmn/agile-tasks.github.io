@@ -1,6 +1,6 @@
 import utils from '../utils.js'
 import content from '../content.js'
-import {allLayers, allLayersMobile} from './config.js'
+import movement from './movement.js'
 const bannerLayers = {
 	fps: 30,
 	mY: 0,
@@ -20,57 +20,19 @@ const bannerLayers = {
 			bannerLayers.mY = e.clientY
 		}
 		setInterval(function () {
-			var c = document.querySelector('.banner-central').style
-			var s = document.querySelectorAll('.banner-secondary')
-			if (bannerLayers.center < bannerLayers.mY) {
-				var ban = document.querySelector('.banner-base');
-				if (utils.pxToIn(ban.style.marginTop) < 50) {
-					ban.style.marginTop = `${utils.pxToIn(ban.style.marginTop) + 2}px`
-					c.top = `${utils.pxToIn(c.top) - 1}px`
-					if (typeof s[0] != undefined)
-						s[0].style.top = `${utils.pxToIn(s[0].style.top) - 3}px`
-
-					if (typeof s[1] != undefined)
-						s[1].style.top = `${utils.pxToIn(s[1].style.top) + 4}px`
-				}
+			if (bannerLayers.mY > bannerLayers.center / 2) {
+				movement.toDown()
 			}
-			if (bannerLayers.center > bannerLayers.mY) {
-				var ban = document.querySelector('.banner-base');
-				if (utils.pxToIn(ban.style.marginTop) > 0) {
-					ban.style.marginTop = `${utils.pxToIn(ban.style.marginTop) - 2}px`
-					c.top = `${utils.pxToIn(c.top) + 1}px`
-					if (typeof s[0] != undefined)
-						s[0].style.top = `${utils.pxToIn(s[0].style.top) + 3}px`
-
-					if (typeof s[1] != undefined)
-						s[1].style.top = `${utils.pxToIn(s[1].style.top) - 4}px`
-				}
+			if (bannerLayers.mY < bannerLayers.center / 2) {
+				movement.toUp()
 			}
-			if (bannerLayers.middle < bannerLayers.mX) {
-				var ban = document.querySelector('.banner-base');
-				if (utils.pxToIn(ban.style.marginLeft) < 50) {
-					ban.style.marginLeft = `${utils.pxToIn(ban.style.marginLeft) + 2}px`
-					c.left = `${utils.pxToIn(c.left) + 1}px`
-					if (typeof s[0] != undefined)
-						s[0].style.left = `${utils.pxToIn(s[0].style.left) + 3}px`
-
-					if (typeof s[1] != undefined)
-						s[1].style.left = `${utils.pxToIn(s[1].style.left) - 4}px`
-				}
+			if (bannerLayers.mX < bannerLayers.middle / 2) {
+				movement.toRight()
 			}
-			if (bannerLayers.middle > bannerLayers.mX) {
-				var ban = document.querySelector('.banner-base');
-				if (utils.pxToIn(ban.style.marginLeft) > 0) {
-					ban.style.marginLeft = `${utils.pxToIn(ban.style.marginLeft) - 2}px`
-					c.left = `${utils.pxToIn(c.left) - 1}px`
-					if (typeof s[0] != undefined)
-						s[0].style.left = `${utils.pxToIn(s[0].style.left) - 3}px`
-
-					if (typeof s[1] != undefined)
-						s[1].style.left = `${utils.pxToIn(s[1].style.left) + 4}px`
-				}
+			if (bannerLayers.mX > bannerLayers.middle) {
+				movement.toLeft()
 			}
-		}, 30)
+		}, 60)
 	},
 	mouseMove_: function () {
 		window.onmousemove = function (e) {
@@ -183,7 +145,7 @@ const bannerLayers = {
 			div.dataset.initPos = ((window.screen.width - this.width) / 2)
 		}
 		img.style.cursor = 'pointer'
-		img.onclick = function () {
+		img.parentElement.onclick = function () {
 			content.showContent()
 			document.body.className = document.body.classList[0]
 		}

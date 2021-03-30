@@ -1,4 +1,5 @@
 import bannerLayers from './layers.js'
+import movement from './movement.js'
 import change from './change.js'
 import {allLayers, allLayersMobile} from './config.js'
 const create = {
@@ -7,8 +8,8 @@ const create = {
 		if (window.screen.width < 800) {
 			create.allL = allLayersMobile
 		}
-		document.querySelector('.tright').addEventListener('click', change.changeBannerArrow)
-		document.querySelector('.tleft').addEventListener('click', change.changeBannerArrow)
+		document.querySelector('.tright').addEventListener('click', change.changeBanner)
+		document.querySelector('.tleft').addEventListener('click', change.changeBanner)
 
 		const bannerContent = document.querySelector('.banner-content')
 		bannerContent.innerHTML = ''
@@ -18,6 +19,7 @@ const create = {
 			bannerContent.append(banner)
 			document.body.className = `banner${key}`
 		})
+		movement.init()
 	},
 	one: function (pos, isPrevius) {
 		if (pos < 0) {
@@ -37,7 +39,6 @@ const create = {
 		banner.style.marginRight = '1px'
 		banner.style.marginLeft = '1px'
 		banner.style.marginBottom = '1px'
-		banner.addEventListener('click', change.changeBanner)
 		return banner
 	}
 }

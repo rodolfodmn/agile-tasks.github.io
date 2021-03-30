@@ -79,6 +79,7 @@ var content = {
 				return
 			}
 			clearInterval(transiotion)
+			document.body.className = `banner${document.querySelector('.banner-base').dataset.pos}`
 			document.querySelector('.tleft').style.display = 'flex'
 			document.querySelector('.tright').style.display = 'flex'
 			document.querySelector('footer').style.display = 'block'

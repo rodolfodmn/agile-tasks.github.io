@@ -1,8 +1,8 @@
 import utils from '../utils.js'
+import movement from './movement.js'
 import bannerLayers from './layers.js'
 import fakeJson from '../fake-ajax.js'
 import create from './create.js'
-import content from '../content.js'
 import {allLayers} from './config.js'
 
 const change = {
@@ -15,8 +15,10 @@ const change = {
 		}
 	},
 	changeBanner: function (e) {
+		movement.stop()
 		if (change.canChange) {
-			change.currentBanner = e.target.dataset.pos
+			var banner = document.querySelector('.banner-base')
+			change.currentBanner = banner.dataset.pos
 			if (typeof change.currentBanner === 'undefined') {
 				change.currentBanner = e.target.parentNode.parentNode.dataset.pos
 			}
@@ -43,6 +45,7 @@ const change = {
 			fakeJson.init()
 			document.body.className = allLayers[nextBanner.dataset.pos].bg
 			document.body.className += ` banner${nextBanner.dataset.pos}`
+			movement.init()
 			change.canChange = true
 		}, 30)
 	},
@@ -60,6 +63,7 @@ const change = {
 			fakeJson.init()
 			document.body.className = allLayers[banner.dataset.pos].bg
 			document.body.className += ` banner${banner.dataset.pos}`
+			movement.init()
 			change.canChange = true
 		}, 30)
 	},
