@@ -16,16 +16,16 @@ const touch = {
 		touch.initPosX = e.changedTouches[0].clientX
 		setInterval(function () {
 			touch.move()
-		}, 80)
+		}, 30)
 	},
-	checkDirection: function (clientX) {
-		if (clientX > touch.initPosX) {
+	checkDirection: function () {
+		if (touch.posX > touch.initPosX) {
 			return true
 		}
 		return false
 	},
 	move: function () {
-		if (touch.checkDirection(touch.posX)) {
+		if (touch.checkDirection()) {
 			touch.toPrevious()
 			return
 		}
@@ -37,10 +37,7 @@ const touch = {
 	},
 	toPrevious: function () {
 		var moved = (touch.posX - touch.initPosX) / touch.getPercent()
-		moved = (moved - 100)
-		touch.bannersPos.p = moved + '%'
-		//var banner = document.querySelector(`#banner${touch.currentBanner}`)
-		//banner.style.width = `${(moved - 100) * 2}%`
+		touch.bannersPos.p = `${moved}%`
 	},
 	toNext: function (posX) {
 		console.log('n')
@@ -72,6 +69,7 @@ const touch = {
 		//}, 60)
 	},
 	getPercent: function () {
+		console.log(window.screen.width)
 		return window.screen.width / 100
 	},
 	appendNewBanners: function () {
