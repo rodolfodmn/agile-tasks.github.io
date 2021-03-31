@@ -1,25 +1,29 @@
 import bannerLayers from './layers.js'
 import movement from './movement.js'
 import change from './change.js'
+import touch from './touch.js'
 import {allLayers, allLayersMobile} from './config.js'
 const create = {
 	allL: allLayers,
 	init: function () {
-		if (window.screen.width < 800) {
-			create.allL = allLayersMobile
-		}
 		document.querySelector('.tright').addEventListener('click', change.changeBanner)
 		document.querySelector('.tleft').addEventListener('click', change.changeBanner)
 
+		if (window.screen.width < 800) {
+			create.allL = allLayersMobile
+			document.body.ontouchstart = touch.start
+			document.body.ontouchmove = touch.bannerUpdate
+			document.body.ontouchend = touch.leave
+		}
 		const bannerContent = document.querySelector('.banner-content')
-		bannerContent.innerHTML = ''
 		bannerContent.style.width = '200%'
-		create.allL.slice(0, 1).forEach(function (layer, key) {
-			var banner = create.one(key, false)
-			bannerContent.append(banner)
-			document.body.className = `banner${key}`
-		})
-		movement.init()
+		var banner = create.one(0, false)
+		bannerContent.append(banner)
+		document.body.className = `banner0`
+		if (window.screen.width < 800) {
+			touch.setAround()
+		} else
+			movement.init()
 	},
 	one: function (pos, isPrevius) {
 		if (pos < 0) {
@@ -31,7 +35,7 @@ const create = {
 
 		var banner = bannerLayers.init(create.allL[pos])
 		banner.id = `banner${pos}`
-		banner.style.width = (isPrevius) ? 0 : '50%'
+		banner.style.width = (isPrevius) ? '0%' : '50%'
 		banner.style.zIndex = 1
 		banner.style.position = 'relative'
 		banner.dataset.pos = pos

@@ -1,4 +1,3 @@
-import utils from '../utils.js'
 import content from '../content.js'
 import movement from './movement.js'
 const bannerLayers = {
@@ -12,7 +11,9 @@ const bannerLayers = {
 	center: window.screen.height / 2,
 	init: function (layer) {
 		var base = bannerLayers.createBanner(layer)
-		bannerLayers.mouseMove(document.querySelector('.banner-content'))
+		if (window.screen.width > 800) {
+			bannerLayers.mouseMove(document.querySelector('.banner-content'))
+		}
 		return base
 	},
 	mouseMove: function () {
@@ -80,8 +81,8 @@ const bannerLayers = {
 		}
 		img.style.cursor = 'pointer'
 		img.parentElement.onclick = function () {
-			content.showContent()
-			document.body.className = document.body.classList[0]
+			//content.showContent()
+			//document.body.className = document.body.classList[0]
 		}
 		return div
 	},

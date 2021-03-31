@@ -51,7 +51,7 @@ var content = {
 			document.querySelector('.tright').style.display = 'none'
 			document.querySelector('.post-content').style.display = 'flex'
 			document.querySelector('.show-back').style.display = 'none'
-			if (window.screen.availWidth > 768) {
+			if (window.screen.availWidth > 800) {
 				document.querySelector('.go-back').style.display = 'block'
 				document.querySelector('.go-back').addEventListener('click', function () {
 					self.showBanners()
@@ -80,8 +80,10 @@ var content = {
 			}
 			clearInterval(transiotion)
 			document.body.className = `banner${document.querySelector('.banner-base').dataset.pos}`
-			document.querySelector('.tleft').style.display = 'flex'
-			document.querySelector('.tright').style.display = 'flex'
+			if (window.screen.availWidth > 800) {
+				document.querySelector('.tleft').style.display = 'flex'
+				document.querySelector('.tright').style.display = 'flex'
+			}
 			document.querySelector('footer').style.display = 'block'
 			document.querySelector('.banner-content').style.display = 'flex'
 			document.querySelector('.banner-content').style.opacity = 1

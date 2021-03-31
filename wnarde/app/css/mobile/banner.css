@@ -6,6 +6,7 @@
 	height: 100%;
 }
 .tleft{
+	background-color: red;
 	z-index: 9;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -17,6 +18,7 @@
 	padding: 25% 33px;
 }
 .tright{
+	background-color: red;
 	z-index: 9;
 	background-repeat: no-repeat;
 	background-position: center;
