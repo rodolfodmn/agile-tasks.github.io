@@ -30,7 +30,7 @@ body{
 }
 .footer-end{
 	flex: 1;
-	padding:8px 15px;
+	padding:8px 0 8px 8px;
 	align-items: center;
 	justify-content: flex-end;
 }

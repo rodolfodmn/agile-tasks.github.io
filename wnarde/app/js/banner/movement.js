@@ -1,4 +1,5 @@
 import utils from '../utils.js'
+import bannerLayers from './layers.js'
 const movement = {
 	c: '',
 	t: '',
@@ -80,6 +81,7 @@ const movement = {
 		}
 	},
 	stop: function () {
+		bannerLayers.cleanMovement()
 		this.ban.style.marginTop = 0
 		this.ban.style.marginLeft = 0
 		this.canMove = false

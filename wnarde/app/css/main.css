@@ -18,9 +18,6 @@
 .up{
 	text-transform: uppercase;
 }
-.icon{
-	font-size: 35px;
-}
 .p20{
 	padding: 20px;
 }
@@ -48,10 +45,24 @@
 }
 .icon{
 	font-size: 35px;
+	width: 51px;
+	text-align: center;
 }
 .icon-day{
-	margin-left: 55px;
+	left: 111px;
+	display: block;
 }
 .icon-night{
-	margin-left: 55px;
+	left: 111px;
+	display: none;
+}
+.go-back{
+	display: none;
+}
+.show-back{
+	display: block;
+}
+.top-menu span{
+	top:27px;
+	position:fixed;
 }

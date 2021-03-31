@@ -110,15 +110,9 @@ footer section {
 	padding: 0 8px;
 	color: #1D262D;
 }
-.footer-middle{
-	padding:8px 15px;
-}
 .footer-time{
 	border-right:0.5px dashed #1D262D;
 	font-weight: 400;
-}
-.footer-hour p{
-	margin-right: 12px;
 }
 .footer-hour span{
 	font-weight: normal;
@@ -133,9 +127,6 @@ footer section {
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #1D262D;
-}
-.post-resume{
-	margin-left: 12px;
 }
 
 /*hidden mobile*/

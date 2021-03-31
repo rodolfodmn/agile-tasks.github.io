@@ -108,7 +108,6 @@
 	margin-right: 30px;
 }
 .post-date p, .post-date span{
-	margin-left: 5px;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-style: normal;
 	font-weight: normal;
@@ -235,7 +234,7 @@
 	margin-top: 30px;
 }
 .footer-post > section > div > div{
-	padding: 6px 12px;
+	padding: 6px 0;
 }
 .footer-post > section > div > div:nth-child(1){
 	border-bottom: 0.5px dashed #1D262D;
@@ -268,9 +267,6 @@
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #1D262D; 
-}
-.footer-post span{
-	margin: 0 10px 0 10px;
 }
 .post-top-banner{
 	position: absolute;

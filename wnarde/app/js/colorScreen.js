@@ -3,20 +3,20 @@ var colorScreen = {
 
 	setNightScreen: function () {
 		colorScreen.link = document.createElement("link");
-		colorScreen.link.href = "static/css/night.css"
+		colorScreen.link.href = "app/css/night.css"
 		colorScreen.link.type = "text/css";
 		colorScreen.link.rel = "stylesheet";
 		colorScreen.link.media = "screen,print";
 
 		document.getElementsByTagName("head")[0].appendChild(colorScreen.link);
-		document.querySelector(".icon-day").hidden = true
-		document.querySelector(".icon-night").hidden = false
+		document.querySelector(".icon-day").style.display = 'none'
+		document.querySelector(".icon-night").style.display = 'block'
 	},
 
 	setDayScreen: function () {
 		colorScreen.link.remove()
-		document.querySelector(".icon-day").hidden = false
-		document.querySelector(".icon-night").hidden = true
+		document.querySelector(".icon-day").style.display = 'block'
+		document.querySelector(".icon-night").style.display = 'none'
 	},
 
 	setup: function () {

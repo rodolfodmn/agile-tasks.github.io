@@ -6,6 +6,7 @@ const bannerLayers = {
 	mY: 0,
 	mX: 0,
 	changScreen: 0,
+	cleanInterval: false,
 	screen: window.screen,
 	middle: window.screen.width / 2,
 	center: window.screen.height / 2,
@@ -19,7 +20,11 @@ const bannerLayers = {
 			bannerLayers.mX = e.clientX
 			bannerLayers.mY = e.clientY
 		}
-		setInterval(function () {
+		var moveInterval = setInterval(function () {
+			if (bannerLayers.cleanInterval) {
+				clearInterval(moveInterval)
+			}
+			bannerLayers.cleanInterval = false
 			if (bannerLayers.mY > bannerLayers.center / 2) {
 				movement.toDown()
 			}
@@ -34,82 +39,11 @@ const bannerLayers = {
 			}
 		}, 60)
 	},
-	mouseMove_: function () {
-		window.onmousemove = function (e) {
-			bannerLayers.mX = e.clientX
-			bannerLayers.mY = e.clientY
-		}
-		setInterval(function () {
-			if (bannerLayers.mY > window.screen.height / 2) {
-				document.body.style.cursor = 'pointer'
-				return
-			}
-			document.body.style.cursor = 'alias'
-			const middle = window.screen.width / 2
-			var base = document.querySelector('.banner-base')
-			for (var i = 0, len = base.children.length; i < len; i++) {
-				var chil = base.children.item(i)
-				var limit = chil.querySelector('img').width
-				if (chil.className != 'banner-text') {
-					if (chil.className === 'banner-central') {
-						bannerLayers.moveCentral(middle, limit)
-					}
-					if (chil.className === 'banner-secondary') {
-						bannerLayers.moveSecundary(middle, limit)
-					}
-				}
-			}
-		}, 80)
+	cleanMovement: function () {
+		this.cleanInterval = true
 	},
-	moveSecundary: function (middle, limit) {
-		const chil = document.querySelector('.banner-secondary')
-		if (middle > bannerlayers.mx) {
-			var moved = (utils.middle - bannerlayers.mx)
-			var tomove = (moved / 10)
-			tomove = utils.pxtoin(chil.style.left) - tomove
-			if (tomove < utils.middle - (limit / 1.3)) {
-				tomove = `${chil.dataset.initpos}px`
-			}
-
-			chil.style.left = `${tomove}px`
-		} else {
-			var moved = (bannerlayers.mx - utils.middle)
-			var tomove = (moved / 10)
-			tomove = utils.pxtoin(chil.style.left) + tomove
-			if (tomove > utils.middle - (limit / 3)) {
-				tomove = `${chil.dataset.initpos}px`
-			}
-
-			chil.style.left = `${tomove}px`
-		}
-	},
-	moveCentral: function (middle, limit) {
-		const chil = document.querySelector('.banner-central')
-		if (middle > bannerLayers.mX) {
-			var moved = (utils.middle - bannerLayers.mX)
-			var toMove = (moved / 10)
-			toMove = utils.pxToIn(chil.style.left) + toMove
-			if (toMove > utils.middle - (limit / 3)) {
-				toMove = `${chil.dataset.initPos}px`
-			}
-
-			chil.style.left = `${toMove}px`
-		} else {
-			var moved = (bannerLayers.mX - utils.middle)
-			var toMove = (moved / 10)
-			toMove = utils.pxToIn(chil.style.left) - toMove
-			if (toMove < utils.middle - (limit / 1.3)) {
-				toMove = `${chil.dataset.initPos}px`
-			}
-
-			chil.style.left = `${toMove}px`
-		}
-	},
-	setPorcent: function () {
-		return this.middle / this.toMove
-	},
-	checkDistance: function (mousePos) {
-		return parseInt(mousePos / this.setPorcent())
+	needClean: function () {
+		return this.cleanInterval
 	},
 	createBanner: function (layer) {
 		var banner = document.createElement('div')
@@ -150,6 +84,12 @@ const bannerLayers = {
 			document.body.className = document.body.classList[0]
 		}
 		return div
-	}
+	},
+	setPorcent: function () {
+		return this.middle / this.toMove
+	},
+	checkDistance: function (mousePos) {
+		return parseInt(mousePos / this.setPorcent())
+	},
 }
 export default bannerLayers
