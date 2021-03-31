@@ -144,7 +144,7 @@
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #1D262D;
@@ -156,6 +156,7 @@
 	font-family: Open Sans;
 	text-transform: uppercase;
 	font-weight: bold;
+	font-size: 15px;
 }
 .footer-post-links a{
 	margin: 0 0 0 12px;
@@ -176,9 +177,11 @@
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #1D262D; 
+	flex: 1;
+	justify-content: space-between;
 }
 .footer-post span{
-	margin: 0 10px 0 10px;
+	margin:0;
 }
 .job-title{
 	padding: 7px 16px;

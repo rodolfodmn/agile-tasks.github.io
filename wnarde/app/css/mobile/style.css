@@ -163,17 +163,33 @@ h5{
 	justify-content: flex-end;
 }
 .footer-start{
-	padding:8px 15px;
+	padding:8px 0;
 	border-bottom:0.5px dashed #1D262D;
 	justify-content: space-between;
 }
+
 .icon-day{
-	margin-left: 55px;
+	left: 111px;
+	display: block;
 }
 .icon-night{
-	margin-left: 55px;
+	left: 111px;
+	display: none;
 }
-
+.go-back-mb{
+	display: none;
+}
+.con-tag{
+	text-align: end;
+}
+.text-post-type{
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
 /*hidden desktop*/
 .dk{
 	display:none;

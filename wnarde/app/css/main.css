@@ -15,6 +15,9 @@
 .auto{
 	margin: auto;
 }
+.auto-l{
+	margin-left: auto;
+}
 .up{
 	text-transform: uppercase;
 }

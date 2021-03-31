@@ -143,10 +143,14 @@ footer section{
 .tleft{
 	background-image: url("../../assets/tlN.png");
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: left;
+	left: 39px;
+	top: 15%;
 }
 .tright{
 	background-image: url("../../assets/trN.png");
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: right;
+	right: 39px;
+	top: 15%;
 }
