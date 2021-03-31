@@ -292,3 +292,58 @@
 	background-position: top;
 	background-repeat: repeat-x;
 }
+.post-top-banner {
+    position: absolute;
+    right: 153px;
+	top: 0;
+    z-index: -1;
+    width: 100%;
+}
+#top-timezone-post .pos1{
+	position: relative;
+	right: 613px;
+	top: 1px;
+}
+#top-timezone-post .pos2{
+	position: relative;
+	right: 1232;
+	top: 8px;
+}
+#top-timezone-post .pos3{
+	position: relative;
+	right: 1860px;
+	top: 28px;
+	width: auto;
+	height: 100%;
+}
+#top-timezone-post .pos4{
+	position: relative;
+	right: 2085px;
+	top: 133px;
+	width: auto;
+	height: 100%;
+}
+#top-gatlin-post .pos1{
+	position: relative;
+	right: 613px;
+	top: 1px;
+}
+#top-gatlin-post .pos2{
+	position: relative;
+	right: 1232;
+	top: 8px;
+}
+#top-gatlin-post .pos3{
+	position: relative;
+	right: 1860px;
+	top: 28px;
+	width: auto;
+	height: 100%;
+}
+#top-gatlin-post .pos4{
+	position: relative;
+	right: 2085px;
+	bottom: 203px;
+	width: auto;
+	height: 100%;
+}

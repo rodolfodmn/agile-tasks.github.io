@@ -190,6 +190,12 @@ h5{
 	line-height: 20px;
 	text-transform: uppercase;
 }
+.bg-psico{
+	background-image: url('../../../assets/bgMobile/brain.png');
+	background-repeat: repeat-x;
+	background-color: #fcf9f7;
+	background-position: top;
+}
 /*hidden desktop*/
 .dk{
 	display:none;
