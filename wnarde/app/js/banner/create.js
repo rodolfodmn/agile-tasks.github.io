@@ -12,7 +12,7 @@ const create = {
 		if (window.screen.width < 800) {
 			create.allL = allLayersMobile
 			document.body.ontouchstart = touch.start
-			document.body.ontouchmove = touch.bannerUpdate
+			document.body.ontouchmove = touch.move
 			document.body.ontouchend = touch.leave
 		}
 		const bannerContent = document.querySelector('.banner-content')
@@ -20,10 +20,7 @@ const create = {
 		var banner = create.one(0, false)
 		bannerContent.append(banner)
 		document.body.className = `banner0`
-		if (window.screen.width < 800) {
-			touch.setAround()
-		} else
-			movement.init()
+		movement.init()
 	},
 	one: function (pos, isPrevius) {
 		if (pos < 0) {

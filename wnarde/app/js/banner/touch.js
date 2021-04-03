@@ -1,22 +1,16 @@
+import utils from '../utils.js'
 import create from './create.js'
+import {allLayersMobile} from './config.js'
 
 const touch = {
 	initPosX: 0,
 	posX: null,
 	bannersAround: {},
+	nextBanner: null,
 	currentBanner: 0,
 	bannersPos: {
 		p: '0%',
 		n: '0%'
-	},
-	setAround: function () {
-		touch.bannersAround = touch.appendNewBanners()
-	},
-	start: function (e) {
-		touch.initPosX = e.changedTouches[0].clientX
-		setInterval(function () {
-			touch.move()
-		}, 30)
 	},
 	checkDirection: function () {
 		if (touch.posX > touch.initPosX) {
@@ -24,76 +18,116 @@ const touch = {
 		}
 		return false
 	},
-	move: function () {
+	start: function (e) {
+		touch.initPosX = e.changedTouches[0].clientX
+	},
+	move: function (e) {
+		touch.posX = e.changedTouches[0].clientX
 		if (touch.checkDirection()) {
 			touch.toPrevious()
 			return
 		}
 		touch.toNext()
 	},
-	bannerUpdate: function (ev) {
-		touch.posX = ev.changedTouches[0].clientX
-		touch.bannersAround.p.style.width = touch.bannersPos.p
-	},
 	toPrevious: function () {
+		touch.appendPrevius()
 		var moved = (touch.posX - touch.initPosX) / touch.getPercent()
-		touch.bannersPos.p = `${moved}%`
+		touch.nextBanner.style.width = `${moved}%`
 	},
-	toNext: function (posX) {
-		console.log('n')
-		//var moved = (posX - touch.initPosX) / touch.getPercent()
-		//var banner = document.querySelector(`#banner${touch.currentBanner}`)
-		//banner.style.width = `${(moved - 100) * 2}%`
-		//if (moved > 90) {
-		//moved = 100
-		//touch.destroyBanner(true)
-		//touch.currentBanner = touch.nextBanner.dataset.pos
-		//}
-		//touch.changeToPrevious(moved)
+	toNext: function () {
+		touch.appendNext()
+		var moved = (touch.posX) / touch.getPercent()
+		document.querySelector(`#banner${touch.currentBanner}`).style.width = `${moved}%`
+	},
+	leave: function (e) {
+		touch.posX = e.changedTouches[0].clientX
+		if (touch.checkDirection()) {
+			touch.leavePrevious()
+			return
+		}
+		touch.leaveNext()
+	},
+	leavePrevious: function () {
+		var nextBanner = touch.nextBanner
+		var restore = setInterval(function () {
 
+			if (utils.prToIn(nextBanner.style.width) <= 30) {
+				if (utils.prToIn(nextBanner.style.width) > 49) {
+					clearInterval(restore)
+					return
+				}
+				nextBanner.style.width = `${utils.prToIn(nextBanner.style.width) - 1}%`
+				return
+			}
+			if (utils.prToIn(nextBanner.style.width) >= 30) {
+				if (utils.prToIn(nextBanner.style.width) > 49) {
+					clearInterval(restore)
+					touch.destroyBanner(true)
+					return
+				}
+				nextBanner.style.width = `${utils.prToIn(nextBanner.style.width) + 1}%`
+				return
+			}
+			clearInterval(restore)
+		}, 30)
 	},
-	leave: function (isPrevius) {
-		//var toRestore = (isPrevius) ? touch.nextBanner.dataset.pos : touch.currentBanner
-		//toRestore = touch.currentBanner
-		//const banner = document.querySelector(`#banner${toRestore}`)
-		//var restore = setInterval(function () {
-		//if (utils.prToIn(banner.style.width) < 50) {
-		//banner.style.width = `${utils.prToIn(banner.style.width) + 1}%`
-		//return
-		//}
-		//if (utils.prToIn(banner.style.width) > 50) {
-		//banner.style.width = `${utils.prToIn(banner.style.width) - 1}%`
-		//return
-		//}
-		//clearInterval(restore)
-		//}, 60)
+	leaveNext: function () {
+		var banner = document.querySelector(`#banner${touch.currentBanner}`)
+		var restore = setInterval(function () {
+			if (utils.prToIn(banner.style.width) <= 30) {
+				banner.style.width = `${utils.prToIn(banner.style.width) - 1}%`
+				if (utils.prToIn(banner.style.width) < 1) {
+					touch.destroyBanner(false)
+					clearInterval(restore)
+					return
+				}
+				return
+			}
+			if (utils.prToIn(banner.style.width) >= 30) {
+				banner.style.width = `${utils.prToIn(banner.style.width) + 1}%`
+				if (utils.prToIn(banner.style.width) > 49) {
+					clearInterval(restore)
+					return
+				}
+				return
+			}
+			clearInterval(restore)
+		}, 30)
 	},
 	getPercent: function () {
-		console.log(window.screen.width)
 		return window.screen.width / 100
 	},
-	appendNewBanners: function () {
-		var previousBanner = create.one(touch.currentBanner - 1, true, true)
-		var banner = document.querySelector(`#banner${touch.currentBanner}`)
-		banner.parentNode.insertBefore(previousBanner, banner)
-		//var nextBanner = create.one(touch.currentBanner + 1, false, true)
-		//banner = document.querySelector('.banner-content')
-		//banner.appendChild(nextBanner)
-		return {
-			p: previousBanner,
-			//n: nextBanner
+	appendNext: function () {
+		var nextBannerID = parseInt(touch.currentBanner) + 1
+		if (touch.currentBanner == allLayersMobile.length - 1) {
+			nextBannerID = 0
 		}
-	},
-	destroyBanner: function (isPrevius) {
-		if (isPrevius) {
-			var banner = document.querySelector(`#banner${touch.currentBanner}`)
-			if (banner)
-				banner.remove()
+		if (document.querySelector(`#banner${nextBannerID}`)) {
 			return
 		}
 		var banner = document.querySelector(`#banner${touch.currentBanner}`)
-		if (banner)
-			banner.remove()
+		var nextBanner = create.one(nextBannerID, false, true)
+		banner = document.querySelector('.banner-content')
+		banner.appendChild(nextBanner)
+		touch.nextBanner = nextBanner
+	},
+	appendPrevius: function () {
+		var nextBannerID = parseInt(touch.currentBanner) - 1
+		if (touch.currentBanner == 0) {
+			nextBannerID = allLayersMobile.length - 1
+		}
+		if (document.querySelector(`#banner${nextBannerID}`)) {
+			return
+		}
+		var previousBanner = create.one(nextBannerID, true, true)
+		var banner = document.querySelector(`#banner${touch.currentBanner}`)
+		banner.parentNode.insertBefore(previousBanner, banner)
+		touch.nextBanner = previousBanner
+	},
+	destroyBanner: function () {
+		var banner = document.querySelector(`#banner${touch.currentBanner}`)
+		banner.remove()
+		touch.currentBanner = touch.nextBanner.dataset.pos
 	}
 }
 export default touch
