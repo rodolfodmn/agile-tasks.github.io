@@ -81,8 +81,8 @@ const bannerLayers = {
 		}
 		img.style.cursor = 'pointer'
 		img.parentElement.onclick = function () {
-			//content.showContent()
-			//document.body.className = document.body.classList[0]
+			content.showContent()
+			document.body.className = document.body.classList[0]
 		}
 		return div
 	},

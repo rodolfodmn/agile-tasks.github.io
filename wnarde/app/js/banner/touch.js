@@ -1,5 +1,6 @@
 import utils from '../utils.js'
 import create from './create.js'
+import fakeJson from '../fake-ajax.js'
 import {allLayersMobile} from './config.js'
 
 const touch = {
@@ -8,10 +9,7 @@ const touch = {
 	bannersAround: {},
 	nextBanner: null,
 	currentBanner: 0,
-	bannersPos: {
-		p: '0%',
-		n: '0%'
-	},
+
 	checkDirection: function () {
 		if (touch.posX > touch.initPosX) {
 			return true
@@ -128,6 +126,8 @@ const touch = {
 		var banner = document.querySelector(`#banner${touch.currentBanner}`)
 		banner.remove()
 		touch.currentBanner = touch.nextBanner.dataset.pos
+		document.body.className = allLayersMobile[touch.currentBanner].bg
+		fakeJson.init()
 	}
 }
 export default touch

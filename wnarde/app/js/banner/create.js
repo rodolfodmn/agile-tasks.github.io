@@ -36,10 +36,10 @@ const create = {
 		banner.style.zIndex = 1
 		banner.style.position = 'relative'
 		banner.dataset.pos = pos
-		banner.style.marginTop = '1px'
-		banner.style.marginRight = '1px'
-		banner.style.marginLeft = '1px'
-		banner.style.marginBottom = '1px'
+		banner.style.marginTop = '0px'
+		banner.style.marginRight = '0px'
+		banner.style.marginLeft = '0px'
+		banner.style.marginBottom = '0px'
 		return banner
 	}
 }
