@@ -127,3 +127,135 @@
 .banner-text{
 	z-index: 9;
 }
+.psico2{
+	position: absolute;
+	left: 24.31%;
+	right: 39.1%;
+	top: 16.78%;
+	bottom: 59.44%;
+
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #B3384A;
+}
+.psico1{
+	position: absolute;
+	width: 527px;
+	height: 214px;
+	left: 350px;
+	top: 151px;
+
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #B3384A;
+}
+
+.rocket1 , .rocket2{
+
+	position: absolute;
+	width: 800px;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 111%;
+	/* or 98px */
+
+
+	color: #44427E;
+}
+.code2{
+
+}
+.code1, .code2{
+	position: absolute;
+
+	font-family: Charter;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #89135E;
+}
+
+.cto1{
+	position: absolute;
+	width: 220px;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 80px;
+	line-height: 120%;
+	/* or 96px */
+
+
+	color: #523472;
+}
+.gatlin1{
+	position: absolute;
+
+	width: 500px;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #FFF3B6;
+}
+.timezone2{
+	position: absolute;
+
+	font-family: Charter;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #FFC1AB;
+}
+.timezone1{
+	position: absolute;
+
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #EE7B52;
+}
+.remoto2{
+	position: absolute;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 111%;
+	/* or 98px */
+
+
+	color: #3D3D3D;
+}
+.remoto1{
+	position: absolute;
+
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 111%;
+	/* or 98px */
+
+
+	color: #3D3D3D;
+}

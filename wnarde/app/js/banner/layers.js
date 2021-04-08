@@ -64,7 +64,7 @@ const bannerLayers = {
 		return this.createLayer(layer, 'banner-secondary')
 	},
 	createText: function (layer) {
-		return this.createLayer(layer, 'banner-text')
+		return this.createLayerText(layer, 'banner-text')
 	},
 	createLayer: function (layer, id) {
 		const div = document.createElement('div')
@@ -87,6 +87,33 @@ const bannerLayers = {
 				document.body.className = document.body.classList[0]
 			}
 		}
+		return div
+	},
+
+	createLayerText: function (layer, id) {
+		const div = document.createElement('div')
+		const p = []
+		console.log(layer)
+		layer.forEach(function (text) {
+			var t_ = document.createElement('p')
+			t_.textContent = text.text
+			t_.style.cursor = 'pointer'
+			t_.style.top = text.pos.top
+			t_.style.left = text.pos.left
+			t_.className = text.class
+			p.push(t_)
+			t_.onclick = function () {
+				if (touch.transitionDone) {
+					content.showContent()
+					document.body.className = document.body.classList[0]
+				}
+			}
+			div.append(t_)
+		})
+
+		div.className = id
+		div.style.left = ((window.screen.width) / 2)
+		div.dataset.initPos = ((window.screen.width) / 2)
 		return div
 	},
 	setPorcent: function () {
