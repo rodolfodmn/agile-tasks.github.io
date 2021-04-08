@@ -27,6 +27,7 @@
 .bg-psico{
 	background-image: url('../../assets/BG753.png');
 	background-repeat: repeat-x;
+	background-position: center top;
 	background-color: #fcf9f7;
 }
 .bg-timezone{
@@ -35,7 +36,10 @@
 	background-repeat: repeat-x;
 }
 .bg-gatlin{
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.51%, #c5a59a 100%), linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 89.31%);
+	background-image: url('../../assets/bgs/gatlin.png');
+	background-repeat: repeat-x;
+	background-position: center top;
+	background-color: #fcf9f7;
 }
 .bg-wnarde{
 	background: #fbfff100;

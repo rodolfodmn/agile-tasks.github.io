@@ -1,3 +1,4 @@
+import {allLayers, allLayersMobile} from './banner/config.js'
 var content = {
 	done: false,
 
@@ -35,18 +36,21 @@ var content = {
 
 	showContent: function () {
 		const self = this
-		var banner = document.querySelector('.banner-content').style
+		var banner = document.querySelector('.banner-content')
+		const base = document.querySelector('.banner-base')
+		banner.style.width = '100%'
+		banner.style.position = 'relative'
+		banner.style.height = '800px'
+		banner.style.top = '-119px'
+		base.style.width = ''
+		document.body.className = allLayers[base.dataset.pos].bg
+		if (window.screen.width < 800) {
+			document.body.className = allLayersMobile[base.dataset.pos].bg
+		}
+
 		document.querySelector('footer').style.display = 'none'
 		var transiotion = setInterval(function () {
-			if (banner.opacity === '') {
-				banner.opacity = 1
-			}
-			if (banner.opacity >= 0) {
-				banner.opacity = `${parseFloat(banner.opacity) - 0.1}`
-				return
-			}
 			clearInterval(transiotion)
-			document.querySelector('.banner-content').style.display = 'none'
 			document.querySelector('.tleft').style.display = 'none'
 			document.querySelector('.tright').style.display = 'none'
 			document.querySelector('.post-content').style.display = 'flex'
@@ -69,13 +73,21 @@ var content = {
 
 	showBanners: function () {
 		this.done = false
-		var banner = document.querySelector('.post-content').style
+		var banner = document.querySelector('.banner-content').style
+		var post = document.querySelector('.post-content').style
+		const base = document.querySelector('.banner-base')
+		banner.width = '200%'
+		banner.position = 'fixed'
+		banner.height = '100%'
+		banner.top = '0'
+		base.style.width = '50%'
+		console.log(allLayers[base.dataset.pos].bg)
 		var transiotion = setInterval(function () {
-			if (banner.opacity === '') {
-				banner.opacity = 1
+			if (post.opacity === '') {
+				post.opacity = 1
 			}
-			if (banner.opacity >= 0) {
-				banner.opacity = `${parseFloat(banner.opacity) - 0.1}`
+			if (post.opacity >= 0) {
+				post.opacity = `${parseFloat(post.opacity) - 0.1}`
 				return
 			}
 			clearInterval(transiotion)

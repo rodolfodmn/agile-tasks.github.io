@@ -84,6 +84,7 @@ footer section {
 }
 .icon-fix{
 	color: transparent;
+	width: 51px;
 	font-size: 35px;
 }
 #logo{
@@ -129,6 +130,9 @@ footer section {
 	color: #1D262D;
 }
 
+.back-nav > ul > li > span{
+	margin-left:8px;
+}
 /*hidden mobile*/
 .mb{
 	display:none;

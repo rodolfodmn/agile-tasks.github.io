@@ -19,15 +19,18 @@ footer section{
 	background-repeat: repeat-x;
 }
 .bg-gatlin{
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.51%, rgba(27, 41, 51, 1) 100%), linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 89.31%);
+	background-image: url('../../assets/bgs/gatlinN.png');
+	background-repeat: repeat-x;
+	background-position: center top;
+	background-color: #1b2933;
 }
 #banner0{
 	background: linear-gradient(180deg, #3C313D 0%, #7C7BBA 100%);
 }
-#banner1{
-	background: linear-gradient(180deg, #FFF1FD 0%, #E0E4E6 42.19%, #7C7BBA 100%);
-}
 #banner2{
+	background-image: url('../../app/assets/bgs/timeN.png');
+}
+#banner1{
 	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 50.52%, #D9C5D8 100%);
 }
 #banner3{
@@ -153,4 +156,7 @@ footer section{
 	background-position: right;
 	right: 39px;
 	top: 15%;
+}
+.back-nav > ul > li > span{
+	margin-left:0px;
 }

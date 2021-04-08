@@ -9,6 +9,7 @@ const touch = {
 	bannersAround: {},
 	nextBanner: null,
 	currentBanner: 0,
+	transitionDone: true,
 
 	checkDirection: function () {
 		if (touch.posX > touch.initPosX) {
@@ -20,6 +21,7 @@ const touch = {
 		touch.initPosX = e.changedTouches[0].clientX
 	},
 	move: function (e) {
+		touch.transitionDone = false
 		touch.posX = e.changedTouches[0].clientX
 		if (touch.checkDirection()) {
 			touch.toPrevious()
@@ -127,6 +129,7 @@ const touch = {
 		banner.remove()
 		touch.currentBanner = touch.nextBanner.dataset.pos
 		document.body.className = allLayersMobile[touch.currentBanner].bg
+		touch.transitionDone = true
 		fakeJson.init()
 	}
 }

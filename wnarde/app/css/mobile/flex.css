@@ -3,11 +3,18 @@
 }
 .back-nav-links div{
 	display: flex;
+	align-items: center;
 	justify-content: flex-start;
 }
 .back-nav-links h3{
 	text-align: center;
 	margin-bottom: 24px;
+}
+.back-nav > ul > li > span{
+	margin-left:8px;
+}
+.back-nav > div > p{
+	margin-left: 6%;
 }
 .expance{
 	flex:1;

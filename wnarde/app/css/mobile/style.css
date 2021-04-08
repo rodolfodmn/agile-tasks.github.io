@@ -131,14 +131,15 @@ h5{
 	margin-bottom: 20px;
 }
 .back-nav h3{
-	margin-left: 12%;
+	margin-left: 6%;
 }
 .back-nav a{
 	color: #fff;
-	margin-left: 12%;
+	margin-left: 6%;
 }
 .icon-fix{
 	color: transparent;
+	width: 51px;
 	font-size: 35px;
 }
 #logo{

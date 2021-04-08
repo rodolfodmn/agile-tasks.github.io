@@ -1,4 +1,5 @@
 import content from '../content.js'
+import touch from './touch.js'
 import movement from './movement.js'
 const bannerLayers = {
 	fps: 30,
@@ -81,8 +82,10 @@ const bannerLayers = {
 		}
 		img.style.cursor = 'pointer'
 		img.parentElement.onclick = function () {
-			content.showContent()
-			document.body.className = document.body.classList[0]
+			if (touch.transitionDone) {
+				content.showContent()
+				document.body.className = document.body.classList[0]
+			}
 		}
 		return div
 	},

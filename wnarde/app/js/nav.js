@@ -20,13 +20,17 @@ var navBar = {
 
 	opacityUp: function () {
 		navBar.alpha += 0.05
+		document.querySelector('#logo').style.background = '#fff'
 		var bgColor = `rgba(29, 38, 45, ${navBar.alpha})`
-		if (document.querySelector(".icon-day").hidden) {
+		if (document.querySelector(".icon-day").style.display === 'none') {
 			bgColor = `rgba(255, 255, 255, ${navBar.alpha})`
 		}
 		navBar.backNav.style.background = bgColor
 		if (navBar.alpha > 0.9) {
-			if (document.querySelector(".icon-day").hidden) {
+			if (window.screen.width < 800) {
+				bgColor = `rgba(29, 38, 45, 0.95)`
+			}
+			if (document.querySelector(".icon-day").style.display === 'none') {
 				bgColor = `rgba(255, 255, 255, 1)`
 			}
 			navBar.backNav.style.background = bgColor
