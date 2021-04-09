@@ -172,22 +172,20 @@
 
 	color: #44427E;
 }
-.code2{
-
-}
 .code1, .code2{
 	position: absolute;
-
 	font-family: Charter;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 88px;
 	line-height: 107px;
-
 	color: #89135E;
 }
 
-.cto1{
+.code2{
+	color: #4577ff;
+}
+.cto1, .cto2{
 	position: absolute;
 	width: 220px;
 	font-family: Charter;
@@ -199,6 +197,9 @@
 
 
 	color: #523472;
+}
+.cto2{
+	color: #d92869;
 }
 .gatlin1{
 	position: absolute;
@@ -234,21 +235,8 @@
 
 	color: #EE7B52;
 }
-.remoto2{
+.remoto2, .remoto1{
 	position: absolute;
-	font-family: Charter;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 88px;
-	line-height: 111%;
-	/* or 98px */
-
-
-	color: #3D3D3D;
-}
-.remoto1{
-	position: absolute;
-
 	font-family: Charter;
 	font-style: normal;
 	font-weight: normal;

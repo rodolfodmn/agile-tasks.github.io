@@ -81,7 +81,6 @@ var content = {
 		banner.height = '100%'
 		banner.top = '0'
 		base.style.width = '50%'
-		console.log(allLayers[base.dataset.pos].bg)
 		var transiotion = setInterval(function () {
 			if (post.opacity === '') {
 				post.opacity = 1

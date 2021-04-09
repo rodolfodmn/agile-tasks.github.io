@@ -12,39 +12,49 @@ footer section{
 	box-sizing: border-box;
 	border-radius: 2px;
 }
-.bg-timezone{
+.bg-remoto , .banner0, #banner0{
 	background-color: #1b2933;
-	background-image: url("../../assets/bgTimezoneN.png");
+	background-image: url('../../assets/bgs/remotoN.png');
 	background-position: top;
 	background-repeat: repeat-x;
 }
-.bg-gatlin{
+.bg-psico, .banner1, #banner1{
+	background-color: #1b2933;
+	background-image: url('../../assets/bgs/psicoN.png');
+	background-position: top;
+	background-repeat: repeat-x;
+}
+.bg-timezone, .banner2, #banner2{
+	background-color: #1b2933;
+	background-image: url('../../assets/bgs/timeN.png');
+	background-position: top;
+	background-repeat: repeat-x;
+}
+.bg-cto, .banner4, #banner4{
+	background-color: #1b2933;
+	background-image: url('../../assets/bgs/ctoN.png');
+	background-position: top;
+	background-repeat: repeat-x;
+}
+.bg-code, .banner3, #banner3{
+	background-image: url('../../assets/bgs/codeN.png');
+	background-repeat: repeat-x;
+	background-position: center top;
+	background-color: #1b2933;
+}
+.bg-gatlin, .banner5, #banner5{
 	background-image: url('../../assets/bgs/gatlinN.png');
 	background-repeat: repeat-x;
 	background-position: center top;
 	background-color: #1b2933;
 }
-#banner0{
-	background: linear-gradient(180deg, #3C313D 0%, #7C7BBA 100%);
+.bg-rocket, .banner6, #banner6{
+	background-color: #1b2933;
+	background-image: url('../../assets/bgs/rocketN.png');
+	background-position: top;
+	background-repeat: repeat-x;
 }
-#banner2{
-	background-image: url('../../app/assets/bgs/timeN.png');
-}
-#banner1{
-	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 50.52%, #D9C5D8 100%);
-}
-#banner3{
-	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);
-}
-#banner4{
-	background: linear-gradient(180deg, #CAD3C2 0%, #0C7CBB 100%);
-}
-#banner5{
-	background: linear-gradient(180deg, #8FC3FF 0%, #974AF8 100%);
-}
-#banner6{
-	background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #C9FF56 0%, #937DB0 100%);
-}
+
 
 /*nav*/
 .nav-search input{
@@ -159,4 +169,98 @@ footer section{
 }
 .back-nav > ul > li > span{
 	margin-left:0px;
+}
+
+.psico1, .psico2{
+	position: absolute;
+	width: 527px;
+	height: 214px;
+	left: 350px;
+	top: 151px;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 111%;
+	/* or 98px */
+	color: #FAF5F1;
+}
+
+.rocket1 , .rocket2{
+
+	position: absolute;
+	width: 800px;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 111%;
+	/* or 98px */
+
+
+	color: #44427E;
+}
+
+.code1, .code2{
+	position: absolute;
+
+	font-family: Charter;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 88px;
+	line-height: 107px;
+	color: #C6007D;
+}
+.code2{
+	color: #4577ff;
+}
+
+.cto1{
+	position: absolute;
+	width: 220px;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 80px;
+	line-height: 120%;
+	/* or 96px */
+
+	color: #FFDF9C;
+}
+.gatlin1{
+	position: absolute;
+
+	width: 500px;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #FFF3B6;
+}
+.timezone1{
+	position: absolute;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 107px;
+
+	color: #B0FBBC ;
+	text-shadow: 0px 0px 76px rgba(188, 251, 195, 0.3);
+}
+.timezone2{
+	color: #82F9A1;
+}
+.remoto2, .remoto1{
+	position: absolute;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 88px;
+	line-height: 111%;
+	/* or 98px */
+
+	color: #FFE7FB;
 }

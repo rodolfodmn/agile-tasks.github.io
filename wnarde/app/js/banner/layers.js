@@ -93,7 +93,6 @@ const bannerLayers = {
 	createLayerText: function (layer, id) {
 		const div = document.createElement('div')
 		const p = []
-		console.log(layer)
 		layer.forEach(function (text) {
 			var t_ = document.createElement('p')
 			t_.textContent = text.text
