@@ -41,7 +41,9 @@ var content = {
 		banner.style.width = '100%'
 		banner.style.position = 'relative'
 		banner.style.height = '800px'
-		banner.style.top = '-119px'
+		banner.style.top = '-110px'
+		base.style.right = '1.4%'
+
 		base.style.width = ''
 		document.body.className = allLayers[base.dataset.pos].bg
 		if (window.screen.width < 800) {
@@ -80,6 +82,7 @@ var content = {
 		banner.position = 'fixed'
 		banner.height = '100%'
 		banner.top = '0'
+		base.style.right = '0'
 		base.style.width = '50%'
 		var transiotion = setInterval(function () {
 			if (post.opacity === '') {

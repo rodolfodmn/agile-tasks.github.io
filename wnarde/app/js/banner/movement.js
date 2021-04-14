@@ -16,6 +16,7 @@ const movement = {
 		this.canMove = true
 	},
 	move: function (inBan, inC, inT, inS, isVertival, revert) {
+		return
 		if (revert) {
 			inBan *= -1
 			inC *= -1

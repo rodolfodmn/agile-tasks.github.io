@@ -66,6 +66,7 @@
 }
 #banner1{
 	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 50.52%, #D9C5D8 100%);
+	background-image: url('../../assets/bgB.png');
 }
 #banner5{
 	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);
@@ -129,37 +130,27 @@
 }
 .psico2{
 	position: absolute;
-	left: 24.31%;
-	right: 39.1%;
-	top: 16.78%;
-	bottom: 59.44%;
-
 	font-family: Charter;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 88px;
 	line-height: 107px;
-
 	color: #B3384A;
 }
+
 .psico1{
 	position: absolute;
 	width: 527px;
 	height: 214px;
-	left: 350px;
-	top: 151px;
-
 	font-family: Charter;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 88px;
 	line-height: 107px;
-
 	color: #B3384A;
 }
 
 .rocket1 , .rocket2{
-
 	position: absolute;
 	width: 800px;
 	font-family: Charter;
@@ -246,4 +237,7 @@
 
 
 	color: #3D3D3D;
+}
+.rotate{
+	transform: rotate(-34deg);
 }

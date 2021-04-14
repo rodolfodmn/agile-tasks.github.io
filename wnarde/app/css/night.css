@@ -20,9 +20,8 @@ footer section{
 }
 .bg-psico, .banner1, #banner1{
 	background-color: #1b2933;
-	background-image: url('../../assets/bgs/psicoN.png');
+	background-image: url('../../assets/bgs/psicoN.png'), url('../../assets/bgB.png');
 	background-position: top;
-	background-repeat: repeat-x;
 }
 .bg-timezone, .banner2, #banner2{
 	background-color: #1b2933;

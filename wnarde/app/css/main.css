@@ -25,7 +25,9 @@
 	padding: 20px;
 }
 .bg-psico{
-	background-image: url('../../assets/BG753.png');
+	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 50.52%, #D9C5D8 100%);
+	background-image: url('../../assets/bgB.png');
+	background-image:  url('../../assets/bgB.png'), url('../../assets/bgs/psico.png');
 	background-repeat: repeat-x;
 	background-position: center top;
 	background-color: #fcf9f7;

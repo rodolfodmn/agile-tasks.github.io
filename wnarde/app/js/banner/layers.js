@@ -77,8 +77,8 @@ const bannerLayers = {
 		div.className = id
 		div.style.top = layer.pos.top
 		img.onload = function () {
-			div.style.left = ((window.screen.width - this.width) / 2)
-			div.dataset.initPos = ((window.screen.width - this.width) / 2)
+			div.style.left = ((window.screen.width - this.width) / 2) + layer.pos.left
+			div.dataset.initPos = ((window.screen.width - this.width) / 2) + layer.pos.left
 		}
 		img.style.cursor = 'pointer'
 		img.parentElement.onclick = function () {
