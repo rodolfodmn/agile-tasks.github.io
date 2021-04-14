@@ -95,6 +95,9 @@ const bannerLayers = {
 		const p = []
 		layer.forEach(function (text) {
 			var t_ = document.createElement('p')
+			if (typeof text.pre !== 'undefined') {
+				t_ = document.createElement('pre')
+			}
 			t_.textContent = text.text
 			t_.style.cursor = 'pointer'
 			t_.style.top = text.pos.top

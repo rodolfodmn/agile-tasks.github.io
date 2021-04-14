@@ -264,3 +264,7 @@ footer section{
 
 	color: #FFE7FB;
 }
+
+.logo_svg{
+	filter: invert(94%) sepia(94%) saturate(0%) hue-rotate(189deg) brightness(105%) contrast(107%);
+}
