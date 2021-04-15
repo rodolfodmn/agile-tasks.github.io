@@ -73,13 +73,14 @@ const bannerLayers = {
 		if (window.screen.width < 800)
 			img.src = `assets/bannersMobile/${layer.src}.png`
 
+		img.onload = function () {
+			this.style.position = 'absolute'
+			this.style.left = window.screen.width / 2 - this.width / 2
+			this.style.top = 125
+		}
+
 		div.append(img)
 		div.className = id
-		div.style.top = layer.pos.top
-		img.onload = function () {
-			div.style.left = ((window.screen.width - this.width) / 2) + layer.pos.left
-			div.dataset.initPos = ((window.screen.width - this.width) / 2) + layer.pos.left
-		}
 		img.style.cursor = 'pointer'
 		img.parentElement.onclick = function () {
 			if (touch.transitionDone) {
@@ -100,8 +101,6 @@ const bannerLayers = {
 			}
 			t_.textContent = text.text
 			t_.style.cursor = 'pointer'
-			t_.style.top = text.pos.top
-			t_.style.left = text.pos.left
 			t_.className = text.class
 			p.push(t_)
 			t_.onclick = function () {
@@ -111,11 +110,14 @@ const bannerLayers = {
 				}
 			}
 			div.append(t_)
+
+			t_.style.position = 'absolute'
+			t_.style.left = window.screen.width / 2
+			t_.style.top = 125
+
 		})
 
 		div.className = id
-		div.style.left = ((window.screen.width) / 2)
-		div.dataset.initPos = ((window.screen.width) / 2)
 		return div
 	},
 	setPorcent: function () {

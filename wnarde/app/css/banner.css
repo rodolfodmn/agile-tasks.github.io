@@ -126,6 +126,9 @@
 }
 .banner-base div{
 	position: absolute;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
 }
 .banner-central{
 	z-index: 8;
@@ -176,7 +179,7 @@
 }
 .cto1, .cto2{
 	position: absolute;
-	width: 220px;
+	width: 270px;
 	font-family: Charter;
 	font-style: normal;
 	font-size: 80px;

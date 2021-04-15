@@ -8,10 +8,15 @@ var navBar = {
 			addEventListener('click', function (event) {
 				navBar.alpha = 0
 				document.querySelector(".back-nav").style.display = "none"
+				document.querySelector('#logo').style.background = 'transparent'
 			})
 
 		document.querySelector('.icon-recent_b').
 			addEventListener('click', function (event) {
+				document.querySelector('#logo').style.background = '#fff'
+				if (document.querySelector(".icon-day").style.display === 'none') {
+					document.querySelector('#logo').style.background = '#1d262d'
+				}
 				document.querySelector(".back-nav").style.display = "flex"
 				navBar.show = setInterval(navBar.opacityUp, 25)
 			})
@@ -20,7 +25,7 @@ var navBar = {
 
 	opacityUp: function () {
 		navBar.alpha += 0.05
-		document.querySelector('#logo').style.background = '#fff'
+
 		var bgColor = `rgba(29, 38, 45, ${navBar.alpha})`
 		if (document.querySelector(".icon-day").style.display === 'none') {
 			bgColor = `rgba(255, 255, 255, ${navBar.alpha})`
