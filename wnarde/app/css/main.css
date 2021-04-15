@@ -76,3 +76,11 @@
 	position:fixed;
 }
 
+.banner-text{
+	font-weight: bold;
+}
+.img_perfil_mol{
+	position: relative;
+	right: 152px;
+	bottom: 30px;
+}

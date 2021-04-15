@@ -93,7 +93,8 @@ var content = {
 				return
 			}
 			clearInterval(transiotion)
-			document.body.className = `banner${document.querySelector('.banner-base').dataset.pos}`
+			document.body.className = allLayers[document.querySelector('.banner-base').dataset.pos].bg
+			document.body.className += ` banner${document.querySelector('.banner-base').dataset.pos}`
 			if (window.screen.availWidth > 800) {
 				document.querySelector('.tleft').style.display = 'flex'
 				document.querySelector('.tright').style.display = 'flex'

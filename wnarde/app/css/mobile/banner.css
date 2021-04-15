@@ -73,8 +73,9 @@
 #banner0{
 	background: linear-gradient(180deg, #FFF1FD 0%, #E0E4E6 42.19%, #7C7BBA 100%);
 }
-#banner1{
+.banner1{
 	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 50.52%, #D9C5D8 100%);
+	background-image: url('../../../assets/bannersMobile/C_3.png');
 }
 #banner5{
 	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);
@@ -98,17 +99,12 @@
 	z-index: 9;
 }
 
-#banner1 .banner-secondary{
-	left:0 !important;
-}
 .psico2{
 	position: absolute;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 44px;
 	line-height: 54px;
-
 	color: #B3384A;
 }
 .psico1{
@@ -116,7 +112,6 @@
 	width: 527px;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 44px;
 	line-height: 54px;
 	color: #B3384A;
@@ -124,10 +119,9 @@
 
 .rocket1 , .rocket2{
 	position: absolute;
-	width: 230px;
+	width: 250px;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 44px;
 	line-height: 54px;
 	color: #44427E;
@@ -136,7 +130,6 @@
 	position: absolute;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: bold;
 	font-size: 44px;
 	line-height: 54px;
 	color: #89135E;
@@ -150,11 +143,8 @@
 	width: 220px;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 40px;
 	line-height: 54px;
-
-
 	color: #523472;
 }
 .cto2{
@@ -162,33 +152,25 @@
 }
 .gatlin1{
 	position: absolute;
-
 	width: 200px;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 44px;
 	line-height: 54px;
-
 	color: #FFF3B6;
 }
 .timezone2{
 	position: absolute;
-
 	font-family: Charter;
 	font-style: normal;
-	font-weight: bold;
 	font-size: 44px;
 	line-height: 54px;
-
 	color: #FFC1AB;
 }
 .timezone1{
 	position: absolute;
-
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 44px;
 	line-height: 54px;
 
@@ -198,11 +180,7 @@
 	position: absolute;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 44px;
 	line-height: 54px;
-	/* or 98px */
-
-
 	color: #3D3D3D;
 }

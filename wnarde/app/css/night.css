@@ -18,9 +18,14 @@ footer section{
 	background-position: top;
 	background-repeat: repeat-x;
 }
-.bg-psico, .banner1, #banner1{
+.bg-psico{
 	background-color: #1b2933;
-	background-image: url('../../assets/bgs/psicoN.png'), url('../../assets/bgB.png');
+	background-image:  url('../../assets/bgs/psicoN.png');
+	background-position: top;
+}
+.banner1, #banner1{
+	background-color: #1b2933;
+	background-image: url('../../assets/bgs/psicoN.png');
 	background-position: top;
 }
 .bg-timezone, .banner2, #banner2{

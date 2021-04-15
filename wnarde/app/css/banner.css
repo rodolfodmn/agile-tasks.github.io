@@ -65,8 +65,7 @@
 	background: linear-gradient(180deg, #FFF1FD 0%, #E0E4E6 42.19%, #7C7BBA 100%);
 }
 #banner1{
-	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 50.52%, #D9C5D8 100%);
-	background-image: url('../../assets/bgB.png');
+	background-image: url('../../assets/BG753.png');
 }
 #banner5{
 	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);
@@ -87,7 +86,7 @@
 	background: linear-gradient(180deg, #FFF1FD 0%, #E0E4E6 42.19%, #7C7BBA 100%);
 }
 .banner1{
-	background: linear-gradient(180deg, rgba(255, 198, 252, 1) 50.52%, #D9C5D8 100%);
+	background-image: url('../../assets/BG753.png');
 }
 .banner5{
 	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);
@@ -132,7 +131,6 @@
 	position: absolute;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 88px;
 	line-height: 107px;
 	color: #B3384A;
@@ -144,7 +142,6 @@
 	height: 214px;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 88px;
 	line-height: 107px;
 	color: #B3384A;
@@ -155,19 +152,14 @@
 	width: 800px;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 88px;
 	line-height: 111%;
-	/* or 98px */
-
-
 	color: #44427E;
 }
 .code1, .code2{
 	position: absolute;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: bold;
 	font-size: 88px;
 	line-height: 107px;
 	color: #89135E;
@@ -181,12 +173,8 @@
 	width: 220px;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 80px;
 	line-height: 120%;
-	/* or 96px */
-
-
 	color: #523472;
 }
 .cto2{
@@ -194,11 +182,9 @@
 }
 .gatlin1{
 	position: absolute;
-
 	width: 500px;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 88px;
 	line-height: 107px;
 
@@ -206,7 +192,6 @@
 }
 .timezone2{
 	position: absolute;
-
 	font-family: Charter;
 	font-style: normal;
 	font-weight: bold;
@@ -217,25 +202,18 @@
 }
 .timezone1{
 	position: absolute;
-
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 88px;
 	line-height: 107px;
-
 	color: #EE7B52;
 }
 .remoto2, .remoto1{
 	position: absolute;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 88px;
 	line-height: 111%;
-	/* or 98px */
-
-
 	color: #3D3D3D;
 }
 .rotate{
