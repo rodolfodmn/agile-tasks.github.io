@@ -65,7 +65,10 @@
 	background: linear-gradient(180deg, #FFF1FD 0%, #E0E4E6 42.19%, #7C7BBA 100%);
 }
 #banner1{
-	background-image: url('../../assets/BG753.png');
+	background-image:  url('../../assets/banners/C_4.png') , url("../../assets/bgs/psico.png");
+	background-position: center top;
+	background-repeat: repeat-x;
+	background-color: #d69fd5;
 }
 #banner5{
 	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);
@@ -86,7 +89,10 @@
 	background: linear-gradient(180deg, #FFF1FD 0%, #E0E4E6 42.19%, #7C7BBA 100%);
 }
 .banner1{
-	background-image: url('../../assets/BG753.png');
+	background-image:   url("../../assets/bgs/psico.png");
+	background-position: center top;
+	background-repeat: repeat-x;
+	background-color: #d69fd5;
 }
 .banner5{
 	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);

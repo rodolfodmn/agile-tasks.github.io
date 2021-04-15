@@ -18,16 +18,23 @@ const touch = {
 		return false
 	},
 	start: function (e) {
-		touch.initPosX = e.changedTouches[0].clientX
+		if (touch.onlyOne(e)) {
+			touch.initPosX = e.changedTouches[0].clientX
+		}
 	},
 	move: function (e) {
-		touch.transitionDone = false
-		touch.posX = e.changedTouches[0].clientX
-		if (touch.checkDirection()) {
-			touch.toPrevious()
-			return
+		if (touch.onlyOne(e)) {
+			touch.transitionDone = false
+			touch.posX = e.changedTouches[0].clientX
+			if (touch.checkDirection()) {
+				touch.toPrevious()
+				return
+			}
+			touch.toNext()
 		}
-		touch.toNext()
+	},
+	onlyOne: function (e) {
+		return e.changedTouches.length < 2
 	},
 	toPrevious: function () {
 		touch.appendPrevius()
@@ -40,12 +47,14 @@ const touch = {
 		document.querySelector(`#banner${touch.currentBanner}`).style.width = `${moved}%`
 	},
 	leave: function (e) {
-		touch.posX = e.changedTouches[0].clientX
-		if (touch.checkDirection()) {
-			touch.leavePrevious()
-			return
+		if (touch.onlyOne(e)) {
+			touch.posX = e.changedTouches[0].clientX
+			if (touch.checkDirection()) {
+				touch.leavePrevious()
+				return
+			}
+			touch.leaveNext()
 		}
-		touch.leaveNext()
 	},
 	leavePrevious: function () {
 		var nextBanner = touch.nextBanner

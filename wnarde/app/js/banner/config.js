@@ -28,7 +28,7 @@ export const allLayers = [
 		secondary:
 			[
 				{src: `C_2`, pos: {top: '50', left: -26, delay: 30}},
-				{src: `C_3`, pos: {top: '50', left: -26, delay: 30}}
+				{src: `C_3`, pos: {top: '50', left: -26, delay: 30}},
 			]
 	},
 	{
