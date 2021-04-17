@@ -59,11 +59,14 @@ var content = {
 		document.querySelector('footer').style.display = 'none'
 		var transiotion = setInterval(function () {
 			clearInterval(transiotion)
-			document.querySelector('.tleft').style.display = 'none'
-			document.querySelector('.tright').style.display = 'none'
+			document.querySelector('.tleft').style.top = '64%'
+			document.querySelector('.tright').style.top = '64%'
 			document.querySelector('.post-content').style.display = 'flex'
 			document.querySelector('.show-back').style.display = 'none'
 			if (window.screen.availWidth > 800) {
+				document.querySelector('.tleft').style.opacity = 0
+				document.querySelector('.tright').style.opacity = 0
+				content.showPostArrow()
 				document.querySelector('.go-back').style.display = 'block'
 				document.querySelector('.go-back').addEventListener('click', function () {
 					self.showBanners()
@@ -102,8 +105,10 @@ var content = {
 			document.body.className = allLayers[document.querySelector('.banner-base').dataset.pos].bg
 			document.body.className += ` banner${document.querySelector('.banner-base').dataset.pos}`
 			if (window.screen.availWidth > 800) {
-				document.querySelector('.tleft').style.display = 'flex'
-				document.querySelector('.tright').style.display = 'flex'
+				document.querySelector('.tleft').style.top = '15%'
+				document.querySelector('.tright').style.top = '15%'
+				document.querySelector('.tleft').style.opacity = 1
+				document.querySelector('.tright').style.opacity = 1
 			}
 			document.querySelector('footer').style.display = 'block'
 			document.querySelector('.banner-content').style.display = 'flex'
@@ -117,6 +122,18 @@ var content = {
 				document.querySelector('.go-back-mb').style.display = 'none'
 			}
 		}, 30)
+	},
+
+	showPostArrow: function () {
+		window.addEventListener("scroll", (event) => {
+			if (window.scrollMaxY - 100 <= window.pageYOffset) {
+				document.querySelector('.tleft').style.opacity = 1
+				document.querySelector('.tright').style.opacity = 1
+			} else {
+				document.querySelector('.tleft').style.opacity = 0
+				document.querySelector('.tright').style.opacity = 0
+			}
+		});
 	}
 }
 export default content

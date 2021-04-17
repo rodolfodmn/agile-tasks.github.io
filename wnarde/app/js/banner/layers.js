@@ -16,6 +16,8 @@ const bannerLayers = {
 		var base = bannerLayers.createBanner(layer)
 		if (window.screen.width > 800) {
 			bannerLayers.mouseMove(document.querySelector('.banner-content'))
+		} else {
+			bannerLayers.moveScreen()
 		}
 		return base
 	},
@@ -42,6 +44,17 @@ const bannerLayers = {
 			bannerLayers.mXold = bannerLayers.mX
 			bannerLayers.mYold = bannerLayers.mY
 		}, 60)
+	},
+	moveScreen: function () {
+		window.ondeviceorientation = function (e) {
+			if (e.gamma > 0) {
+				movement.toLeft()
+			}
+			else if (e.gamma < 0) {
+				movement.toRight()
+			}
+
+		}
 	},
 	cleanMovement: function () {
 		this.cleanInterval = true

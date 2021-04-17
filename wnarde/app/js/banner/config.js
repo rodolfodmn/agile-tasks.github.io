@@ -18,7 +18,7 @@ export const allLayers = [
 	},
 	{
 		bg: 'bg-psico',
-		postSpace: 30,
+		postSpace: 300,
 		central: {
 			src: `C_1`, pos: {top: 280, left: 0, delay: 10}
 		},
@@ -122,7 +122,7 @@ export const allLayers = [
 			]
 	},
 ]
-
+//mobile
 export const allLayersMobile = [
 	{
 		bg: 'bg-remoto',
@@ -131,8 +131,8 @@ export const allLayersMobile = [
 		},
 		text:
 			[
-				{text: `Comunicação Assíncrona & `, class: `remoto1`, pos: {top: 119, left: -160, delay: 20}},
-				{text: ` Trabalho Remoto`, class: `remoto2`, pos: {top: 437, left: -160, delay: 20}}
+				{text: `Comunicação Assíncrona & `, class: `remoto1`, pos: {top: 119, left: 150, delay: 20}},
+				{text: ` Trabalho Remoto`, class: `remoto2`, pos: {top: 437, left: 150, delay: 20}}
 			],
 		secondary:
 			[
@@ -147,8 +147,8 @@ export const allLayersMobile = [
 		},
 		text:
 			[
-				{text: `Segurança`, class: `psico1`, pos: {top: 100, left: -160, delay: 20}},
-				{text: `Psicológica`, class: `psico2`, pos: {top: 147, left: -160, delay: 20}}
+				{text: `Segurança`, class: `psico1`, pos: {top: 100, left: 150, delay: 20}},
+				{text: `Psicológica`, class: `psico2`, pos: {top: 147, left: 150, delay: 20}}
 			],
 		secondary:
 			[
@@ -163,8 +163,8 @@ export const allLayersMobile = [
 		},
 		text:
 			[
-				{text: `Fazendo as \npazes \ncom`, pre: true, class: `timezone1`, pos: {top: '136', left: '-160', delay: 20}},
-				{text: `timezone`, class: `timezone2`, pos: {top: '350', left: '-80', delay: 20}}
+				{text: `Fazendo as \npazes \ncom`, pre: true, class: `timezone1`, pos: {top: 136, left: 150, delay: 20}},
+				{text: `timezone`, class: `timezone2`, pos: {top: 440, left: 90, delay: 20}}
 			],
 		secondary:
 			[
@@ -179,8 +179,8 @@ export const allLayersMobile = [
 		},
 		text:
 			[
-				{text: `Introdução à Infraestrutura como`, class: `code1`, pos: {top: '80', left: '-150', delay: 20}},
-				{text: `Código`, class: `code2`, pos: {top: 190, left: '-36', delay: 20}}
+				{text: `Introdução à Infraestrutura como`, class: `code1`, pos: {top: 80, left: 150, delay: 20}},
+				{text: `Código`, class: `code2`, pos: {top: 190, left: 30, delay: 20}}
 			],
 		secondary:
 			[
@@ -195,10 +195,10 @@ export const allLayersMobile = [
 		text:
 			[
 				{
-					text: 'O que faz um CTO?', class: `cto1`, pos: {top: '100', left: '-150', delay: 20}
+					text: 'O que faz um CTO?', class: `cto1`, pos: {top: 100, left: 150, delay: 20}
 				},
 				{
-					text: 'CTO', class: `cto2`, pos: {top: '154', left: '-84', delay: 20}
+					text: 'CTO', class: `cto2`, pos: {top: '154', left: 79, delay: 20}
 				}
 			],
 		secondary:
@@ -214,7 +214,7 @@ export const allLayersMobile = [
 		},
 		text:
 			[
-				{text: `Testes de carga com Gatlin`, class: `gatlin1`, pos: {top: 140, left: '-166', delay: 20}},
+				{text: `Testes de carga com Gatlin`, class: `gatlin1`, pos: {top: 140, left: 150, delay: 20}},
 			],
 		secondary:
 			[
@@ -230,9 +230,9 @@ export const allLayersMobile = [
 		text:
 			[
 				{
-					text: `Gestão de despesas em computação na nuvem`, class: `rocket1`, pos: {top: '100', left: '-150', delay: 20}
+					text: `Gestão de despesas em computação na nuvem`, class: `rocket1`, pos: {top: '100', left: 150, delay: 20}
 				},
-				{text: `para equipes financeiras`, class: `rocket2`, pos: {top: '480', left: '-150', delay: 20}}
+				{text: `para equipes financeiras`, class: `rocket2`, pos: {top: '480', left: 150, delay: 20}}
 			],
 		secondary:
 			[
