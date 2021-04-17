@@ -328,3 +328,6 @@
 	width: auto;
 	height: 100%;
 }
+.post-content{
+	z-index: 1;
+}

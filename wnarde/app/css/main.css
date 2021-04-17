@@ -51,6 +51,7 @@
 	cursor: pointer;
 }
 .icon{
+	display: block;
 	font-size: 35px;
 	width: 51px;
 	text-align: center;

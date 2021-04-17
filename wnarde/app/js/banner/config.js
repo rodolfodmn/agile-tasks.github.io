@@ -1,117 +1,124 @@
 export const allLayers = [
 	{
 		bg: 'bg-remoto',
+		postSpace: 30,
 		central: {
-			src: `B_1`, pos: {top: 5, left: 34, delay: 10}
+			src: `B_1`, pos: {top: 151, left: 0, delay: 10}
 		},
 		text:
 			[
-				{text: `Comunicação Assíncrona & `, class: `remoto1`, pos: {top: '137', left: '-371', delay: 20}},
-				{text: ` Trabalho Remoto`, class: `remoto2`, pos: {top: '525', left: '-371', delay: 20}}
+				{text: `Comunicação Assíncrona & `, class: `remoto1`, pos: {top: 150, left: 350, delay: 20}},
+				{text: ` Trabalho Remoto`, class: `remoto2`, pos: {top: 550, left: 350, delay: 20}}
 			],
 		secondary:
 			[
-				{src: `B_3`, pos: {top: -35, left: -28, delay: 30}},
-				{src: `B_2`, pos: {top: -50, left: 0, delay: 30}}
+				{src: `B_3`, pos: {top: 150, left: 0, delay: 30}},
+				{src: `B_2`, pos: {top: 150, left: 0, delay: 30}}
 			]
 	},
 	{
 		bg: 'bg-psico',
+		postSpace: 30,
 		central: {
-			src: `C_1`, pos: {top: '50', left: -26, delay: 10}
+			src: `C_1`, pos: {top: 280, left: 0, delay: 10}
 		},
 		text:
 			[
-				{text: `Segurança`, class: `psico1`, pos: {top: '140', left: '-371', delay: 20}},
-				{text: `Psicológica`, class: `psico2`, pos: {top: '227', left: '-371', delay: 20}}
+				{text: `Segurança`, class: `psico1`, pos: {top: 151, left: 350, delay: 20}},
+				{text: `Psicológica`, class: `psico2`, pos: {top: 256, left: 350, delay: 20}}
 			],
 		secondary:
 			[
-				{src: `C_2`, pos: {top: '50', left: -26, delay: 30}},
-				{src: `C_3`, pos: {top: '50', left: -26, delay: 30}},
+				{src: `C_2`, pos: {top: 440, left: -180, delay: 30}},
+				{src: `C_3`, pos: {top: 190, left: 190, delay: 30}},
 			]
 	},
 	{
 		bg: 'bg-timezone',
+		postSpace: 30,
 		central: {
-			src: `A_1`, pos: {top: '54', left: -6, delay: 10}
+			src: `A_1`, pos: {top: 390, left: -14, delay: 10}
 		},
 		text:
 			[
-				{text: `Fazendo as pazes com `, class: `timezone1`, pos: {top: '286', left: '-371', delay: 20}},
-				{text: `timezone`, class: `timezone2`, pos: {top: '500', left: '-194', delay: 20}}
+				{text: `Fazendo as\npazes\ncom `, pre: true, class: `timezone1`, pos: {top: 260, left: 370, delay: 20}},
+				{text: `timezone`, class: `timezone2`, pos: {top: 474, left: 190, delay: 20}}
 			],
 		secondary:
 			[
-				{src: `A_3`, pos: {top: '54', left: -6, delay: 30}},
-				{src: `A_2`, pos: {top: '54', left: -6, delay: 30}}
+				{src: `A_3`, pos: {top: 185, left: -160, delay: 30}},
+				{src: `A_2`, pos: {top: 125, left: 0, delay: 30}, isPrincipal: true}
 			]
 	},
 	{
 		bg: 'bg-code',
+		postSpace: 30,
 		central: {
-			src: `D_1`, pos: {top: '-30', left: -122, delay: 10}
+			src: `centralbook`, pos: {top: 450, left: 0, delay: 10}
 		},
 		text:
 			[
-				{text: `Introdução à Infraestrutura como`, class: `code1`, pos: {top: '80', left: '-371', delay: 20}},
-				{text: `Código`, class: `code2`, pos: {top: '295', left: '-136', delay: 20}}
+				{text: `Introdução à Infraestrutura como`, class: `code1`, pos: {top: 100, left: 370, delay: 20}},
+				{text: `Código`, class: `code2`, pos: {top: 314, left: 130, delay: 20}}
 			],
 		secondary:
 			[
-				{src: `D_3_`, pos: {top: '-20', left: 50, delay: 30}},
+				{src: `D_3_`, pos: {top: 0, left: 0, delay: 30}},
 			]
 	},
 	{
 		bg: 'bg-cto',
+		postSpace: 30,
 		central: {
-			src: `F_1`, pos: {top: -78, left: 0, delay: 10}
+			src: `F_1`, pos: {top: 535, left: 330, delay: 10}
 		},
 		text:
 			[
 				{
-					text: 'O que faz um CTO?', class: `cto1`, pos: {top: '150', left: '-371', delay: 20}
+					text: 'O que faz um CTO?', class: `cto1`, pos: {top: 150, left: 350, delay: 20}
 				},
 				{
-					text: 'CTO', class: `cto2`, pos: {top: '342', left: '-371', delay: 20}
+					text: 'CTO', class: `cto2`, pos: {top: 342, left: 350, delay: 20}
 				}
 			],
 		secondary:
 			[
-				{src: `F_3`, pos: {top: 34, left: 20, delay: 30}},
-				{src: `F_2`, pos: {top: -40, left: 80, delay: 30}}
+				{src: `F_3`, pos: {top: 144, left: 20, delay: 30}},
+				{src: `F_2`, pos: {top: 250, left: -70, delay: 30}}
 			]
 	},
 	{
 		bg: 'bg-gatlin',
+		postSpace: 300,
 		central: {
-			src: `E_1`, pos: {top: 0, left: 22, delay: 10}
+			src: `E_1`, pos: {top: 20, left: -180, delay: 10}
 		},
 		text:
 			[
-				{text: `Testes de carga com Gatlin`, class: `gatlin1`, pos: {top: '80', left: '-371', delay: 20}},
+				{text: `Testes de carga com Gatlin`, class: `gatlin1`, pos: {top: 120, left: 350, delay: 20}},
 			],
 		secondary:
 			[
-				{src: `E_3`, pos: {top: 50, left: 50, delay: 30}},
-				{src: `E_2`, pos: {top: 50, left: 50, delay: 30}}
+				{src: `E_3`, pos: {top: 450, left: 250, delay: 30}},
+				{src: `E_2`, pos: {top: 322, left: 50, delay: 30}, isPrincipal: true}
 			]
 	},
 	{
 		bg: 'bg-timezone',
+		postSpace: 30,
 		central: {
-			src: `centralrocket`, pos: {top: 140, left: 0, delay: 10}
+			src: `centralrocket`, pos: {top: 80, left: 0, delay: 10}
 		},
 		text:
 			[
 				{
-					text: `Gestão de despesas em computação na nuvem`, class: `rocket1`, pos: {top: 100, left: -371, delay: 20}
+					text: `Gestão de despesas em computação na nuvem`, class: `rocket1`, pos: {top: 135, left: 350, delay: 20}
 				},
-				{text: `para equipes financeiras`, class: `rocket2`, pos: {top: 480, left: -371, delay: 20}}
+				{text: `para equipes financeiras`, class: `rocket2`, pos: {top: 580, left: 350, delay: 20}}
 			],
 		secondary:
 			[
-				{src: `rocket`, pos: {top: 44, left: 40, delay: 30}},
+				{src: `rocket`, pos: {top: 4, left: 0, delay: 30}},
 			]
 	},
 ]
@@ -156,8 +163,8 @@ export const allLayersMobile = [
 		},
 		text:
 			[
-				{text: `Fazendo as \npazes \ncom `, pre: true, class: `timezone1`, pos: {top: '136', left: '-160', delay: 20}},
-				{text: `timezone`, class: `timezone2`, pos: {top: '450', left: '-80', delay: 20}}
+				{text: `Fazendo as \npazes \ncom`, pre: true, class: `timezone1`, pos: {top: '136', left: '-160', delay: 20}},
+				{text: `timezone`, class: `timezone2`, pos: {top: '350', left: '-80', delay: 20}}
 			],
 		secondary:
 			[

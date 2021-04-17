@@ -5,6 +5,8 @@ const bannerLayers = {
 	fps: 30,
 	mY: 0,
 	mX: 0,
+	mYold: 0,
+	mXold: 0,
 	changScreen: 0,
 	cleanInterval: false,
 	screen: window.screen,
@@ -27,18 +29,18 @@ const bannerLayers = {
 				clearInterval(moveInterval)
 			}
 			bannerLayers.cleanInterval = false
-			if (bannerLayers.mY > bannerLayers.center / 2) {
-				movement.toDown()
-			}
-			if (bannerLayers.mY < bannerLayers.center / 2) {
-				movement.toUp()
-			}
-			if (bannerLayers.mX < bannerLayers.middle / 2) {
+			if (bannerLayers.mX > bannerLayers.mXold) {
 				movement.toRight()
-			}
-			if (bannerLayers.mX > bannerLayers.middle) {
+			} else if (bannerLayers.mX < bannerLayers.mXold) {
 				movement.toLeft()
 			}
+			if (bannerLayers.mY > bannerLayers.mYold) {
+				movement.toUp()
+			} else if (bannerLayers.mY < bannerLayers.mYold) {
+				movement.toDown()
+			}
+			bannerLayers.mXold = bannerLayers.mX
+			bannerLayers.mYold = bannerLayers.mY
 		}, 60)
 	},
 	cleanMovement: function () {
@@ -52,6 +54,10 @@ const bannerLayers = {
 		banner.className = 'banner-base'
 		banner.append(this.createCentral(layer.central))
 		layer.secondary.forEach(function (s) {
+			if (s.isPrincipal) {
+				banner.append(bannerLayers.createSecondary(s, true))
+				return
+			}
 			banner.append(bannerLayers.createSecondary(s))
 		})
 		banner.append(this.createText(layer.text))
@@ -60,13 +66,16 @@ const bannerLayers = {
 	createCentral: function (layer) {
 		return this.createLayer(layer, 'banner-central')
 	},
-	createSecondary: function (layer) {
-		return this.createLayer(layer, 'banner-secondary')
+	createSecondary: function (layer, isPrincipal) {
+		return this.createLayer(layer, 'banner-secondary', isPrincipal)
 	},
 	createText: function (layer) {
 		return this.createLayerText(layer, 'banner-text')
 	},
-	createLayer: function (layer, id) {
+	createLayer: function (layer, id, isPrincipal) {
+		if (isPrincipal) {
+			id = `${id} principal-banner`
+		}
 		const div = document.createElement('div')
 		const img = document.createElement('img')
 		img.src = `assets/banners/${layer.src}.png`
@@ -75,8 +84,8 @@ const bannerLayers = {
 
 		img.onload = function () {
 			this.style.position = 'absolute'
-			this.style.left = window.screen.width / 2 - this.width / 2
-			this.style.top = 125
+			this.style.left = (window.screen.width / 2 - this.width / 2) - layer.pos.left
+			this.style.top = layer.pos.top
 		}
 
 		div.append(img)
@@ -94,7 +103,7 @@ const bannerLayers = {
 	createLayerText: function (layer, id) {
 		const div = document.createElement('div')
 		const p = []
-		layer.forEach(function (text) {
+		layer.forEach(function (text, key) {
 			var t_ = document.createElement('p')
 			if (typeof text.pre !== 'undefined') {
 				t_ = document.createElement('pre')
@@ -112,8 +121,8 @@ const bannerLayers = {
 			div.append(t_)
 
 			t_.style.position = 'absolute'
-			t_.style.left = window.screen.width / 2
-			t_.style.top = 125
+			t_.style.left = window.screen.width / 2 - layer[key].pos.left
+			t_.style.top = layer[key].pos.top
 
 		})
 

@@ -182,12 +182,14 @@
 	width: 270px;
 	font-family: Charter;
 	font-style: normal;
+	font-weight:normal;
 	font-size: 80px;
 	line-height: 120%;
 	color: #523472;
 }
 .cto2{
 	color: #d92869;
+	font-weight:bold;
 }
 .gatlin1{
 	position: absolute;
@@ -203,15 +205,16 @@
 	position: absolute;
 	font-family: Charter;
 	font-style: normal;
-	font-weight: bold;
 	font-size: 88px;
 	line-height: 107px;
 
 	color: #FFC1AB;
 }
 .timezone1{
+	width: 460px;
 	position: absolute;
 	font-family: Charter;
+	font-weight: normal;
 	font-style: normal;
 	font-size: 88px;
 	line-height: 107px;
@@ -219,6 +222,7 @@
 }
 .remoto2, .remoto1{
 	position: absolute;
+	width: 100px;
 	font-family: Charter;
 	font-style: normal;
 	font-size: 88px;

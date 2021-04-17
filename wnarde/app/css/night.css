@@ -172,6 +172,7 @@ footer section{
 	top: 15%;
 }
 .back-nav > ul > li > span{
+	width: 36px;
 	margin-left:0px;
 }
 
@@ -230,6 +231,7 @@ footer section{
 	position: absolute;
 	font-family: Charter;
 	font-style: normal;
+	font-weight: normal;
 	font-size: 88px;
 	line-height: 107px;
 	color: #B0FBBC ;
@@ -237,6 +239,7 @@ footer section{
 }
 .timezone2{
 	color: #82F9A1;
+	font-weight: bold;
 }
 .remoto2, .remoto1{
 	position: absolute;

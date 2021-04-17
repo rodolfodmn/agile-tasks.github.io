@@ -7,70 +7,57 @@ const movement = {
 	porcent: 0,
 	canMove: true,
 	init: function () {
-		this.c = document.querySelector('.banner-central').style
+		this.c = document.querySelector('.banner-central').querySelector('img')
 		this.s = document.querySelectorAll('.banner-secondary')
 		this.canMove = true
 	},
-	move: function (inC, inS, isVertival, revert) {
-		return
-		if (revert) {
-			inBan *= -1
-			inC *= -1
-			inT *= -1
-			inS *= -1
-		}
+	move: function (inC, inS, isVertival) {
 		if (isVertival) {
-			if (revert) {
-				if (true) {
-					movement.doMovimentV(inC, inS)
-				}
-			} else {
-				if (true) {
-					movement.doMovimentV(inC, inS)
-				}
+			if (true) {
+				movement.doMovimentV(inC, inS)
+			}
+			if (true) {
+				movement.doMovimentV(inC, inS)
 			}
 		} else {
-			if (revert) {
-				if (true) {
-					movement.doMovimentH(inC, inS)
-				}
-			} else {
-				if (true) {
-					movement.doMovimentH(inC, inS)
-				}
+			if (true) {
+				movement.doMovimentH(inC, inS)
+			}
+			if (true) {
+				movement.doMovimentH(inC, inS)
 			}
 		}
 	},
-	toDown: function () {
-		this.move(2, 1, true, false)
-	},
 	toRight: function () {
-		this.move(2, 1, false, true)
-	},
-	toUp: function () {
-		this.move(2, 1, true, true)
+		this.move(-1, -1, false)
 	},
 	toLeft: function () {
-		this.move(2, 1, false, false)
+		this.move(1, 1, false)
+	},
+	toUp: function () {
+		this.move(-1, -1, true, false)
+	},
+	toDown: function () {
+		this.move(1, 1, true, true)
 	},
 	doMovimentH: function (inC, inS) {
 		if (this.canMove) {
-			movement.c.left = `${utils.pxToIn(movement.c.left) - inC}px`
-			if (typeof movement.s[0] != undefined)
-				movement.s[0].style.left = `${utils.pxToIn(movement.s[0].style.left) - inS}px`
+			movement.c.style.left = `${utils.pxToIn(movement.c.style.left) - inC}px`
+			if (typeof movement.s[0] !== 'undefined')
+				movement.s[0].querySelector('img').style.left = `${utils.pxToIn(movement.s[0].querySelector('img').style.left) - inS}px`
 
-			if (typeof movement.s[1] != undefined)
-				movement.s[1].style.left = `${utils.pxToIn(movement.s[1].style.left) + inS}px`
+			if (typeof movement.s[1] !== 'undefined')
+				movement.s[1].querySelector('img').style.left = `${utils.pxToIn(movement.s[1].querySelector('img').style.left) + inS}px`
 		}
 	},
 	doMovimentV: function (inC, inS) {
 		if (this.canMove) {
-			movement.c.top = `${utils.pxToIn(movement.c.top) - inC}px`
-			if (typeof movement.s[0] != undefined)
-				movement.s[0].style.top = `${utils.pxToIn(movement.s[0].style.top) - inS}px`
+			movement.c.style.top = `${utils.pxToIn(movement.c.style.top) - inC}px`
+			if (typeof movement.s[0] !== 'undefined')
+				movement.s[0].querySelector('img').style.top = `${utils.pxToIn(movement.s[0].querySelector('img').style.top) - inS}px`
 
-			if (typeof movement.s[1] != undefined)
-				movement.s[1].style.top = `${utils.pxToIn(movement.s[1].style.top) + inS}px`
+			if (typeof movement.s[1] !== 'undefined')
+				movement.s[1].querySelector('img').style.top = `${utils.pxToIn(movement.s[1].querySelector('img').style.top) + inS}px`
 		}
 	},
 	stop: function () {

@@ -1,4 +1,5 @@
 import {allLayers, allLayersMobile} from './banner/config.js'
+import utils from './utils.js'
 var content = {
 	done: false,
 
@@ -38,9 +39,14 @@ var content = {
 		const self = this
 		var banner = document.querySelector('.banner-content')
 		const base = document.querySelector('.banner-base')
+		var central = base.querySelector('.principal-banner')
+		if (central === null) {
+			central = base.querySelector('.banner-central')
+		}
+		central = central.querySelector('img')
 		banner.style.width = '100%'
 		banner.style.position = 'relative'
-		banner.style.height = '800px'
+		banner.style.height = central.height + allLayers[base.dataset.pos].postSpace
 		banner.style.top = '-110px'
 		base.style.right = '1.4%'
 

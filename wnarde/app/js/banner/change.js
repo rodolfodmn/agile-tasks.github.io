@@ -47,7 +47,7 @@ const change = {
 			document.body.className += ` banner${nextBanner.dataset.pos}`
 			movement.init()
 			change.canChange = true
-		}, 30)
+		}, 10)
 	},
 	changeToPrevious: function () {
 		change.canChange = false
@@ -65,7 +65,7 @@ const change = {
 			document.body.className += ` banner${banner.dataset.pos}`
 			movement.init()
 			change.canChange = true
-		}, 30)
+		}, 10)
 	},
 	appendNewBanner: function (isPrevius) {
 		if (isPrevius) {
