@@ -1,5 +1,6 @@
 import utils from '../utils.js'
 import create from './create.js'
+import movement from './movement.js'
 import fakeJson from '../fake-ajax.js'
 import {allLayersMobile} from './config.js'
 
@@ -103,6 +104,7 @@ const touch = {
 		touch.updateBanners()
 		touch.transitionDone = true
 		fakeJson.init()
+		movement.init()
 	},
 	updateBanners: function () {
 		touch.currentBanner = touch.nextBanner.dataset.pos
