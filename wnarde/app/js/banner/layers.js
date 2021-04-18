@@ -121,7 +121,7 @@ const bannerLayers = {
 			if (typeof text.pre !== 'undefined') {
 				t_ = document.createElement('pre')
 			}
-			t_.textContent = text.text
+			t_.innerHTML = text.text
 			t_.style.cursor = 'pointer'
 			t_.className = text.class
 			p.push(t_)

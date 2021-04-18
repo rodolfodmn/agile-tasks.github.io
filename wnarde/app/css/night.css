@@ -250,6 +250,84 @@ footer section{
 	color: #FFE7FB;
 }
 
+.back-nav > ul > li > span{
+	margin :0;
+}
 .logo_svg{
 	filter: invert(94%) sepia(94%) saturate(0%) hue-rotate(189deg) brightness(105%) contrast(107%);
+}
+@media only screen and (max-width: 868px) {
+	.psico2{
+		position: absolute;
+		font-family: Charter;
+		font-style: normal;
+		font-size: 44px;
+		line-height: 54px;
+	}
+	.psico1{
+		position: absolute;
+		width: 527px;
+		font-family: Charter;
+		font-style: normal;
+		font-size: 44px;
+		line-height: 54px;
+	}
+
+	.rocket1 , .rocket2{
+		position: absolute;
+		width: 270px;
+		font-family: Charter;
+		font-style: normal;
+		font-size: 44px;
+		line-height: 54px;
+	}
+	.code1, .code2{
+		position: absolute;
+		font-family: Charter;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 44px;
+		line-height: 54px;
+	}
+
+	.code2{
+		color: #4577ff;
+	}
+	.cto1, .cto2{
+		position: absolute;
+		width: 220px;
+		font-family: Charter;
+		font-style: normal;
+		font-size: 40px;
+		line-height: 54px;
+	}
+	.gatlin1{
+		position: absolute;
+		width: 220px;
+		font-family: Charter;
+		font-style: normal;
+		font-size: 44px;
+		line-height: 54px;
+	}
+	.timezone2{
+		position: absolute;
+		font-family: Charter;
+		font-style: normal;
+		font-size: 44px;
+		line-height: 54px;
+	}
+	.timezone1{
+		position: absolute;
+		font-family: Charter;
+		font-style: normal;
+		font-size: 44px;
+		line-height: 54px;
+	}
+	.remoto2, .remoto1{
+		position: absolute;
+		font-family: Charter;
+		font-style: normal;
+		font-size: 44px;
+		line-height: 54px;
+	}
 }

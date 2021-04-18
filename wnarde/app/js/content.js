@@ -1,5 +1,5 @@
 import {allLayers, allLayersMobile} from './banner/config.js'
-import utils from './utils.js'
+import touch from './banner/touch.js'
 var content = {
 	done: false,
 
@@ -37,9 +37,15 @@ var content = {
 
 	showContent: function () {
 		const self = this
+		touch.isPost = true
 		var banner = document.querySelector('.banner-content')
 		const base = document.querySelector('.banner-base')
 		var central = base.querySelector('.principal-banner')
+		document.querySelector('body').style.overflowX = 'hidden'
+		document.querySelector('body').style.maxWidth = '100%'
+		document.querySelector('html').style.overflowX = 'hidden'
+		document.querySelector('html').style.maxWidth = '100%'
+
 		if (central === null) {
 			central = base.querySelector('.banner-central')
 		}
@@ -53,6 +59,9 @@ var content = {
 		base.style.width = ''
 		document.body.className = allLayers[base.dataset.pos].bg
 		if (window.screen.width < 800) {
+			base.style.right = '8.4%'
+			banner.style.top = '-116px'
+			banner.style.height = central.height
 			document.body.className = allLayersMobile[base.dataset.pos].bg
 		}
 
@@ -83,6 +92,8 @@ var content = {
 	},
 
 	showBanners: function () {
+		document.querySelector('body').style.maxWidth = 'none'
+		document.querySelector('html').style.maxWidth = 'none'
 		this.done = false
 		var banner = document.querySelector('.banner-content').style
 		var post = document.querySelector('.post-content').style
@@ -97,10 +108,11 @@ var content = {
 			if (post.opacity === '') {
 				post.opacity = 1
 			}
-			if (post.opacity >= 0) {
+			if (post.opacity >= 0.1) {
 				post.opacity = `${parseFloat(post.opacity) - 0.1}`
 				return
 			}
+			touch.isPost = false
 			clearInterval(transiotion)
 			document.body.className = allLayers[document.querySelector('.banner-base').dataset.pos].bg
 			document.body.className += ` banner${document.querySelector('.banner-base').dataset.pos}`

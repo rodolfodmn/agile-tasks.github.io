@@ -1,3 +1,4 @@
+import touch from './banner/touch.js'
 var navBar = {
 	show: '',
 	alpha: 0,
@@ -6,6 +7,7 @@ var navBar = {
 	init: function () {
 		document.querySelector('.icon-close').
 			addEventListener('click', function (event) {
+				touch.isPost = false
 				navBar.alpha = 0
 				document.querySelector(".back-nav").style.display = "none"
 				document.querySelector('#logo').style.background = 'transparent'
@@ -13,6 +15,7 @@ var navBar = {
 
 		document.querySelector('.icon-recent_b').
 			addEventListener('click', function (event) {
+				touch.isPost = true
 				document.querySelector('#logo').style.background = '#fff'
 				if (document.querySelector(".icon-day").style.display === 'none') {
 					document.querySelector('#logo').style.background = '#1d262d'

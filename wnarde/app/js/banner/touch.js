@@ -4,6 +4,8 @@ import fakeJson from '../fake-ajax.js'
 import {allLayersMobile} from './config.js'
 
 const touch = {
+	isPost: false,
+	canLeave: false,
 	initPosX: 0,
 	posX: null,
 	bannersAround: {},
@@ -23,14 +25,17 @@ const touch = {
 		}
 	},
 	move: function (e) {
-		if (touch.onlyOne(e)) {
-			touch.transitionDone = false
-			touch.posX = e.changedTouches[0].clientX
-			if (touch.checkDirection()) {
-				touch.toPrevious()
-				return
+		if (!touch.isPost) {
+			if (touch.onlyOne(e)) {
+				touch.canLeave = true
+				touch.transitionDone = false
+				touch.posX = e.changedTouches[0].clientX
+				if (touch.checkDirection()) {
+					touch.toPrevious()
+					return
+				}
+				touch.toNext()
 			}
-			touch.toNext()
 		}
 	},
 	onlyOne: function (e) {
@@ -47,21 +52,26 @@ const touch = {
 		document.querySelector(`#banner${touch.currentBanner}`).style.width = `${moved}%`
 	},
 	leave: function (e) {
-		if (touch.onlyOne(e)) {
-			touch.posX = e.changedTouches[0].clientX
-			if (touch.checkDirection()) {
-				touch.leavePrevious()
-				return
+		if (touch.canLeave) {
+			touch.canLeave = false
+			if (!touch.isPost) {
+				if (touch.onlyOne(e)) {
+					touch.posX = e.changedTouches[0].clientX
+					if (touch.checkDirection()) {
+						touch.leavePrevious()
+						return
+					}
+					touch.leaveNext()
+				}
 			}
-			touch.leaveNext()
 		}
 	},
 	leavePrevious: function () {
 		var nextBanner = touch.nextBanner
 		var restore = setInterval(function () {
-
 			if (utils.prToIn(nextBanner.style.width) <= 30) {
-				if (utils.prToIn(nextBanner.style.width) > 49) {
+				if (utils.prToIn(nextBanner.style.width) < 1) {
+					touch.destroyBannerP()
 					clearInterval(restore)
 					return
 				}
@@ -71,7 +81,7 @@ const touch = {
 			if (utils.prToIn(nextBanner.style.width) >= 30) {
 				if (utils.prToIn(nextBanner.style.width) > 49) {
 					clearInterval(restore)
-					touch.destroyBanner(true)
+					touch.destroyBanner()
 					return
 				}
 				nextBanner.style.width = `${utils.prToIn(nextBanner.style.width) + 1}%`
@@ -86,7 +96,7 @@ const touch = {
 			if (utils.prToIn(banner.style.width) <= 30) {
 				banner.style.width = `${utils.prToIn(banner.style.width) - 1}%`
 				if (utils.prToIn(banner.style.width) < 1) {
-					touch.destroyBanner(false)
+					touch.destroyBanner()
 					clearInterval(restore)
 					return
 				}
@@ -95,6 +105,7 @@ const touch = {
 			if (utils.prToIn(banner.style.width) >= 30) {
 				banner.style.width = `${utils.prToIn(banner.style.width) + 1}%`
 				if (utils.prToIn(banner.style.width) > 49) {
+					touch.destroyBannerN()
 					clearInterval(restore)
 					return
 				}
@@ -133,13 +144,26 @@ const touch = {
 		banner.parentNode.insertBefore(previousBanner, banner)
 		touch.nextBanner = previousBanner
 	},
+	destroyBannerP: function () {
+		var banner = touch.nextBanner
+		banner.remove()
+		touch.transitionDone = true
+	},
+	destroyBannerN: function () {
+		var banner = touch.nextBanner
+		banner.remove()
+		touch.transitionDone = true
+	},
 	destroyBanner: function () {
 		var banner = document.querySelector(`#banner${touch.currentBanner}`)
 		banner.remove()
-		touch.currentBanner = touch.nextBanner.dataset.pos
-		document.body.className = allLayersMobile[touch.currentBanner].bg
+		touch.updateBanners()
 		touch.transitionDone = true
 		fakeJson.init()
+	},
+	updateBanners: function () {
+		touch.currentBanner = touch.nextBanner.dataset.pos
+		document.body.className = allLayersMobile[touch.currentBanner].bg
 	}
 }
 export default touch

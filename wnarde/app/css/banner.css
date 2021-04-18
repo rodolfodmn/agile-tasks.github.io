@@ -169,6 +169,7 @@
 	position: absolute;
 	font-family: Charter;
 	font-style: normal;
+	font-weight: bold;
 	font-size: 88px;
 	line-height: 107px;
 	color: #89135E;
@@ -225,6 +226,15 @@
 	width: 100px;
 	font-family: Charter;
 	font-style: normal;
+	font-size: 88px;
+	line-height: 111%;
+	color: #3D3D3D;
+}
+.remoto3{
+	position: absolute;
+	font-family: Charter;
+	font-style: normal;
+	font-weight: bold;
 	font-size: 88px;
 	line-height: 111%;
 	color: #3D3D3D;

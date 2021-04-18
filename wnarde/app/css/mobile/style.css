@@ -107,6 +107,7 @@ h5{
 	flex-direction: column;
 }
 .back-nav{
+	overflow: auto;
 	position: fixed;
 	z-index: 5;
 	font-family: Open Sans;
