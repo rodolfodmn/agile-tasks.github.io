@@ -194,7 +194,7 @@ footer section{
 	font-style: normal;
 	font-size: 88px;
 	line-height: 111%;
-	color: #44427E;
+	color: #fff;
 }
 
 .code1, .code2{
@@ -248,6 +248,18 @@ footer section{
 	font-size: 88px;
 	line-height: 111%;
 	color: #FFE7FB;
+}
+.remoto1 span, .remoto2 span{
+	color: #FFE7FB;
+}
+ .timezone2 span{
+	color: #82F9A1;
+}
+ .gatlin1 span{
+	color: #FFF3B6;
+}
+.rocket2 span, .rocket1 span{
+	color: #44427E;
 }
 
 .back-nav > ul > li > span{
