@@ -97,7 +97,7 @@ const bannerLayers = {
 
     img.onload = function () {
       this.style.position = 'absolute'
-      this.style.left = (window.screen.width / 2 - this.width / 2) - layer.pos.left
+      this.style.left = (document.documentElement.clientWidth / 2 - this.width / 2) - layer.pos.left
       this.style.top = layer.pos.top
     }
 
@@ -134,7 +134,7 @@ const bannerLayers = {
       div.append(t_)
 
       t_.style.position = 'absolute'
-      t_.style.left = window.screen.width / 2 - layer[key].pos.left
+      t_.style.left = document.documentElement.clientWidth / 2 - layer[key].pos.left
       t_.style.top = layer[key].pos.top
 
     })
