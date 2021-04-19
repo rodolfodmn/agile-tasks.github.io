@@ -83,13 +83,19 @@
 	background: linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 82.03%);
 }
 #banner6{
-	background: linear-gradient(180deg, #CAD3C2 0%, #0C7CBB 100%);
+	background: url('../../../assets/bgMobile/rocket.png'), linear-gradient(180deg, #CAD3C2 0%, #0C7CBB 100%);
+	background-position: bottom;
+	background-repeat: no-repeat;
 }
 #banner4{
 	background: linear-gradient(180deg, #8FC3FF 0%, #974AF8 100%);
 }
 #banner3{
-	background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #C9FF56 0%, #937DB0 100%);
+	background:
+	url('../../../assets/bgMobile/code.png'),
+	linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #C9FF56 0%, #937DB0 100%);
+	background-position: top;
+	background-repeat: no-repeat;
 }
 .banner1{
 	background-image:   url("../../../assets/bgs/psico.png");

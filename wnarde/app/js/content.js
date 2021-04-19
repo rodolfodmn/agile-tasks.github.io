@@ -2,7 +2,6 @@ import {allLayers, allLayersMobile} from './banner/config.js'
 import touch from './banner/touch.js'
 var content = {
 	done: false,
-
 	includeHTML: function () {
 		if (!this.done) {
 			this.done = true
@@ -52,7 +51,8 @@ var content = {
 		central = central.querySelector('img')
 		banner.style.width = '100%'
 		banner.style.position = 'relative'
-		banner.style.height = central.height + allLayers[base.dataset.pos].postSpace
+		banner.style.height = '640px'
+		banner.style.zIndex = -1
 		banner.style.top = '-110px'
 		base.style.right = '1.4%'
 
@@ -99,6 +99,7 @@ var content = {
 		var post = document.querySelector('.post-content').style
 		const base = document.querySelector('.banner-base')
 		banner.width = '200%'
+		banner.zIndex = 1
 		banner.position = 'fixed'
 		banner.height = '100%'
 		banner.top = '0'
