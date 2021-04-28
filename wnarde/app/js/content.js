@@ -137,6 +137,7 @@ var content = {
 		var goBack = document.querySelector('.go-back')
 		var showBackNav = document.querySelector('.show-back')
 		if (isPost) {
+			showBackNav.style.display = 'none'
 			if (window.screen.availWidth > 868) {
 				lArrow.style.opacity = 0
 				rArrow.style.opacity = 0
@@ -146,7 +147,6 @@ var content = {
 				})
 				lArrow.style.top = '64%'
 				rArrow.style.top = '64%'
-				showBackNav.style.display = 'none'
 				content.showPostArrow(isPost)
 			} else {
 				goBackM.style.display = 'block'
@@ -156,13 +156,13 @@ var content = {
 			}
 			return
 		}
+		showBackNav.style.display = 'block'
 		if (window.screen.availWidth > 868) {
 			lArrow.style.top = '15%'
 			rArrow.style.top = '15%'
 			lArrow.style.opacity = 1
 			rArrow.style.opacity = 1
 			goBack.style.display = 'none'
-			showBackNav.style.display = 'block'
 		}
 		else {
 			goBackM.style.display = 'none'

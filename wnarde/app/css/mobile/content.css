@@ -293,11 +293,11 @@
 	background-repeat: repeat-x;
 }
 .post-top-banner {
-    position: absolute;
-    right: 153px;
+	position: absolute;
+	right: 153px;
 	top: 0;
-    z-index: -1;
-    width: 100%;
+	z-index: -1;
+	width: 100%;
 }
 #top-timezone-post .pos1{
 	position: relative;
@@ -349,4 +349,72 @@
 }
 .post-content{
 	margin-top: 580px;
+}
+.wnarde{
+	background-image:  url('../../../assets/bgMobile/wnarde.png') ;
+	background-position: center top;
+	background-repeat:no-repeat;
+	background-size: contain;
+	background-color: #FBFFF1;
+}
+.about-social{
+	display: flex;
+	padding: 0 10% 0 0;
+	justify-content: flex-end;
+}
+.about-social i{
+	margin-left: 32px;
+	color: #DF753A;
+}
+
+.wnarde .post-content{
+	margin-top: 224px;
+}
+
+/*job-card*/
+.job-card{
+	border: 1px solid #1D262D;
+	box-sizing: border-box;
+	border-radius: 2px;
+	font-family: Open Sans;
+	font-style: normal;
+}
+.job-card > p{
+	margin-top: 30px;
+}
+.job-card > section > div > div{
+	padding: 6px 0;
+}
+.multi-line{
+	border-bottom: 0.5px dashed #1D262D;
+	box-sizing: border-box;
+}
+.job-card-imgs{
+	display: flex;
+	justify-content: space-between;
+}
+.job-card-title{
+	flex: 1;
+	margin: 0 0 0 16px;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #1D262D;
+}
+.job-card-links a{
+	margin: 0 0 0 12px;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: right;
+	text-transform: uppercase;
+	color: #1D262D;
+}
+.job-card-info{
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #1D262D; 
 }
