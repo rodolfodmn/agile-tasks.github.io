@@ -90,3 +90,9 @@
 	right: 152px;
 	bottom: 30px;
 }
+#logo{
+	cursor: pointer;
+}
+.post-content{
+	margin-top: 680px;
+}

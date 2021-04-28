@@ -12,6 +12,12 @@ footer section{
 	box-sizing: border-box;
 	border-radius: 2px;
 }
+.wnarde{
+	background-image:  url('../../assets/banners/wnarde.png') ;
+	background-position: center top;
+	background-repeat:no-repeat;
+	background-color: #1b2933;
+}
 .bg-remoto , .banner0, #banner0{
 	background-color: #1b2933;
 	background-image: url('../../assets/bgs/remotoN.png');

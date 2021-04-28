@@ -134,6 +134,15 @@ footer section {
 .back-nav > ul > li > span{
 	margin-top:7px;
 }
+
+.p-wnarde{
+font-family: Georgia;
+font-style: normal;
+font-weight: normal;
+font-size: 21px;
+line-height: 150.6%;
+color: #292929;
+}
 /*hidden mobile*/
 .mb{
 	display:none;
