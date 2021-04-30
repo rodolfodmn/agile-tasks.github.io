@@ -391,7 +391,7 @@
 }
 .job-card-imgs{
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 .job-card-title{
 	flex: 1;
@@ -417,4 +417,14 @@
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #1D262D; 
+}
+.job-title{
+	padding: 7px 16px;
+}
+.job-card{
+	margin: 44px 0;
+}
+.imgs-wnarde{
+	justify-content: space-between;
+	margin: 20px 0;
 }
