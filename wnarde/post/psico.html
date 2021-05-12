@@ -16,14 +16,14 @@
     <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" preload="metadata" loop></audio>
     <div class="audio-div">
       <div class="player">
-        <img class="play-icon" src="./assets/play.png" alt="" />
-        <div class="media-bar seek-slider">
+        <img id="play-icon" src="./assets/play.png" alt="" />
+        <div class="media-bar" id="seek-slider">
           <span id="btn-media" class=""></span>
         </div>
-        <img src="./assets/sound.png" class="mute-icon" alt="" />
+        <img src="./assets/sound.png" id="mute-icon" alt="" />
       </div>
       <div class="info">
-        <p class="data">Download (36:02 — 24.7MB)</p>
+        <p class="data">Download (<span id="current-time">00:00</span> | <span id="duration">00:00</span> — 24.7MB)</p>
         <p class="emb">EMBED</p>
       </div>
     </div>
