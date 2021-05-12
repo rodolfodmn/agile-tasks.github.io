@@ -1,6 +1,8 @@
 import {allLayers, allLayersMobile} from './banner/config.js'
 import touch from './banner/touch.js'
 import create from './banner/create.js'
+import player from './player.js'
+
 var content = {
 	done: false,
 	includeHTML: function () {
@@ -69,6 +71,9 @@ var content = {
 		var transiotion = setInterval(function () {
 			clearInterval(transiotion)
 			document.querySelector('.post-content').style.display = 'flex'
+			if (document.getElementById('audio-player-container')) {
+				player.init()
+			}
 		}, 30)
 
 		content.includeHTML()

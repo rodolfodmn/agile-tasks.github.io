@@ -148,6 +148,7 @@
 	align-items: center;
 }
 .audio-div img{
+	cursor: pointer;
 	height: 100%;
 	width: auto;
 }
