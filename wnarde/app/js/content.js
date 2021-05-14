@@ -5,6 +5,7 @@ import player from './player.js'
 
 var content = {
 	done: false,
+	arrowInPost: false,
 	includeHTML: function () {
 		if (!this.done) {
 			this.done = true
@@ -175,6 +176,9 @@ var content = {
 	},
 	showPostArrow: function () {
 		window.addEventListener("scroll", (event) => {
+			if (!content.arrowInPost)
+				return
+
 			var lArrow = document.querySelector('.tleft')
 			var rArrow = document.querySelector('.tright')
 			if (content.inView(document.querySelector('.footer-post'))) {
