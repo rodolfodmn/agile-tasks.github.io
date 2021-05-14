@@ -177,7 +177,7 @@ footer section {
 	-moz-transform: translateY(-100%);
 	transform: translateY(-100%);
 }
-a:-webkit-any-link {
+main a:-webkit-any-link , footer a:-webkit-any-link{
 	color:#1D262D;
 }
 /*hidden mobile*/

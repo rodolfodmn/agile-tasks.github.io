@@ -7,6 +7,7 @@ var navBar = {
 	init: function () {
 		document.querySelector('.icon-close').
 			addEventListener('click', function (event) {
+				document.querySelector('footer').style.zIndex = 9
 				touch.isPost = false
 				navBar.alpha = 0
 				document.querySelector(".back-nav").style.display = "none"
@@ -15,6 +16,7 @@ var navBar = {
 
 		document.querySelector('.icon-recent_b').
 			addEventListener('click', function (event) {
+				document.querySelector('footer').style.zIndex = 1
 				touch.isPost = true
 				document.querySelector('#logo').style.background = '#fff'
 				if (document.querySelector(".icon-day").style.display === 'none') {
