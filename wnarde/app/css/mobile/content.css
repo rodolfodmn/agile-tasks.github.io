@@ -71,7 +71,7 @@
 	justify-content: space-between;
 }
 .media-bar{
-	margin-top: 10px;
+	margin-top: 2px;
 	width: 80%;
 	height: 5px;
 	background:#C16071
@@ -427,4 +427,39 @@
 .imgs-wnarde{
 	justify-content: space-between;
 	margin: 20px 0;
+}
+.info p{
+	margin: 0;
+}
+.player{
+	align-items: center;
+}
+.audio-div img{
+	height: 100%;
+	width: auto;
+}
+.about-podcast{
+	display:flex;
+	justify-content: space-around;
+	margin: 42px 20px;
+
+}
+.about-podcast img{
+	height: 100%;
+	width: auto;
+}
+.about-podcast div{
+	display: flex;
+	flex-direction: column;
+}
+.about-podcast p{
+		font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 15px;
+	text-transform: uppercase;
+
+	color: #1D262D;
+
 }

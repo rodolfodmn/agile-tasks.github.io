@@ -4,6 +4,7 @@ import create from './banner/create.js'
 import player from './player.js'
 
 var content = {
+	useFake: true,
 	done: false,
 	arrowInPost: false,
 	includeHTML: function () {
@@ -77,7 +78,8 @@ var content = {
 			}
 		}, 30)
 
-		content.includeHTML()
+		if(content.useFake)
+			content.includeHTML()
 	},
 
 	showBanners: function () {
@@ -118,6 +120,7 @@ var content = {
 			document.querySelector('.post-content').style.opacity = 1
 		}, 30)
 	},
+
 	showFullPageContent: function (bgClass) {
 		document.querySelector('body').className = bgClass
 		document.querySelector('.banner-content').style.height = 0
@@ -136,6 +139,7 @@ var content = {
 		}, 30)
 		content.includeHTML()
 	},
+
 	toggleArrows: function (isPost) {
 		var lArrow = document.querySelector('.tleft')
 		var rArrow = document.querySelector('.tright')
@@ -174,6 +178,7 @@ var content = {
 			goBackM.style.display = 'none'
 		}
 	},
+
 	showPostArrow: function () {
 		window.addEventListener("scroll", (event) => {
 			if (!content.arrowInPost)
@@ -190,6 +195,7 @@ var content = {
 			}
 		});
 	},
+
 	inView: function (el) {
 		const rect = el.getBoundingClientRect();
 		return (
