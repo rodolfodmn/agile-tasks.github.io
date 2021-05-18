@@ -320,6 +320,45 @@ footer section{
 a:-webkit-any-link {
 	color:#fff;
 }
+
+.audio-div{
+	height: 99px;
+	border: 1px solid #fff;
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+.audio-div .player{
+	display: flex;
+	padding: 12px;
+	border-bottom: 0.5px dashed #fff;
+	box-sizing: border-box;
+	justify-content: space-between;
+}
+.media-bar{
+	margin-top: 2px;
+	width: 80%;
+	height: 5px;
+	background:#C16071
+}
+.media-bar span{
+	padding: 1px 9px;
+	background: #fff;
+	border-radius: 50%; 
+	position: relative;
+	bottom:6px;
+	left:4px;
+}
+.info .emb{
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+
+	color: #fff; 
+}
+
 @media only screen and (max-width: 868px) {
 	.psico2{
 		position: absolute;

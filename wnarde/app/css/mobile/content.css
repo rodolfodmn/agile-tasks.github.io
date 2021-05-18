@@ -53,6 +53,7 @@
 
 /*brain*/
 .audio-div{
+	text-align:center;
 	height: 99px;
 	border: 1px solid #1D262D;
 	box-sizing: border-box;
@@ -452,13 +453,18 @@
 	display: flex;
 	flex-direction: column;
 }
+.about-podcast span{
+	font-size: 49px;
+}
 .about-podcast p{
-		font-family: Open Sans;
+	text-align:center;
+	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 11px;
 	line-height: 15px;
 	text-transform: uppercase;
+	margin: 6px 0 0 0;
 
 	color: #1D262D;
 
