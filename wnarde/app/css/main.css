@@ -11,7 +11,7 @@
 	padding: 0;
 }
 .slin{
-	font-weight: 400;
+	font-weight: 400 !important;
 }
 .bold{
 	font-weight: 700;

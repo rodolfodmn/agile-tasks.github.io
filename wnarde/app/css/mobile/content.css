@@ -1,6 +1,16 @@
 .go-back-mb{
 	transform: rotate(90deg);
 }
+
+.home-post p{
+	font-family: Georgia;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+	line-height: 32px;
+	margin: 20px 0;
+	color: #292929;
+}
 .setas-mobile{
 	margin-top: 30px;
 	display: flex;
@@ -142,21 +152,26 @@
 .footer-post-end{
 	margin: 0;
 	flex: 1;
+}
+.footer-post-end p{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
+	margin: 0;
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #1D262D;
+
 }
 .footer-post-end{
 	justify-content: space-between;
 }
-.footer-post-type{
+.footer-post-type p{
 	font-family: Open Sans;
 	text-transform: uppercase;
 	font-weight: bold;
+	margin: 0;
 	font-size: 15px;
 }
 .footer-post-links a{
@@ -170,16 +185,20 @@
 	text-transform: uppercase;
 	color: #1D262D;
 }
-.footer-post-time{
+.footer-post-time p {
 	font-family: Open Sans;
+	margin: 0;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #1D262D; 
+}
+.footer-post-time{
 	flex: 1;
 	justify-content: space-between;
+	margin: 0 0 0 12px;
 }
 .footer-post span{
 	margin:0;
@@ -246,15 +265,6 @@
 .post-body{
 	width: 100%;
 	margin: auto;
-}
-.home-post p{
-	font-family: Georgia;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 21px;
-	line-height: 32px;
-	margin: 20px 0;
-	color: #292929;
 }
 .post-notes p{
 	font-family: Open Sans;
