@@ -258,10 +258,10 @@ footer section{
 .remoto1 span, .remoto2 span{
 	color: #FFE7FB;
 }
- .timezone2 span{
+.timezone2 span{
 	color: #82F9A1;
 }
- .gatlin1 span{
+.gatlin1 span{
 	color: #FFF3B6;
 }
 .rocket2 span, .rocket1 span{
@@ -358,7 +358,11 @@ a:-webkit-any-link {
 
 	color: #fff; 
 }
-
+.audio-div img{
+	filter: invert(94%) sepia(94%) saturate(0%) hue-rotate( 
+	189deg
+	) brightness(105%) contrast(107%);
+}
 @media only screen and (max-width: 868px) {
 	.psico2{
 		position: absolute;
