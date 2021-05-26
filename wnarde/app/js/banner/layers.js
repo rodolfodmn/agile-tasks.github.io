@@ -93,7 +93,7 @@ const bannerLayers = {
     const img = document.createElement('img')
     img.src = `assets/banners/${layer.src}.png`
     if (window.screen.width < 800)
-      img.src = `assets/bannersMobile/${layer.src}.png`
+      img.src = `assets/banners-mobile/${layer.src}.png`
 
     img.onload = function () {
       this.style.position = 'absolute'

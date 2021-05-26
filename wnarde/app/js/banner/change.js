@@ -43,8 +43,6 @@ const change = {
 			change.destroyBanner()
 			clearInterval(hidde)
 			fakeJson.init()
-			document.body.className = allLayers[nextBanner.dataset.pos].bg
-			document.body.className += ` banner${nextBanner.dataset.pos}`
 			movement.init()
 			change.canChange = true
 		}, 10)

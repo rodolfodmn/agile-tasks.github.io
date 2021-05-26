@@ -198,7 +198,7 @@ export const allLayersMobile = [
 					text: 'O que faz um <span>CTO</span>?', class: `cto1`, pos: {top: 100, left: 150, delay: 20}
 				},
 				{
-					text: '<span>CTO</span>', class: `cto2`, pos: {top: '154', left: 82, delay: 20}
+					text: '<span>CTO</span>', class: `cto2`, pos: {top: '154', left: 84, delay: 20}
 				}
 			],
 		secondary:

@@ -1,3 +1,6 @@
+body{
+	background: #1d262d;
+}
 p, li, a, i, span{
 	color: #fff;
 }
@@ -20,51 +23,60 @@ footer section{
 }
 .bg-remoto , .banner0, #banner0{
 	background-color: #1b2933;
-	background-image: url('../../assets/bgs/remotoN.png');
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 7.29%, #4A4970 100%);
+	/*transform: rotate(-180deg);*/
 	background-position: top;
 	background-repeat: repeat-x;
 }
-.bg-psico{
-	background-color: #1b2933;
-	background-image:  url('../../assets/bgs/psicoN.png');
+#banner0{
+	background: linear-gradient(180deg, #1b2933 7.29%, #4A4970 100%);
+}
+#banner1{
+	background: 
+	url('../../../assets/banners/bg001.png'),
+	linear-gradient(180deg, #81147C 0%,  #1b2933 100%);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#banner2{
+	background: linear-gradient(180deg, #3C313D 0%, #7C7BBA 100%);
+}
+#banner3{
+	background: 
+	url('../../../assets/banners/D_3.png'),
+	linear-gradient(180deg, #B8CDAE 0.01%, #7444B5 52.6%, #1d262d 100%);
 	background-position: top;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
-.banner1, #banner1{
+#banner4{
 	background-color: #1b2933;
-	background-image: url('../../assets/bgs/psicoN.png');
-	background-position: top;
+	background: linear-gradient(180deg, #6E3EA5 0%, #1d262d 100%);
 }
-.bg-timezone, .banner2, #banner2{
-	background-color: #1b2933;
-	background-image: url('../../assets/bgs/timeN.png');
-	background-position: top;
-	background-repeat: repeat-x;
-}
-.bg-cto, .banner4, #banner4{
-	background-color: #1b2933;
-	background-image: url('../../assets/bgs/ctoN.png');
-	background-position: top;
-	background-repeat: repeat-x;
-}
-.bg-code, .banner3, #banner3{
-	background-image: url('../../assets/bgs/codeN.png');
-	background-repeat: repeat-x;
-	background-position: center top;
+#banner5{
+	background: linear-gradient(357.38deg, rgba(0, 0, 0, 0) 1.11%, rgba(147, 51, 51, 0.5) 49.73%, #A93B3B 101.49%);
 	background-color: #1b2933;
 }
-.bg-gatlin, .banner5, #banner5{
-	background-image: url('../../assets/bgs/gatlinN.png');
-	background-repeat: repeat-x;
-	background-position: center top;
-	background-color: #1b2933;
-}
-.bg-rocket, .banner6, #banner6{
-	background-color: #1b2933;
-	background-image: url('../../assets/bgs/rocketN.png');
-	background-position: top;
-	background-repeat: repeat-x;
+#banner6{
+	background: url(../../../assets/bgs/rocket.png), linear-gradient(180deg, #1b2933 0%, #4577ff 100%);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
+#banner1post{
+	background: 
+	linear-gradient(180deg, rgb(246 242 255 / 23%) 0%, rgb(156 25 151 / 40%) 50.83%, #1d262d),
+	url(../../../assets/banners/bg001.png);
+	background-size: contain;
+}
+#banner2post{
+	background: linear-gradient(180deg, #3C313D 0%, rgba(117, 115, 172, 0.53) 56.25%, rgba(124, 123, 186, 0) 100%);
+}
+#banner5post{
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 30.51%, #1d262d 100%), linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 89.31%);
+}
 
 /*nav*/
 .nav-search input{
@@ -164,14 +176,14 @@ footer section{
 	color: transparent !important;
 }
 .tleft{
-	background-image: url("../../assets/tlN.png");
+	background-image: url("../../assets/icons/tlN.png");
 	background-repeat: no-repeat;
 	background-position: left;
 	left: 39px;
 	top: 15%;
 }
 .tright{
-	background-image: url("../../assets/trN.png");
+	background-image: url("../../assets/icons/trN.png");
 	background-repeat: no-repeat;
 	background-position: right;
 	right: 39px;
@@ -364,6 +376,12 @@ a:-webkit-any-link {
 	) brightness(105%) contrast(107%);
 }
 @media only screen and (max-width: 868px) {
+	#banner1{
+		background: 
+		url('../../../assets/banners-mobile/bg001.png'),
+		linear-gradient(180deg, #81147C 0%,  #1b2933 100%);
+		background-size: cover;
+	}
 	.psico2{
 		position: absolute;
 		font-family: Charter;

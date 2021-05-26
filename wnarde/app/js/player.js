@@ -17,18 +17,18 @@ const player = {
 
 		const playAnimation = function (play) {
 			if (play) {
-				playIconContainer.src = './assets/stop.png'
+				playIconContainer.src = './assets/player/stop.png'
 				return
 			}
-			playIconContainer.src = './assets/play.png'
+			playIconContainer.src = './assets/player/play.png'
 		}
 
 		const muteAnimation = function (mute) {
 			if (!mute) {
-				muteIconContainer.src = './assets/sound.png'
+				muteIconContainer.src = './assets/player/sound.png'
 				return
 			}
-			muteIconContainer.src = './assets/mute.png'
+			muteIconContainer.src = './assets/player/mute.png'
 		}
 
 		playIconContainer.addEventListener('click', () => {

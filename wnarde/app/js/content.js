@@ -58,10 +58,11 @@ var content = {
 		banner.style.height = '0'
 		banner.style.position = 'relative'
 		banner.style.zIndex = -1
-		banner.style.top = '-110px'
-		base.style.right = '1.4%'
+		banner.style.top = '-90'
+		base.style.height = document.documentElement.clientHeight
+		base.style.width = document.documentElement.clientWidth
+		base.id = `${base.id}post`
 
-		base.style.width = ''
 		document.body.className = allLayers[base.dataset.pos].bg
 		if (window.screen.width < 800) {
 			base.style.right = '8.4%'
@@ -101,6 +102,7 @@ var content = {
 		banner.top = '0'
 		base.style.right = '0'
 		base.style.width = '50%'
+		base.id = `${base.id.replace('post','')}`
 		var transiotion = setInterval(function () {
 			if (post.opacity === '') {
 				post.opacity = 1

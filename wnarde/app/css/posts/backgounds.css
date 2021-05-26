@@ -1,0 +1,32 @@
+.bg-wnarde{
+	background: #fbfff100;
+}
+#banner1post{
+	background: 
+		linear-gradient(180deg, rgb(246 242 255 / 23%) 0%, rgb(156 25 151 / 40%) 50.83%, #FCF9F7),
+		url('../../../assets/banners/bg001.png');
+}
+#banner2post{
+	background: linear-gradient(180deg, #FBFFF1 0%, #E0E4E6 36.46%, rgba(124, 123, 186, 0.25) 69.79%, rgba(251, 246, 244, 0) 100%);
+}
+#banner5post{
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.51%, #FCF9F7 100%), linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 89.31%);
+}
+@media only screen and (max-width: 868px) {
+	/*hidden desktop*/
+	.dk{
+		display:none;
+	}
+	.bg2{
+		background-image: url("../../../assets/bgTimezoneM.png");
+		background-position: top;
+		background-repeat: repeat-x;
+	}
+	.wnarde{
+		background-image:  url('../../../assets/bg-mobile/wnarde.png') ;
+		background-position: center top;
+		background-repeat:no-repeat;
+		background-size: contain;
+		background-color: #FBFFF1;
+	}
+}

@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-.scroll-h-block{
-	max-width: 100%;
-    overflow-x: hidden;
-}
 *{
 	list-style: none;
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
+}
+body{
+	background: #FCF9F7;
+}
+#logo{
+	cursor: pointer;
+}
+.scroll-h-block{
+	max-width: 100%;
+	overflow-x: hidden;
 }
 .slin{
 	font-weight: 400 !important;
@@ -27,26 +33,6 @@
 }
 .p20{
 	padding: 20px;
-}
-.bg-psico{
-	background-image:  url('../../assets/banners/C_4.png') , url("../../assets/bgs/psico.png");
-	background-position: center top;
-	background-repeat: repeat-x;
-	background-color: #fcf9f7;
-}
-.bg-timezone{
-	background-image: url("../../assets/bgs/time.png");
-	background-position: top;
-	background-repeat: repeat-x;
-}
-.bg-gatlin{
-	background-image: url('../../assets/bgs/gatlin.png');
-	background-repeat: repeat-x;
-	background-position: center top;
-	background-color: #fcf9f7;
-}
-.bg-wnarde{
-	background: #fbfff100;
 }
 .text-home{
 	cursor: pointer;
@@ -90,9 +76,6 @@
 	right: 152px;
 	bottom: 30px;
 }
-#logo{
-	cursor: pointer;
-}
 .post-content{
 	margin-top: 680px;
 }
@@ -102,3 +85,17 @@
 .title-row img{
 	margin: 28px 0 0 0;
 }
+
+@media only screen and (max-width: 868px) {
+	/*hidden desktop*/
+	.dk{
+		display:none;
+	}
+}
+@media only screen and (min-width: 869px) {
+	/*hidden mobile*/
+	.mb{
+		display:none;
+	}
+}
+
