@@ -145,6 +145,22 @@ body{
 .footer-post-end{
 	justify-content: flex-end;
 }
+.about-podcast{
+	display:flex;
+	justify-content: space-around;
+	margin: 42px 20px;
+}
+.about-podcast img{
+	height: 100%;
+	width: auto;
+}
+.about-podcast div{
+	display: flex;
+	flex-direction: column;
+}
+.about-podcast p{
+	margin: 6px 0 0 0;
+}
 @media only screen and (max-width: 868px) {
 	/*hidden desktop*/
 	.dk{
@@ -291,7 +307,7 @@ body{
 		height: 100%;
 	}
 	.post-content{
-		margin-top: 580px;
+		margin: 540px 20px 0 20px;
 	}
 	.about-social{
 		display: flex;

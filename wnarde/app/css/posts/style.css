@@ -310,6 +310,19 @@ main a:-webkit-any-link , footer a:-webkit-any-link{
 	background-repeat:no-repeat;
 	background-color: #FBFFF1;
 }
+.about-podcast span{
+	font-size: 49px;
+}
+.about-podcast p{
+	text-align:center;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #1D262D;
+}
 @media only screen and (max-width: 868px) {
 	/*hidden desktop*/
 	.dk{

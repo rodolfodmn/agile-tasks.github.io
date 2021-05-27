@@ -1,7 +1,5 @@
 export const allLayers = [
 	{
-		bg: 'bg-remoto',
-		postSpace: 30,
 		central: {
 			src: `B_1`, pos: {top: 151, left: 0, delay: 10}
 		},
@@ -17,8 +15,6 @@ export const allLayers = [
 			]
 	},
 	{
-		bg: 'bg-psico',
-		postSpace: 300,
 		central: {
 			src: `C_1`, pos: {top: 280, left: 0, delay: 10}
 		},
@@ -34,8 +30,6 @@ export const allLayers = [
 			]
 	},
 	{
-		bg: 'bg-timezone',
-		postSpace: 30,
 		central: {
 			src: `A_1`, pos: {top: 390, left: -14, delay: 10}
 		},
@@ -51,10 +45,8 @@ export const allLayers = [
 			]
 	},
 	{
-		bg: 'bg-code',
-		postSpace: 30,
 		central: {
-			src: `centralbook`, pos: {top: 450, left: 0, delay: 10}
+			src: `D_1`, pos: {top: 450, left: 0, delay: 10}
 		},
 		text:
 			[
@@ -63,22 +55,17 @@ export const allLayers = [
 			],
 		secondary:
 			[
-				{src: `D_3_`, pos: {top: 0, left: 0, delay: 30}},
+				{src: `D_3`, pos: {top: 0, left: 0, delay: 30}},
 			]
 	},
 	{
-		bg: 'bg-cto',
-		postSpace: 30,
 		central: {
 			src: `F_1`, pos: {top: 535, left: 330, delay: 10}
 		},
 		text:
 			[
 				{
-					text: 'O que faz um CTO?', class: `cto1`, pos: {top: 150, left: 350, delay: 20}
-				},
-				{
-					text: 'CTO', class: `cto2`, pos: {top: 342, left: 350, delay: 20}
+					text: `O que faz um <span>CTO</span>?`, class: `cto1`, pos: {top: 150, left: 350, delay: 20}
 				}
 			],
 		secondary:
@@ -88,8 +75,6 @@ export const allLayers = [
 			]
 	},
 	{
-		bg: 'bg-gatlin',
-		postSpace: 300,
 		central: {
 			src: `E_1`, pos: {top: 20, left: -180, delay: 10}
 		},
@@ -104,8 +89,6 @@ export const allLayers = [
 			]
 	},
 	{
-		bg: 'bg-timezone',
-		postSpace: 30,
 		central: {
 			src: `centralrocket`, pos: {top: 80, left: 0, delay: 10}
 		},
@@ -125,9 +108,8 @@ export const allLayers = [
 //mobile
 export const allLayersMobile = [
 	{
-		bg: 'bg-remoto',
 		central: {
-			src: `centralwoo`, pos: {top: 45, left: 0, delay: 10}
+			src: `B_1`, pos: {top: 45, left: 0, delay: 10}
 		},
 		text:
 			[
@@ -141,9 +123,8 @@ export const allLayersMobile = [
 			]
 	},
 	{
-		bg: 'bg-psico',
 		central: {
-			src: `centralbrain`, pos: {top: 120, left: 0, delay: 10}
+			src: `C_1`, pos: {top: 120, left: 0, delay: 10}
 		},
 		text:
 			[
@@ -157,7 +138,6 @@ export const allLayersMobile = [
 			]
 	},
 	{
-		bg: 'bg-timezone',
 		central: {
 			src: `A_1`, pos: {top: '46', left: 10, delay: 10}
 		},
@@ -169,13 +149,12 @@ export const allLayersMobile = [
 		secondary:
 			[
 				{src: `A_3`, pos: {top: '90', left: 0, delay: 30}},
-				{src: `Saly`, pos: {top: '90', left: 0, delay: 30}, isPrincipal: true}
+				{src: `A_2`, pos: {top: '90', left: 0, delay: 30}, isPrincipal: true}
 			]
 	},
 	{
-		bg: 'bg-code',
 		central: {
-			src: `centralbook`, pos: {top: 240, left: 0, delay: 10}
+			src: `D_1`, pos: {top: 240, left: 0, delay: 10}
 		},
 		text:
 			[
@@ -188,18 +167,14 @@ export const allLayersMobile = [
 			]
 	},
 	{
-		bg: 'bg-cto',
 		central: {
-			src: `centralphone`, pos: {top: 230, left: 0, delay: 10}
+			src: `F_2`, pos: {top: 230, left: 0, delay: 10}
 		},
 		text:
 			[
 				{
-					text: 'O que faz um <span>CTO</span>?', class: `cto1`, pos: {top: 100, left: 150, delay: 20}
+					text: `O que faz um <span>CTO</span>?`, class: `cto1`, pos: {top: 100, left: 150, delay: 20}
 				},
-				{
-					text: '<span>CTO</span>', class: `cto2`, pos: {top: '154', left: 84, delay: 20}
-				}
 			],
 		secondary:
 			[
@@ -208,7 +183,6 @@ export const allLayersMobile = [
 			]
 	},
 	{
-		bg: 'bg-gatlin',
 		central: {
 			src: `E_2`, pos: {top: 50, left: -130, delay: 30}
 		},
@@ -219,20 +193,19 @@ export const allLayersMobile = [
 		secondary:
 			[
 				{src: `E_3`, pos: {top: 150, left: 200, delay: 30}},
-				{src: `centraldon`, pos: {top: 0, left: 20, delay: 10}, isPrincipal: true}
+				{src: `E_1`, pos: {top: 0, left: 20, delay: 10}, isPrincipal: true}
 			]
 	},
 	{
-		bg: 'bg-timezone',
 		central: {
 			src: `centralrocket`, pos: {top: '140', left: '00', delay: 10}
 		},
 		text:
 			[
 				{
-					text: `Gestão de <span>despesas em computação</span> na nuvem`, class: `rocket1`, pos: {top: '100', left: 150, delay: 20}
+					text: `Gestão de <span>despesas em computação</span> na nuvem`, class: `rocket1`, pos: {top:110, left: 150, delay: 20}
 				},
-				{text: `para equipes financeiras`, class: `rocket2`, pos: {top: '480', left: 150, delay: 20}}
+				{text: `para equipes financeiras`, class: `rocket2`, pos: {top:440, left: 150, delay: 20}}
 			],
 		secondary:
 			[

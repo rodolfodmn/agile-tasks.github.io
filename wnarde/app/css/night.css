@@ -33,7 +33,7 @@ footer section{
 }
 #banner1{
 	background: 
-	url('../../../assets/banners/bg001.png'),
+	url('../../../assets/banners/C_4.png'),
 	linear-gradient(180deg, #81147C 0%,  #1b2933 100%);
 	background-size: contain;
 	background-position: center;
@@ -48,7 +48,7 @@ footer section{
 	linear-gradient(180deg, #B8CDAE 0.01%, #7444B5 52.6%, #1d262d 100%);
 	background-position: top;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 }
 #banner4{
 	background-color: #1b2933;
@@ -62,13 +62,13 @@ footer section{
 	background: url(../../../assets/bgs/rocket.png), linear-gradient(180deg, #1b2933 0%, #4577ff 100%);
 	background-position: bottom;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 }
 
 #banner1post{
 	background: 
 	linear-gradient(180deg, rgb(246 242 255 / 23%) 0%, rgb(156 25 151 / 40%) 50.83%, #1d262d),
-	url(../../../assets/banners/bg001.png);
+	url(../../../assets/banners/C_4.png);
 	background-size: contain;
 }
 #banner2post{
@@ -378,7 +378,7 @@ a:-webkit-any-link {
 @media only screen and (max-width: 868px) {
 	#banner1{
 		background: 
-		url('../../../assets/banners-mobile/bg001.png'),
+		url('../../../assets/banners-mobile/C_4.png'),
 		linear-gradient(180deg, #81147C 0%,  #1b2933 100%);
 		background-size: cover;
 	}

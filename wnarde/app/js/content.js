@@ -65,7 +65,6 @@ var content = {
 
 		document.body.className = allLayers[base.dataset.pos].bg
 		if (window.screen.width < 800) {
-			base.style.right = '8.4%'
 			banner.style.top = '-116px'
 			document.body.className = allLayersMobile[base.dataset.pos].bg
 		}

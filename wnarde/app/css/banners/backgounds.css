@@ -2,7 +2,7 @@
 	background: linear-gradient(#FFF1FD 0%, #E0E4E6 42.19%, #7C7BBA 100%);
 }
 #banner1{
-	background: url('../../../assets/banners/bg001.png'), linear-gradient(180deg, #F6F2FF 0%, #9C1997 100%);
+	background: url('../../../assets/banners/C_4.png'), linear-gradient(180deg, #F6F2FF 0%, #9C1997 100%);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -55,7 +55,7 @@
 	.banner1{
 	}
 	#banner1{
-		background: url('../../../assets/banners-mobile/bg001.png'), linear-gradient(180deg, #F6F2FF 0%, #9C1997 100%);
+		background: url('../../../assets/banners-mobile/C_4.png'), linear-gradient(180deg, #F6F2FF 0%, #9C1997 100%);
 		background-size: cover;
 	}
 	#banner3{
@@ -64,13 +64,13 @@
 		linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #C9FF56 0%, #937DB0 100%);
 		background-position: top;
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 	}
 	#banner6{
 		background: url('../../../assets/bg-mobile/rocket.png'), linear-gradient(180deg, #CAD3C2 0%, #0C7CBB 100%);
 		background-position: bottom;
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size:cover;
 	}
 	.bg-psico{
 	}

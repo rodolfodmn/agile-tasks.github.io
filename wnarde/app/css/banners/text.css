@@ -33,7 +33,7 @@
 .code2{
 	color: #4577ff;
 }
-.cto1, .cto2{
+.cto1{
 	font-family: Charter;
 	font-style: normal;
 	font-weight:bold;
@@ -41,7 +41,7 @@
 	line-height: 120%;
 	color: #523472;
 }
-.cto2{
+.cto1 span{
 	color: #d92869;
 	font-weight:bold;
 }
@@ -104,7 +104,7 @@
 		line-height: 54px;
 	}
 
-	.cto1, .cto2{
+	.cto1{
 		font-size: 40px;
 		line-height: 54px;
 	}
