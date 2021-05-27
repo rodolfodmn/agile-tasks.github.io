@@ -31,7 +31,7 @@
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 15px;
+	font-size: 0.9em;
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #C16071;
@@ -82,23 +82,17 @@
 		left:4px;
 	}
 	.info .emb{
-		font-family: Open Sans;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 14px;
+		font-size: 0.9em;
 		line-height: 20px;
 		text-transform: uppercase;
-
-		color: #1D262D; 
 	}
 	.info .data{
-		font-family: Open Sans;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 15px;
+		font-size: 0.9em;
 		line-height: 20px;
 		text-transform: uppercase;
-
-		color: #C16071;
 	}
 }

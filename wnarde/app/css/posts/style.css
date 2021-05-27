@@ -10,7 +10,7 @@ footer{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 0.9em;
 	line-height: 20px;
 	text-transform: uppercase;
 	margin: auto;
@@ -359,7 +359,7 @@ main a:-webkit-any-link , footer a:-webkit-any-link{
 		font-family: Open Sans;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 15px;
+		font-size: 0.9em;
 		line-height: 20px;
 		text-transform: uppercase;
 		color: #1D262D;
