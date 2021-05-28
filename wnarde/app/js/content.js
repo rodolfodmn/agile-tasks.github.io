@@ -61,12 +61,11 @@ var content = {
 		banner.style.top = '-90'
 		base.style.height = document.documentElement.clientHeight
 		base.style.width = document.documentElement.clientWidth
-		base.id = `${base.id}post`
 
-		document.body.className = allLayers[base.dataset.pos].bg
+		document.body.id = `${base.id}post`
+		base.id = ''
 		if (window.screen.width < 800) {
 			banner.style.top = '-116px'
-			document.body.className = allLayersMobile[base.dataset.pos].bg
 		}
 
 		document.querySelector('footer').style.display = 'none'
@@ -101,7 +100,7 @@ var content = {
 		banner.top = '0'
 		base.style.right = '0'
 		base.style.width = '50%'
-		base.id = `${base.id.replace('post','')}`
+		base.id = `banner${document.querySelector('.banner-base').dataset.pos}`
 		var transiotion = setInterval(function () {
 			if (post.opacity === '') {
 				post.opacity = 1
@@ -112,8 +111,6 @@ var content = {
 			}
 			touch.isPost = false
 			clearInterval(transiotion)
-			document.body.className = allLayers[document.querySelector('.banner-base').dataset.pos].bg
-			document.body.className += ` banner${document.querySelector('.banner-base').dataset.pos}`
 			document.querySelector('footer').style.display = 'block'
 			document.querySelector('.banner-content').style.display = 'flex'
 			document.querySelector('.banner-content').style.opacity = 1

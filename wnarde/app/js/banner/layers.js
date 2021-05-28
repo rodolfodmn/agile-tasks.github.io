@@ -12,8 +12,8 @@ const bannerLayers = {
   screen: window.screen,
   middle: window.screen.width / 2,
   center: window.screen.height / 2,
-  init: function (layer) {
-    var base = bannerLayers.createBanner(layer)
+  init: function (layer, pos) {
+    var base = bannerLayers.createBanner(layer, pos)
     if (window.screen.width > 800) {
       bannerLayers.mouseMove(document.querySelector('.banner-content'))
     } else {
@@ -62,7 +62,7 @@ const bannerLayers = {
   needClean: function () {
     return this.cleanInterval
   },
-  createBanner: function (layer) {
+  createBanner: function (layer, pos) {
     var banner = document.createElement('div')
     banner.className = 'banner-base'
     banner.append(this.createCentral(layer.central))
@@ -73,7 +73,7 @@ const bannerLayers = {
       }
       banner.append(bannerLayers.createSecondary(s))
     })
-    banner.append(this.createText(layer.text))
+    banner.append(this.createText(layer.text, pos))
     return banner
   },
   createCentral: function (layer) {
@@ -82,8 +82,8 @@ const bannerLayers = {
   createSecondary: function (layer, isPrincipal) {
     return this.createLayer(layer, 'banner-secondary', isPrincipal)
   },
-  createText: function (layer) {
-    return this.createLayerText(layer, 'banner-text')
+  createText: function (layer, pos) {
+    return this.createLayerText(layer, 'banner-text', pos)
   },
   createLayer: function (layer, id, isPrincipal) {
     if (isPrincipal) {
@@ -104,16 +104,10 @@ const bannerLayers = {
     div.append(img)
     div.className = id
     img.style.cursor = 'pointer'
-    img.parentElement.onclick = function () {
-      if (touch.transitionDone) {
-        content.showContent()
-        document.body.className = document.body.classList[0]
-      }
-    }
     return div
   },
 
-  createLayerText: function (layer, id) {
+  createLayerText: function (layer, id, pos) {
     const div = document.createElement('div')
     const p = []
     layer.forEach(function (text, key) {
@@ -125,12 +119,6 @@ const bannerLayers = {
       t_.style.cursor = 'pointer'
       t_.className = text.class
       p.push(t_)
-      t_.onclick = function () {
-        if (touch.transitionDone) {
-          content.showContent()
-          document.body.className = document.body.classList[0]
-        }
-      }
       div.append(t_)
 
       t_.style.position = 'absolute'
@@ -139,6 +127,7 @@ const bannerLayers = {
 
     })
 
+    div.id = `banner-text${pos}`
     div.className = id
     return div
   },

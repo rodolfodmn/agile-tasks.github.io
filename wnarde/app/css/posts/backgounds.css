@@ -2,15 +2,17 @@
 	background: #fbfff100;
 }
 #banner1post{
-	background: 
-		linear-gradient(180deg, rgb(246 242 255 / 23%) 0%, rgb(156 25 151 / 40%) 50.83%, #FCF9F7),
-		url('../../../assets/banners/C_4.png');
+	background:
+	url(../../../assets/posts/C_4.png),
+	linear-gradient(180deg, rgba(252,249,247,1) 0%, rgba(208,147,205,0.6) 20%, rgba(252,249,247,1) 64%);
+	background-repeat: no-repeat;
+	background-size:contain;
 }
 #banner2post{
-	background: linear-gradient(180deg, #FBFFF1 0%, #E0E4E6 36.46%, rgba(124, 123, 186, 0.25) 69.79%, rgba(251, 246, 244, 0) 100%);
+	background: linear-gradient(180deg, rgba(251,255,241,1) 0%, rgba(224,228,230,1) 6%, rgba(124,123,186,0.5) 15%, rgba(252,249,247,1) 27%);
 }
 #banner5post{
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.51%, #FCF9F7 100%), linear-gradient(334.33deg, #E27266 3.35%, #FAA779 47.47%, #DA6060 89.31%);
+	background:linear-gradient(180deg, rgba(226,114,102,1) 0%, rgba(250,167,121,1) 22%, rgba(218,96,96,1) 40%, rgba(252,249,247,1) 50%)
 }
 @media only screen and (max-width: 868px) {
 	/*hidden desktop*/

@@ -1,32 +1,32 @@
 export const allLayers = [
 	{
 		central: {
-			src: `B_1`, pos: {top: 151, left: 0, delay: 10}
+			src: `B_1`, pos: {top: 110, left: 0, delay: 10}
 		},
 		text:
 			[
-				{text: `Comunicação <span>Assíncrona</span> & `, class: `remoto1`, pos: {top: 150, left: 350, delay: 20}},
+				{text: `Comunicação <span>Assíncrona</span> & `, class: `remoto1`, pos: {top: 110, left: 350, delay: 20}},
 				{text: ` Trabalho <span>Remoto</span>`, class: `remoto2`, pos: {top: 550, left: 350, delay: 20}}
 			],
 		secondary:
 			[
-				{src: `B_3`, pos: {top: 150, left: 0, delay: 30}},
-				{src: `B_2`, pos: {top: 150, left: 0, delay: 30}}
+				{src: `B_3`, pos: {top: 110, left: 0, delay: 30}},
+				{src: `B_2`, pos: {top: 110, left: 0, delay: 30}}
 			]
 	},
 	{
 		central: {
-			src: `C_1`, pos: {top: 280, left: 0, delay: 10}
+			src: `C_1`, pos: {top: 225, left: 0, delay: 10}
 		},
 		text:
 			[
-				{text: `Segurança`, class: `psico1`, pos: {top: 151, left: 350, delay: 20}},
-				{text: `<span>Psicológica</span>`, class: `psico2`, pos: {top: 256, left: 350, delay: 20}}
+				{text: `Segurança`, class: `psico1`, pos: {top: 110, left: 350, delay: 20}},
+				{text: `<span>Psicológica</span>`, class: `psico2`, pos: {top: 200, left: 350, delay: 20}}
 			],
 		secondary:
 			[
-				{src: `C_2`, pos: {top: 440, left: -180, delay: 30}},
-				{src: `C_3`, pos: {top: 190, left: 190, delay: 30}},
+				{src: `C_2`, pos: {top: 390, left: -180, delay: 30}},
+				{src: `C_3`, pos: {top: 134, left: 190, delay: 30}},
 			]
 	},
 	{
@@ -54,9 +54,7 @@ export const allLayers = [
 				{text: `Código`, class: `code2`, pos: {top: 314, left: 130, delay: 20}}
 			],
 		secondary:
-			[
-				{src: `D_3`, pos: {top: 0, left: 0, delay: 30}},
-			]
+			[]
 	},
 	{
 		central: {
@@ -65,7 +63,7 @@ export const allLayers = [
 		text:
 			[
 				{
-					text: `O que faz um <span>CTO</span>?`, class: `cto1`, pos: {top: 150, left: 350, delay: 20}
+					text: `O que faz um <span>CTO</span>?`, class: `cto1`, pos: {top: 110, left: 350, delay: 20}
 				}
 			],
 		secondary:
@@ -88,22 +86,22 @@ export const allLayers = [
 				{src: `E_2`, pos: {top: 322, left: 50, delay: 30}, isPrincipal: true}
 			]
 	},
-	{
-		central: {
-			src: `centralrocket`, pos: {top: 80, left: 0, delay: 10}
-		},
-		text:
-			[
-				{
-					text: `Gestão <span>de despesas em computação</span> na nuvem`, class: `rocket1`, pos: {top: 135, left: 350, delay: 20}
-				},
-				{text: `para equipes financeiras`, class: `rocket2`, pos: {top: 580, left: 350, delay: 20}}
-			],
-		secondary:
-			[
-				{src: `rocket`, pos: {top: 4, left: 0, delay: 30}},
-			]
-	},
+	//{
+		//central: {
+			//src: `centralrocket`, pos: {top: 80, left: 0, delay: 10}
+		//},
+		//text:
+			//[
+				//{
+					//text: `Gestão <span>de despesas em computação</span> na nuvem`, class: `rocket1`, pos: {top: 135, left: 350, delay: 20}
+				//},
+				//{text: `para equipes financeiras`, class: `rocket2`, pos: {top: 580, left: 350, delay: 20}}
+			//],
+		//secondary:
+			//[
+				//{src: `rocket`, pos: {top: 4, left: 0, delay: 30}},
+			//]
+	//},
 ]
 //mobile
 export const allLayersMobile = [
@@ -192,25 +190,25 @@ export const allLayersMobile = [
 			],
 		secondary:
 			[
-				{src: `E_3`, pos: {top: 150, left: 200, delay: 30}},
+				{src: `E_3`, pos: {top: 110, left: 200, delay: 30}},
 				{src: `E_1`, pos: {top: 0, left: 20, delay: 10}, isPrincipal: true}
 			]
 	},
-	{
-		central: {
-			src: `centralrocket`, pos: {top: '140', left: '00', delay: 10}
-		},
-		text:
-			[
-				{
-					text: `Gestão de <span>despesas em computação</span> na nuvem`, class: `rocket1`, pos: {top:110, left: 150, delay: 20}
-				},
-				{text: `para equipes financeiras`, class: `rocket2`, pos: {top:440, left: 150, delay: 20}}
-			],
-		secondary:
-			[
-				{src: `rocket`, pos: {top: 44, left: 0, delay: 30}},
-			]
-	},
+	//{
+		//central: {
+			//src: `centralrocket`, pos: {top: '140', left: '00', delay: 10}
+		//},
+		//text:
+			//[
+				//{
+					//text: `Gestão de <span>despesas em computação</span> na nuvem`, class: `rocket1`, pos: {top:110, left: 150, delay: 20}
+				//},
+				//{text: `para equipes financeiras`, class: `rocket2`, pos: {top:440, left: 150, delay: 20}}
+			//],
+		//secondary:
+			//[
+				//{src: `rocket`, pos: {top: 44, left: 0, delay: 30}},
+			//]
+	//},
 ]
 

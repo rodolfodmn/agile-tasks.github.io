@@ -30,7 +30,7 @@ const create = {
 			pos = 0
 		}
 
-		var banner = bannerLayers.init(create.allL[pos])
+		var banner = bannerLayers.init(create.allL[pos], pos)
 		banner.id = `banner${pos}`
 		banner.style.width = (isPrevius) ? '0%' : '50%'
 		banner.style.zIndex = 1
