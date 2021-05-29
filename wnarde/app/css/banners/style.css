@@ -1,15 +1,16 @@
 .tleft{
-	background-image: url("../../../assets/icons/tl.png");
 }
 .tright{
-	background-image: url("../../../assets/icons/tr.png");
+	transform: rotate(180deg);
 }
 .tleft:hover{
 	transform: scale(1.2);
+	transform: rotate(360deg);
 	transition-duration: 0.5s;
 }
 .tright:hover{
 	transform: scale(1.2);
+	transform: rotate(-180deg);
 	transition-duration: 0.5s;
 }
 .home-text{

@@ -20,12 +20,12 @@ const player = {
 				playIconContainer.src = './assets/player/stop.png'
 				return
 			}
-			playIconContainer.src = './assets/player/play.png'
+			playIconContainer.src = './assets/player/audio_play.svg'
 		}
 
 		const muteAnimation = function (mute) {
 			if (!mute) {
-				muteIconContainer.src = './assets/player/sound.png'
+				muteIconContainer.src = './assets/player/audio_volume.svg'
 				return
 			}
 			muteIconContainer.src = './assets/player/mute.png'

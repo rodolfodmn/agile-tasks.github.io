@@ -239,4 +239,7 @@
 		line-height: 150.6%;
 		color: #292929;
 	}
+	.post-date p{
+		font-size: 0.9em;
+	}
 }

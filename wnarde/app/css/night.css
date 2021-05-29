@@ -16,7 +16,7 @@ footer section{
 	border-radius: 2px;
 }
 .wnarde{
-	background-image:  url('../../assets/banners/wnarde.png') ;
+	background-image:  url('../../../assets/bgs/about_wagverse.png') ;
 	background-position: center top;
 	background-repeat:no-repeat;
 	background-color: #1b2933;
@@ -60,10 +60,10 @@ footer section{
 
 #banner1post{
 	background:
-	url(../../../assets/posts/C_4.png),
+	url(../../../assets/bgs/C_4.png),
 	linear-gradient(180deg, #81147C 0%,  #1b2933 64%);
 	background-repeat: no-repeat;
-	background-size:contain;
+	background-position: center top;
 }
 #banner2post{
 	background: linear-gradient(180deg, #3C313D 0%, #7C7BBA 6%,  #7C7BBA 15%, #1D262D 27%);
@@ -168,20 +168,6 @@ footer section{
 }
 .icon-fix{
 	color: transparent !important;
-}
-.tleft{
-	background-image: url("../../assets/icons/tlN.png");
-	background-repeat: no-repeat;
-	background-position: left;
-	left: 39px;
-	top: 15%;
-}
-.tright{
-	background-image: url("../../assets/icons/trN.png");
-	background-repeat: no-repeat;
-	background-position: right;
-	right: 39px;
-	top: 15%;
 }
 .back-nav > ul > li > span{
 	width: 36px;
@@ -369,12 +355,25 @@ a:-webkit-any-link {
 	189deg
 	) brightness(105%) contrast(107%);
 }
+.about-podcast p{
+	color:#fff;
+}
+.slin{
+	color: #fff;
+}
 @media only screen and (max-width: 868px) {
 	#banner1{
 		background: 
 		url('../../../assets/banners-mobile/C_4.png'),
 		linear-gradient(180deg, #81147C 0%,  #1b2933 100%);
 		background-size: cover;
+	}
+
+	.wnarde{
+		background-image:  url('../../../assets/bg-mobile/wnarde.png') ;
+		background-position: center top;
+		background-repeat:no-repeat;
+		background-color: #1b2933;
 	}
 	.psico2{
 		position: absolute;
@@ -448,5 +447,8 @@ a:-webkit-any-link {
 		font-style: normal;
 		font-size: 44px;
 		line-height: 54px;
+	}
+	.footer-post-end p, .footer-post-time p {
+		color: #fff;
 	}
 }

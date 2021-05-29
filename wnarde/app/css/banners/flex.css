@@ -2,10 +2,10 @@
 	z-index: 9;
 	background-repeat: no-repeat;
 	background-position: right;
-	width: 12px;
+	width: 112px;
 	height: 19px;
 	position: fixed;
-	right : 39px;
+	right : 0;
 	top: 15%;
 	padding: 250px 33px;
 }
@@ -13,10 +13,10 @@
 	z-index: 9;
 	background-repeat: no-repeat;
 	background-position: left;
-	width: 12px;
+	width: 112px;
 	height: 19px;
 	position: fixed;
-	left: 39px;
+	left: 0;
 	top: 15%;
 	padding: 250px 33px;
 }
