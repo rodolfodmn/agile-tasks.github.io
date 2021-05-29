@@ -1,5 +1,5 @@
 .tright{
-	z-index: 9;
+	z-index: 7;
 	background-repeat: no-repeat;
 	background-position: right;
 	width: 112px;
@@ -10,7 +10,7 @@
 	padding: 250px 33px;
 }
 .tleft{
-	z-index: 9;
+	z-index: 7;
 	background-repeat: no-repeat;
 	background-position: left;
 	width: 112px;

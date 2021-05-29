@@ -13,6 +13,7 @@ const touch = {
 	nextBanner: null,
 	currentBanner: 0,
 	transitionDone: true,
+	bannerSpeed: 2,
 
 	checkDirection: function () {
 		if (touch.posX > touch.initPosX) {
@@ -49,7 +50,7 @@ const touch = {
 		var nextBanner = touch.nextBanner
 		var restore = setInterval(function () {
 			if (utils.prToIn(nextBanner.style.width) < 50) {
-				nextBanner.style.width = `${utils.prToIn(nextBanner.style.width) + 1}%`
+				nextBanner.style.width = `${utils.prToIn(nextBanner.style.width) + touch.bannerSpeed}%`
 				return
 			}
 			clearInterval(restore)
@@ -61,7 +62,7 @@ const touch = {
 		var banner = document.querySelector(`#banner${touch.currentBanner}`)
 		var restore = setInterval(function () {
 			if (utils.prToIn(banner.style.width) > 0) {
-				banner.style.width = `${utils.prToIn(banner.style.width) - 1}%`
+				banner.style.width = `${utils.prToIn(banner.style.width) - touch.bannerSpeed}%`
 				return
 			}
 			touch.destroyBanner()

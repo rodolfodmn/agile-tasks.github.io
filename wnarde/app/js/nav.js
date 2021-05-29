@@ -22,7 +22,12 @@ var navBar = {
 				if (document.querySelector(".icon-day").style.display === 'none') {
 					document.querySelector('#logo').style.background = '#1d262d'
 				}
-				document.querySelector(".back-nav").style.display = "flex"
+				document.querySelector(".mb, .back-nav").style.display = "flex"
+				if (window.screen.width > 868) {
+					document.querySelector(".mb, .back-nav-links").style.display = "none"
+				}else{
+					document.querySelector(".dk, .back-nav-links").style.display = "none"
+				}
 				navBar.show = setInterval(navBar.opacityUp, 25)
 			})
 
