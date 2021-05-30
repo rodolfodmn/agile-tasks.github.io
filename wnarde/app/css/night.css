@@ -28,8 +28,7 @@ footer section{
 	background: 
 	url('../../assets/banners/C_4.png'),
 	linear-gradient(180deg, #81147C 0%,  #1b2933 100%);
-	background-size: cover;
-	background-position: center;
+	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 #banner2{
@@ -59,7 +58,7 @@ footer section{
 
 #banner1post{
 	background:
-	url(../../assets/bgs/C_4.png),
+	url(../../../assets/banners/C_4.png),
 	linear-gradient(180deg, #81147C 0%,  #1b2933 64%);
 	background-repeat: no-repeat;
 	background-position: center top;

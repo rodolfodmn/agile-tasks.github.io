@@ -3,8 +3,7 @@
 }
 #banner1{
 	background: url('../../../assets/banners/C_4.png'), linear-gradient(180deg, #F6F2FF 0%, #9C1997 100%);
-	background-size: cover;
-	background-position: center;
+	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 #banner2{
@@ -17,7 +16,6 @@
 		linear-gradient(180deg, #C9FF56 0%, #937DB0 100%);
 	background-position: top;
 	background-repeat: no-repeat;
-	background-size: contain;
 }
 #banner4{
 	background: linear-gradient(180deg, #8FC3FF 0%, #974AF8 100%);
