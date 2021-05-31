@@ -364,7 +364,7 @@ a:-webkit-any-link {
 		background: 
 		url('../../assets/banners-mobile/C_4.png'),
 		linear-gradient(180deg, #81147C 0%,  #1b2933 100%);
-		background-size: cover;
+		background-position: center top;
 	}
 
 	.wnarde{

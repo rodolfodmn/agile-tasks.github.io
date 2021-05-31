@@ -54,7 +54,7 @@
 	}
 	#banner1{
 		background: url('../../../assets/banners-mobile/C_4.png'), linear-gradient(180deg, #F6F2FF 0%, #9C1997 100%);
-		background-size: cover;
+		background-position: center top;
 	}
 	#banner3{
 		background:
