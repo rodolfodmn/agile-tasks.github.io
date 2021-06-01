@@ -126,6 +126,7 @@ var content = {
 		if (document.querySelector('.banner-base')) {
 			document.querySelector('.banner-base').remove()
 		}
+		touch.currentBanner = 0
 		document.querySelector('body').style.overflowX = 'hidden'
 		document.querySelector('body').style.maxWidth = '100%'
 		document.querySelector('html').style.overflowX = 'hidden'
