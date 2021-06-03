@@ -80,7 +80,7 @@
 		justify-content: space-between;
 	}
 	.links-count{
-		margin-left: auto;
+		margin-right: 5px;margin-left: auto;
 	}
 	.nav-mb{
 		flex-direction: column;

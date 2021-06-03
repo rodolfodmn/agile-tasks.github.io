@@ -24,9 +24,7 @@ var navBar = {
 				}
 				document.querySelector(".mb, .back-nav").style.display = "flex"
 				if (window.screen.width > 868) {
-					document.querySelector(".mb, .back-nav-links").style.display = "none"
-				}else{
-					document.querySelector(".dk, .back-nav-links").style.display = "none"
+					document.querySelector(".nav-mb").style.display = "none"
 				}
 				navBar.show = setInterval(navBar.opacityUp, 25)
 			})

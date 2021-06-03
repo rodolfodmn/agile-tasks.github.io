@@ -138,6 +138,12 @@ footer section{
 	font-weight: bold;
 	color: #98FBAE;
 }
+.gold-title{
+	font-size: 25px;
+	line-height: 34px;
+	margin-bottom: 14px;
+	color: #FFF3B6;
+}
 .post-notes h5{
 	margin-bottom: 14px;
 	color: #98FBAE;
