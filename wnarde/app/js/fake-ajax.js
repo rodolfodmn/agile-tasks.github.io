@@ -7,7 +7,7 @@ const fakeJson = {
 		var post = document.querySelector('#post')
 		if (document.querySelector('#banner2')) {
 			document.querySelector('#banner-text2').onclick = function () {
-				$.get('../../post/timezone.html')
+				$.get('../post/timezone.html')
 					.done(function(resp) {
 						content.showContent()
 						document.querySelector('#post').innerHTML = resp
@@ -16,7 +16,7 @@ const fakeJson = {
 		}
 		if (document.querySelector('#banner5')) {
 			document.querySelector('#banner-text5').onclick = function () {
-				$.get('../../post/gatlin.html')
+				$.get('../post/gatlin.html')
 					.done(function(resp) {
 						content.showContent()
 						document.querySelector('#post').innerHTML = resp
@@ -25,7 +25,7 @@ const fakeJson = {
 		}
 		if (document.querySelector('#banner1')) {
 			document.querySelector('#banner-text1').onclick = function () {
-				$.get('../../post/psico.html')
+				$.get('../post/psico.html')
 					.done(function(resp) {
 						content.showContent()
 						document.querySelector('#post').innerHTML = resp
@@ -35,7 +35,7 @@ const fakeJson = {
 		document.querySelector('#logo').
 			addEventListener('click', function (event) {
 				content.showClearPage('wnarde')
-				$.get('../../post/wnarde.html')
+				$.get('../post/wnarde.html')
 					.done(function(resp) {
 						document.querySelector('#post').innerHTML = resp
 					})
