@@ -1,30 +1,44 @@
 import content from './content.js'
+import 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
 
 const fakeJson = {
+	hots: 'localhost:8080',
 	init: function () {
 		var post = document.querySelector('#post')
 		if (document.querySelector('#banner2')) {
-			post.setAttribute('includeHtml', 'post/timezone.html')
 			document.querySelector('#banner-text2').onclick = function () {
-				content.showContent()
+				$.get('../../post/timezone.html')
+					.done(function(resp) {
+						content.showContent()
+						document.querySelector('#post').innerHTML = resp
+					})
 			}
 		}
 		if (document.querySelector('#banner5')) {
-			post.setAttribute('includeHtml', 'post/gatlin.html')
 			document.querySelector('#banner-text5').onclick = function () {
-				content.showContent()
+				$.get('../../post/gatlin.html')
+					.done(function(resp) {
+						content.showContent()
+						document.querySelector('#post').innerHTML = resp
+					})
 			}
 		}
 		if (document.querySelector('#banner1')) {
-			post.setAttribute('includeHtml', 'post/psico.html')
 			document.querySelector('#banner-text1').onclick = function () {
-				content.showContent()
+				$.get('../../post/psico.html')
+					.done(function(resp) {
+						content.showContent()
+						document.querySelector('#post').innerHTML = resp
+					})
 			}
 		}
 		document.querySelector('#logo').
 			addEventListener('click', function (event) {
-				post.setAttribute('includeHtml', 'post/wnarde.html')
-				content.showFullPageContent('wnarde')
+				content.showClearPage('wnarde')
+				$.get('../../post/wnarde.html')
+					.done(function(resp) {
+						document.querySelector('#post').innerHTML = resp
+					})
 			})
 	}
 }

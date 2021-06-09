@@ -57,6 +57,9 @@ body{
 .go-back{
 	display: none;
 }
+.go-home{
+	display: none;
+}
 .show-back{
 	display: block;
 }

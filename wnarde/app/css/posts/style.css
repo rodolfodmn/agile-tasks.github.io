@@ -451,4 +451,8 @@ main a:-webkit-any-link , footer a:-webkit-any-link{
 		transform: rotate(90deg);
 		display:none;
 	}
+	.go-home-mb{
+		transform: rotate(90deg);
+		display:none;
+	}
 }

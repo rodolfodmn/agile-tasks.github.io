@@ -4,40 +4,8 @@ import create from './banner/create.js'
 import player from './player.js'
 
 var content = {
-	useFake: true,
 	done: false,
 	arrowInPost: false,
-	includeHTML: function () {
-		if (!this.done) {
-			this.done = true
-			const self = this
-			var z, i, elmnt, file, xhttp;
-			/* Loop through a collection of all HTML elements: */
-			z = document.getElementsByTagName("*");
-			for (i = 0; i < z.length; i++) {
-				elmnt = z[i];
-				/*search for elements with a certain atrribute:*/
-				file = elmnt.getAttribute("includeHtml");
-				if (file) {
-					/* Make an HTTP request using the attribute value as the file name: */
-					xhttp = new XMLHttpRequest();
-					xhttp.onreadystatechange = function () {
-						if (this.readyState == 4) {
-							if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-							if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-							/* Remove the attribute, and call this function once more: */
-							elmnt.removeAttribute("include-html");
-							self.includeHTML();
-						}
-					}
-					xhttp.open("GET", file, true);
-					xhttp.send();
-					/* Exit the function: */
-					return;
-				}
-			}
-		}
-	},
 
 	showContent: function () {
 		const self = this
@@ -76,9 +44,6 @@ var content = {
 				player.init()
 			}
 		}, 30)
-
-		if(content.useFake)
-			content.includeHTML()
 	},
 
 	showBanners: function () {
@@ -119,24 +84,27 @@ var content = {
 		}, 30)
 	},
 
-	showFullPageContent: function (bgClass) {
-		document.querySelector('body').className = bgClass
-		document.querySelector('.banner-content').style.height = 0
-		content.toggleArrows(true)
-		if (document.querySelector('.banner-base')) {
-			document.querySelector('.banner-base').remove()
+	toggleGoHome: function (isPost) {
+		var goBackM = document.querySelector('.go-home-mb')
+		var goBack = document.querySelector('.go-home')
+		var showBackNav = document.querySelector('.show-back')
+
+		if (isPost) {
+			showBackNav.style.display = 'none'
+			if (window.screen.availWidth > 868) {
+				goBack.style.display = 'block'
+			} else {
+				goBackM.style.display = 'block'
+			}
+			return
 		}
-		touch.currentBanner = 0
-		document.querySelector('body').style.overflowX = 'hidden'
-		document.querySelector('body').style.maxWidth = '100%'
-		document.querySelector('html').style.overflowX = 'hidden'
-		document.querySelector('html').style.maxWidth = '100%'
-		document.querySelector('footer').style.display = 'none'
-		var transiotion = setInterval(function () {
-			clearInterval(transiotion)
-			document.querySelector('.post-content').style.display = 'flex'
-		}, 30)
-		content.includeHTML()
+		showBackNav.style.display = 'block'
+		if (window.screen.availWidth > 868) {
+			goBack.style.display = 'none'
+		}
+		else {
+			goBackM.style.display = 'none'
+		}
 	},
 
 	toggleArrows: function (isPost) {
@@ -193,6 +161,29 @@ var content = {
 				rArrow.style.opacity = 0
 			}
 		});
+	},
+	clearPage: function(){
+		document.querySelector("main").innerHTML = ''
+		document.querySelector("footer").innerHTML = ''
+	},
+	montClearPage: function(){
+		var main = document.querySelector("main")
+		var section = document.createElement('section')
+		var divPost = document.createElement('div')
+		section.className = 'post-content'
+		divPost.className = 'post-body'
+		divPost.id = 'post'
+		section.append(divPost)
+		main.append(section)
+		content.toggleGoHome(true)
+	},
+	showClearPage: function(bg){
+		document.querySelector("body").className = bg
+		document.querySelector("body").id = bg
+		content.clearPage()
+		content.montClearPage()
+		if(content.useFake)
+			content.includeHTML(bg)
 	},
 
 	inView: function (el) {
