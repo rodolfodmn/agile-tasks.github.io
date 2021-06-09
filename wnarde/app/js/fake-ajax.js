@@ -1,5 +1,6 @@
 import content from './content.js'
 import 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+import create from './banner/create.js'
 
 const fakeJson = {
 	hots: 'localhost:8080',
@@ -32,6 +33,12 @@ const fakeJson = {
 					})
 			}
 		}
+
+		document.querySelectorAll(".go-home, .go-home-mb").forEach(function(btn){
+			btn.addEventListener('click', function (event) {
+				content.backFromClean()
+			})
+		})
 		document.querySelector('#logo').
 			addEventListener('click', function (event) {
 				content.showClearPage('wnarde')

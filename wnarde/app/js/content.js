@@ -1,13 +1,14 @@
 import {allLayers, allLayersMobile} from './banner/config.js'
 import touch from './banner/touch.js'
 import create from './banner/create.js'
+import change from './banner/change.js'
 import player from './player.js'
 
 var content = {
 	done: false,
 	arrowInPost: false,
 
-	showContent: function () {
+	showContent: function (isClenPage) {
 		const self = this
 		touch.isPost = true
 		var banner = document.querySelector('.banner-content')
@@ -30,13 +31,15 @@ var content = {
 		base.style.height = document.documentElement.clientHeight
 		base.style.width = document.documentElement.clientWidth
 
-		document.body.id = `${base.id}post`
+		if(!isClenPage)
+			document.body.id = `${base.id}post`
+
 		base.id = ''
 		if (window.screen.width < 800) {
 			banner.style.top = '-116px'
 		}
 
-		document.querySelector('footer').style.display = 'none'
+		document.querySelector('footer').hidden = true
 		var transiotion = setInterval(function () {
 			clearInterval(transiotion)
 			document.querySelector('.post-content').style.display = 'flex'
@@ -76,7 +79,7 @@ var content = {
 			}
 			touch.isPost = false
 			clearInterval(transiotion)
-			document.querySelector('footer').style.display = 'block'
+			document.querySelector('footer').hidden = false
 			document.querySelector('.banner-content').style.display = 'flex'
 			document.querySelector('.banner-content').style.opacity = 1
 			document.querySelector('.post-content').style.display = 'none'
@@ -88,7 +91,10 @@ var content = {
 		var goBackM = document.querySelector('.go-home-mb')
 		var goBack = document.querySelector('.go-home')
 		var showBackNav = document.querySelector('.show-back')
+		var lArrow = document.querySelector('.tleft')
+		var rArrow = document.querySelector('.tright')
 
+		content.toggleBannerArrows(isPost)
 		if (isPost) {
 			showBackNav.style.display = 'none'
 			if (window.screen.availWidth > 868) {
@@ -108,22 +114,17 @@ var content = {
 	},
 
 	toggleArrows: function (isPost) {
-		var lArrow = document.querySelector('.tleft')
-		var rArrow = document.querySelector('.tright')
 		var goBackM = document.querySelector('.go-back-mb')
 		var goBack = document.querySelector('.go-back')
 		var showBackNav = document.querySelector('.show-back')
+		content.toggleBannerArrows(isPost)
 		if (isPost) {
 			showBackNav.style.display = 'none'
 			if (window.screen.availWidth > 868) {
-				lArrow.style.opacity = 0
-				rArrow.style.opacity = 0
 				goBack.style.display = 'block'
 				goBack.addEventListener('click', function () {
 					content.showBanners()
 				})
-				lArrow.style.top = '64%'
-				rArrow.style.top = '64%'
 				content.showPostArrow(isPost)
 			} else {
 				goBackM.style.display = 'block'
@@ -135,14 +136,31 @@ var content = {
 		}
 		showBackNav.style.display = 'block'
 		if (window.screen.availWidth > 868) {
-			lArrow.style.top = '15%'
-			rArrow.style.top = '15%'
-			lArrow.style.opacity = 1
-			rArrow.style.opacity = 1
 			goBack.style.display = 'none'
 		}
 		else {
 			goBackM.style.display = 'none'
+		}
+	},
+
+	toggleBannerArrows: function(isPost){
+		var lArrow = document.querySelector('.tleft')
+		var rArrow = document.querySelector('.tright')
+		if (isPost) {
+			if (window.screen.availWidth > 868) {
+				lArrow.style.opacity = 0
+				rArrow.style.opacity = 0
+				lArrow.style.top = '64%'
+				rArrow.style.top = '64%'
+			} 
+
+			return
+		}
+		if (window.screen.availWidth > 868) {
+			lArrow.style.top = '15%'
+			rArrow.style.top = '15%'
+			lArrow.style.opacity = 1
+			rArrow.style.opacity = 1
 		}
 	},
 
@@ -162,28 +180,33 @@ var content = {
 			}
 		});
 	},
-	clearPage: function(){
-		document.querySelector("main").innerHTML = ''
-		document.querySelector("footer").innerHTML = ''
-	},
-	montClearPage: function(){
-		var main = document.querySelector("main")
-		var section = document.createElement('section')
-		var divPost = document.createElement('div')
-		section.className = 'post-content'
-		divPost.className = 'post-body'
-		divPost.id = 'post'
-		section.append(divPost)
-		main.append(section)
-		content.toggleGoHome(true)
-	},
+
 	showClearPage: function(bg){
-		document.querySelector("body").className = bg
+		document.querySelector("#post").innerHTML = ''
+		document.querySelector(".banner-content").style.display = 'none'
+		document.querySelector("footer").hidden = true
 		document.querySelector("body").id = bg
-		content.clearPage()
-		content.montClearPage()
-		if(content.useFake)
-			content.includeHTML(bg)
+		document.querySelector("body").className = bg
+		content.toggleGoHome()
+
+		content.showContent(true)
+	},
+	
+	backFromClean: function(){
+		const base = document.querySelector('.banner-base')
+		const banner = document.querySelector('.banner-content')
+		banner.style.width = '200%'
+		banner.style.position = 'fixed'
+		banner.style.top = '0'
+		base.id = `banner${document.querySelector('.banner-base').dataset.pos}`
+		document.querySelector(".banner-content").style.display = 'flex'
+		document.querySelector("#post").innerHTML = ''
+		content.toggleBannerArrows(false)
+		if(document.querySelector("footer").hidden === true)
+			document.querySelector("footer").hidden = false
+
+		//content.toggleGoHome()
+		content.showBanners()
 	},
 
 	inView: function (el) {
